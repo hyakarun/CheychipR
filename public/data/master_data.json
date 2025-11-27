@@ -1,0 +1,57 @@
+{
+    "config": {},
+    "exp_table": [
+        {
+            "lv (レベル)": "1",
+            "next_exp (必要経験値)": "50",
+            "reward_sp (獲得SP)": "3"
+        },
+        {
+            "lv (レベル)": "2",
+            "next_exp (必要経験値)": "80",
+            "reward_sp (獲得SP)": "3"
+        },
+        {
+            "lv (レベル)": "3",
+            "next_exp (必要経験値)": "120",
+            "reward_sp (獲得SP)": "3"
+        },
+        {
+            "lv (レベル)": "...",
+            "next_exp (必要経験値)": "...",
+            "reward_sp (獲得SP)": "..."
+        }
+    ],
+    "enemies": [
+        {
+            "id": 1,
+            "name": "スライム",
+            "hp": 20,
+            "atk": 5,
+            "exp": 10,
+            "speed": 1.0,
+            "color": "#ffffff",
+            "width": 30
+        },
+        {
+            "id": 2,
+            "name": "ゴブリン",
+            "hp": 50,
+            "atk": 12,
+            "exp": 25,
+            "speed": 1.5,
+            "color": "#ffffff",
+            "width": 35
+        },
+        {
+            "id": 3,
+            "name": "オーク",
+            "hp": 150,
+            "atk": 30,
+            "exp": 80,
+            "speed": 0.8,
+            "color": "#ffffff",
+            "width": 50
+        }
+    ]
+}
