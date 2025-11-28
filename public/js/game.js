@@ -12,9 +12,7 @@ let player = {
   exp: 0,
   nextExp: 50,
   sp: 0,
-  // 基礎ステータス
   stats: { str: 5, vit: 5, agi: 5, int: 5, dex: 5, luk: 5 },
-  // 戦闘ステータス
   battleStats: {
     atk: 10,
     matk: 0,
@@ -36,55 +34,83 @@ let player = {
 
 // 敵管理
 let enemies = [];
+// ★追加：ダメージポップアップ管理
+let damageTexts = [];
+
 const lanes = [0.25, 0.5, 0.75];
 let spawnTimer = 0;
 let masterData = null;
 
+// 画像管理キャッシュ
+const imageCache = {};
+
 // 管理用フラグ
 let saveTimer = 0;
-let isPaused = false; // 裏に行っている間は止めるためのフラグ
+let isPaused = false;
 
 // --- 初期化 ---
 async function init() {
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
 
-  // 1. マスタデータの読み込み
   try {
     const res = await fetch("../data/master_data.json?v=" + Date.now());
     if (res.ok) {
       masterData = await res.json();
+      console.log("Master Data Loaded:", masterData);
       applyConfig();
     }
   } catch (e) {
     console.error(e);
   }
 
-  // 2. セーブデータのロード
   loadGame();
-
-  // 3. ステータス計算 & オフラインボーナス計算（初回ロード時）
+  syncExpTable();
   calcBattleStats();
   calculateOfflineProgress();
 
   updateUI();
   requestAnimationFrame(gameLoop);
-
-  // ★追加：タブの切り替え監視イベント
   document.addEventListener("visibilitychange", handleVisibilityChange);
 }
 
-// タブ切り替え時の処理
+// 画像読み込み
+function getImage(fileName) {
+  if (!fileName) return null;
+  if (imageCache[fileName]) return imageCache[fileName];
+  const img = new Image();
+  img.src = "images/" + fileName;
+  imageCache[fileName] = img;
+  return img;
+}
+
+// ★追加：ダメージ数字を発生させる関数
+function spawnDamageText(x, y, damage, color) {
+  damageTexts.push({
+    x: x,
+    y: y,
+    text: damage,
+    color: color,
+    life: 60, // 60フレーム（約1秒）表示
+    maxLife: 60,
+    vy: -1.5, // 上に浮き上がる速度
+  });
+}
+
+function syncExpTable() {
+  if (!masterData || !masterData.exp_table) return;
+  const row = masterData.exp_table.find((r) => Number(r.lv) === player.lv);
+  if (row) {
+    player.nextExp = Number(row.next_exp);
+    if (player.exp >= player.nextExp) gainExp(0);
+  }
+}
+
 function handleVisibilityChange() {
   if (document.hidden) {
-    // 裏に行った：セーブしてゲームを一時停止
-    console.log("Tab hidden: Pausing game...");
     saveGame();
     isPaused = true;
   } else {
-    // 戻ってきた：ボーナス計算して再開
-    console.log("Tab visible: Resuming...");
-    // 少し待ってから計算（ブラウザの復帰ラグ対策）
     setTimeout(() => {
       calculateOfflineProgress();
       isPaused = false;
@@ -92,7 +118,6 @@ function handleVisibilityChange() {
   }
 }
 
-// 設定反映
 function applyConfig() {
   if (!masterData || !masterData.config) return;
   const c = masterData.config;
@@ -114,11 +139,9 @@ function resizeCanvas() {
   }
 }
 
-// --- ステータス計算 ---
 function calcBattleStats() {
   const s = player.stats;
   const b = player.battleStats;
-
   const strMult = getConfig("str_to_atk", 2.0);
   const vitMult = getConfig("vit_to_hp", 10);
 
@@ -133,19 +156,16 @@ function calcBattleStats() {
   if (player.hp <= 0) player.hp = player.maxHp;
 }
 
-// --- セーブ & ロード機能 ---
 function saveGame() {
   player.lastLogin = Date.now();
   const saveData = JSON.stringify(player);
   localStorage.setItem("cc_save_data", saveData);
-
-  // UI演出
   const btn = document.querySelector(".menu-item.active");
   if (btn) {
-    let originalText = btn.innerText;
+    let t = btn.innerText;
     btn.innerText = "保存中...";
     setTimeout(() => {
-      btn.innerText = originalText;
+      btn.innerText = t;
     }, 1000);
   }
 }
@@ -157,20 +177,16 @@ function loadGame() {
       const loadedPlayer = JSON.parse(saveData);
       player = { ...player, ...loadedPlayer };
     } catch (e) {
-      console.error("Save data corrupted", e);
+      console.error(e);
     }
   }
 }
 
-// --- オフラインボーナス計算 ---
 function calculateOfflineProgress() {
   const now = Date.now();
   const last = player.lastLogin || now;
-
-  // 経過秒数
   const diffSeconds = (now - last) / 1000;
 
-  // 10秒以上裏に行っていたら計算（短すぎるとうるさいので）
   if (diffSeconds > 10) {
     let agiRed = getConfig("agi_reduction", 0.2);
     let atkInterval = Math.max(
@@ -179,41 +195,29 @@ function calculateOfflineProgress() {
     );
     let attacksPerSec = 60 / atkInterval;
 
-    // 簡易シミュレーション
     let avgEnemyHp = 20 + player.lv * 5;
     let avgEnemyExp = 10 + player.lv * 2;
     let myAtk = Math.max(1, player.battleStats.atk);
 
     let hitsToKill = Math.ceil(avgEnemyHp / myAtk);
-    let secondsPerKill = (hitsToKill / attacksPerSec) * 1.2; // 1.2は索敵時間のバッファ
+    let secondsPerKill = (hitsToKill / attacksPerSec) * 1.2;
 
     let killCount = Math.floor(diffSeconds / secondsPerKill);
 
     if (killCount > 0) {
       let totalGainedExp = killCount * avgEnemyExp;
-
-      // アラートで見せる
-      alert(
-        `【放置ボーナス】\n${Math.floor(
-          diffSeconds
-        )}秒経過しました。\n${killCount} 体を倒して、\n${totalGainedExp} EXP を獲得しました！`
+      console.log(
+        `Offline: ${diffSeconds}s, ${killCount} kills, ${totalGainedExp} exp`
       );
-
       gainExp(totalGainedExp);
     }
   }
-
-  // 時刻更新
   player.lastLogin = now;
 }
 
-// --- ゲームループ ---
 function gameLoop() {
   requestAnimationFrame(gameLoop);
-
-  // ★追加：一時停止中は更新も描画もしない
   if (isPaused) return;
-
   try {
     update();
     draw();
@@ -222,16 +226,13 @@ function gameLoop() {
   }
 }
 
-// --- 更新処理 ---
 function update() {
-  // オートセーブ
   saveTimer++;
   if (saveTimer > 600) {
     saveGame();
     saveTimer = 0;
   }
 
-  // 1. 敵のスポーン
   spawnTimer++;
   const rate = getConfig("spawn_rate", 100);
   if (spawnTimer > rate) {
@@ -239,7 +240,7 @@ function update() {
     spawnTimer = 0;
   }
 
-  // 2. 敵の行動
+  // --- 敵の処理 ---
   for (let i = enemies.length - 1; i >= 0; i--) {
     let e = enemies[i];
     let dist = e.x - (player.x + player.width);
@@ -248,20 +249,24 @@ function update() {
       e.state = "attack";
       e.attackTimer++;
       if (e.attackTimer > e.attackInterval) {
+        // 敵の攻撃ヒット
         let dmg = Math.max(1, e.damage);
         player.hp -= dmg;
         e.attackTimer = 0;
+
+        // ★追加：プレイヤーへのダメージ表示（赤色）
+        spawnDamageText(player.x, player.y - 10, dmg, "#e74c3c");
+
         updateUI();
       }
     } else {
       e.state = "move";
       e.x -= e.speed;
     }
-
     if (e.x < -50) enemies.splice(i, 1);
   }
 
-  // 3. プレイヤーの行動
+  // --- プレイヤーの処理 ---
   let agiRed = getConfig("agi_reduction", 0.2);
   let currentInterval = Math.max(
     20,
@@ -281,6 +286,7 @@ function update() {
     }
 
     if (target) {
+      // 攻撃ヒット
       let dmg = player.battleStats.atk || 5;
       target.hp -= dmg;
       player.attackTimer = 0;
@@ -289,6 +295,10 @@ function update() {
         player.x -= 10;
       }, 100);
 
+      // ★追加：敵へのダメージ表示（白色、クリティカルなら黄色）
+      // （今はクリティカル未実装なので白固定）
+      spawnDamageText(target.x, target.y - 10, dmg, "#ffffff");
+
       if (target.hp <= 0) {
         let index = enemies.indexOf(target);
         if (index > -1) {
@@ -296,6 +306,16 @@ function update() {
           gainExp(target.exp);
         }
       }
+    }
+  }
+
+  // --- ★追加：ダメージテキストの更新 ---
+  for (let i = damageTexts.length - 1; i >= 0; i--) {
+    let dt = damageTexts[i];
+    dt.y += dt.vy; // 上に浮かす
+    dt.life--; // 寿命を減らす
+    if (dt.life <= 0) {
+      damageTexts.splice(i, 1); // 消滅
     }
   }
 
@@ -334,6 +354,7 @@ function spawnEnemy() {
     speed: Number(enemyData.speed),
     color: enemyData.color || "red",
     width: Number(enemyData.width) || 30,
+    image: enemyData.image || null,
     range: 40,
     attackTimer: 0,
     attackInterval: 80,
@@ -343,7 +364,6 @@ function spawnEnemy() {
 
 function gainExp(amount) {
   player.exp += amount;
-
   while (player.exp >= player.nextExp) {
     let nextReq = 50;
     let rewardSp = 3;
@@ -356,9 +376,7 @@ function gainExp(amount) {
         nextReq = Math.floor(player.nextExp * 1.2);
       }
     }
-
     player.nextExp = nextReq;
-
     if (player.exp >= player.nextExp) {
       player.lv++;
       player.exp -= player.nextExp;
@@ -366,10 +384,8 @@ function gainExp(amount) {
       calcBattleStats();
       player.hp = player.maxHp;
       if (masterData && masterData.exp_table) {
-        const nextRow = masterData.exp_table.find(
-          (r) => Number(r.lv) === player.lv
-        );
-        if (nextRow) player.nextExp = Number(nextRow.next_exp);
+        const nr = masterData.exp_table.find((r) => Number(r.lv) === player.lv);
+        if (nr) player.nextExp = Number(nr.next_exp);
       }
     } else {
       break;
@@ -391,6 +407,7 @@ window.addStat = function (statName) {
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  // レーン
   ctx.strokeStyle = "#ccc";
   ctx.beginPath();
   lanes.forEach((y) => {
@@ -400,20 +417,47 @@ function draw() {
   });
   ctx.stroke();
 
+  // プレイヤー
   ctx.fillStyle = "#3498db";
   ctx.fillRect(player.x, canvas.height * 0.5 - 15, player.width, player.height);
 
+  // 敵
   enemies.forEach((e) => {
     let y = canvas.height * e.yRatio;
-    ctx.fillStyle = e.color;
     let w = e.width || 30;
-    ctx.fillRect(e.x, y - w / 2, w, w);
+    let h = w;
 
+    let img = getImage(e.image);
+    if (img && img.complete && img.naturalHeight !== 0) {
+      ctx.drawImage(img, e.x, y - h / 2, w, h);
+    } else {
+      ctx.fillStyle = e.color;
+      ctx.fillRect(e.x, y - h / 2, w, h);
+    }
+
+    // HPバー
     let hpPer = Math.max(0, e.hp / e.maxHp);
     ctx.fillStyle = "black";
-    ctx.fillRect(e.x, y + w / 2 + 5, w, 5);
+    ctx.fillRect(e.x, y + h / 2 + 5, w, 5);
     ctx.fillStyle = "#2ecc71";
-    ctx.fillRect(e.x, y + w / 2 + 5, w * hpPer, 5);
+    ctx.fillRect(e.x, y + h / 2 + 5, w * hpPer, 5);
+  });
+
+  // ★追加：ダメージテキストの描画
+  damageTexts.forEach((dt) => {
+    // 徐々に透明にする
+    ctx.globalAlpha = Math.max(0, dt.life / dt.maxLife);
+
+    ctx.fillStyle = dt.color;
+    ctx.font = "bold 20px Arial";
+
+    // 文字の縁取り（見やすくするため）
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "black";
+    ctx.strokeText(dt.text, dt.x, dt.y);
+    ctx.fillText(dt.text, dt.x, dt.y);
+
+    ctx.globalAlpha = 1.0; // 透明度リセット
   });
 }
 
