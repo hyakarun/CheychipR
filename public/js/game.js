@@ -34,17 +34,12 @@ let player = {
 
 // 敵管理
 let enemies = [];
-// ★追加：ダメージポップアップ管理
 let damageTexts = [];
-
 const lanes = [0.25, 0.5, 0.75];
 let spawnTimer = 0;
 let masterData = null;
 
-// 画像管理キャッシュ
 const imageCache = {};
-
-// 管理用フラグ
 let saveTimer = 0;
 let isPaused = false;
 
@@ -57,7 +52,6 @@ async function init() {
     const res = await fetch("../data/master_data.json?v=" + Date.now());
     if (res.ok) {
       masterData = await res.json();
-      console.log("Master Data Loaded:", masterData);
       applyConfig();
     }
   } catch (e) {
@@ -74,7 +68,29 @@ async function init() {
   document.addEventListener("visibilitychange", handleVisibilityChange);
 }
 
-// 画像読み込み
+// ★追加：画面切り替え機能
+window.switchScreen = function (screenName) {
+  // 全ての画面を非表示
+  document
+    .querySelectorAll(".screen-content")
+    .forEach((el) => (el.style.display = "none"));
+  document
+    .querySelectorAll(".menu-item")
+    .forEach((el) => el.classList.remove("active"));
+
+  // 指定された画面を表示
+  const targetScreen = document.getElementById("screen-" + screenName);
+  if (targetScreen) {
+    targetScreen.style.display = "block";
+  }
+
+  // メニューのアクティブ化
+  const targetMenu = document.getElementById("menu-" + screenName);
+  if (targetMenu) {
+    targetMenu.classList.add("active");
+  }
+};
+
 function getImage(fileName) {
   if (!fileName) return null;
   if (imageCache[fileName]) return imageCache[fileName];
@@ -84,16 +100,15 @@ function getImage(fileName) {
   return img;
 }
 
-// ★追加：ダメージ数字を発生させる関数
 function spawnDamageText(x, y, damage, color) {
   damageTexts.push({
     x: x,
     y: y,
     text: damage,
     color: color,
-    life: 60, // 60フレーム（約1秒）表示
+    life: 60,
     maxLife: 60,
-    vy: -1.5, // 上に浮き上がる速度
+    vy: -1.5,
   });
 }
 
@@ -160,14 +175,6 @@ function saveGame() {
   player.lastLogin = Date.now();
   const saveData = JSON.stringify(player);
   localStorage.setItem("cc_save_data", saveData);
-  const btn = document.querySelector(".menu-item.active");
-  if (btn) {
-    let t = btn.innerText;
-    btn.innerText = "保存中...";
-    setTimeout(() => {
-      btn.innerText = t;
-    }, 1000);
-  }
 }
 
 function loadGame() {
@@ -194,16 +201,12 @@ function calculateOfflineProgress() {
       player.baseAttackInterval - player.battleStats.agi * agiRed
     );
     let attacksPerSec = 60 / atkInterval;
-
     let avgEnemyHp = 20 + player.lv * 5;
     let avgEnemyExp = 10 + player.lv * 2;
     let myAtk = Math.max(1, player.battleStats.atk);
-
     let hitsToKill = Math.ceil(avgEnemyHp / myAtk);
     let secondsPerKill = (hitsToKill / attacksPerSec) * 1.2;
-
     let killCount = Math.floor(diffSeconds / secondsPerKill);
-
     if (killCount > 0) {
       let totalGainedExp = killCount * avgEnemyExp;
       console.log(
@@ -240,7 +243,6 @@ function update() {
     spawnTimer = 0;
   }
 
-  // --- 敵の処理 ---
   for (let i = enemies.length - 1; i >= 0; i--) {
     let e = enemies[i];
     let dist = e.x - (player.x + player.width);
@@ -249,14 +251,11 @@ function update() {
       e.state = "attack";
       e.attackTimer++;
       if (e.attackTimer > e.attackInterval) {
-        // 敵の攻撃ヒット
         let dmg = Math.max(1, e.damage);
         player.hp -= dmg;
         e.attackTimer = 0;
-
-        // ★追加：プレイヤーへのダメージ表示（赤色）
-        spawnDamageText(player.x, player.y - 10, dmg, "#e74c3c");
-
+        let py = canvas.height * 0.5;
+        spawnDamageText(player.x, py - 20, dmg, "#e74c3c");
         updateUI();
       }
     } else {
@@ -266,7 +265,6 @@ function update() {
     if (e.x < -50) enemies.splice(i, 1);
   }
 
-  // --- プレイヤーの処理 ---
   let agiRed = getConfig("agi_reduction", 0.2);
   let currentInterval = Math.max(
     20,
@@ -286,7 +284,6 @@ function update() {
     }
 
     if (target) {
-      // 攻撃ヒット
       let dmg = player.battleStats.atk || 5;
       target.hp -= dmg;
       player.attackTimer = 0;
@@ -295,9 +292,8 @@ function update() {
         player.x -= 10;
       }, 100);
 
-      // ★追加：敵へのダメージ表示（白色、クリティカルなら黄色）
-      // （今はクリティカル未実装なので白固定）
-      spawnDamageText(target.x, target.y - 10, dmg, "#ffffff");
+      let ey = canvas.height * target.yRatio;
+      spawnDamageText(target.x, ey - 20, dmg, "#ffffff");
 
       if (target.hp <= 0) {
         let index = enemies.indexOf(target);
@@ -309,14 +305,11 @@ function update() {
     }
   }
 
-  // --- ★追加：ダメージテキストの更新 ---
   for (let i = damageTexts.length - 1; i >= 0; i--) {
     let dt = damageTexts[i];
-    dt.y += dt.vy; // 上に浮かす
-    dt.life--; // 寿命を減らす
-    if (dt.life <= 0) {
-      damageTexts.splice(i, 1); // 消滅
-    }
+    dt.y += dt.vy;
+    dt.life--;
+    if (dt.life <= 0) damageTexts.splice(i, 1);
   }
 
   if (player.hp <= 0) {
@@ -407,7 +400,6 @@ window.addStat = function (statName) {
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // レーン
   ctx.strokeStyle = "#ccc";
   ctx.beginPath();
   lanes.forEach((y) => {
@@ -417,16 +409,13 @@ function draw() {
   });
   ctx.stroke();
 
-  // プレイヤー
   ctx.fillStyle = "#3498db";
   ctx.fillRect(player.x, canvas.height * 0.5 - 15, player.width, player.height);
 
-  // 敵
   enemies.forEach((e) => {
     let y = canvas.height * e.yRatio;
     let w = e.width || 30;
     let h = w;
-
     let img = getImage(e.image);
     if (img && img.complete && img.naturalHeight !== 0) {
       ctx.drawImage(img, e.x, y - h / 2, w, h);
@@ -434,8 +423,6 @@ function draw() {
       ctx.fillStyle = e.color;
       ctx.fillRect(e.x, y - h / 2, w, h);
     }
-
-    // HPバー
     let hpPer = Math.max(0, e.hp / e.maxHp);
     ctx.fillStyle = "black";
     ctx.fillRect(e.x, y + h / 2 + 5, w, 5);
@@ -443,21 +430,15 @@ function draw() {
     ctx.fillRect(e.x, y + h / 2 + 5, w * hpPer, 5);
   });
 
-  // ★追加：ダメージテキストの描画
   damageTexts.forEach((dt) => {
-    // 徐々に透明にする
     ctx.globalAlpha = Math.max(0, dt.life / dt.maxLife);
-
     ctx.fillStyle = dt.color;
     ctx.font = "bold 20px Arial";
-
-    // 文字の縁取り（見やすくするため）
     ctx.lineWidth = 3;
     ctx.strokeStyle = "black";
     ctx.strokeText(dt.text, dt.x, dt.y);
     ctx.fillText(dt.text, dt.x, dt.y);
-
-    ctx.globalAlpha = 1.0; // 透明度リセット
+    ctx.globalAlpha = 1.0;
   });
 }
 

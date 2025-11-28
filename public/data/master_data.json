@@ -5031,5 +5031,182 @@
             "width": 50,
             "image": "golem.png"
         }
+    ],
+    "dungeons": [
+        {
+            "id": 1,
+            "name": "スライム平原1",
+            "req_lv": 1,
+            "enemy_ids": 1,
+            "description": "テスト1"
+        },
+        {
+            "id": 2,
+            "name": "スライム平原2",
+            "req_lv": 5,
+            "enemy_ids": 2,
+            "description": "テスト2"
+        },
+        {
+            "id": 3,
+            "name": "スライム平原3",
+            "req_lv": 10,
+            "enemy_ids": 3,
+            "description": "テスト3"
+        },
+        {
+            "id": 4,
+            "name": "スライム平原4",
+            "req_lv": 15,
+            "enemy_ids": 4,
+            "description": "テスト4"
+        },
+        {
+            "id": 5,
+            "name": "スライム平原5",
+            "req_lv": 20,
+            "enemy_ids": 5,
+            "description": "テスト5"
+        },
+        {
+            "id": 6,
+            "name": "リザードマンの巣1",
+            "req_lv": 30,
+            "enemy_ids": 6,
+            "description": "テスト6"
+        },
+        {
+            "id": 7,
+            "name": "リザードマンの巣2",
+            "req_lv": 40,
+            "enemy_ids": 7,
+            "description": "テスト7"
+        },
+        {
+            "id": 8,
+            "name": "リザードマンの巣3",
+            "req_lv": 50,
+            "enemy_ids": 8,
+            "description": "テスト8"
+        },
+        {
+            "id": 9,
+            "name": "リザードマンの巣4",
+            "req_lv": 60,
+            "enemy_ids": 9,
+            "description": "テスト9"
+        },
+        {
+            "id": 10,
+            "name": "リザードマンの巣5",
+            "req_lv": 70,
+            "enemy_ids": 10,
+            "description": "テスト10"
+        },
+        {
+            "id": 11,
+            "name": "ゴーレムの集落1",
+            "req_lv": 100,
+            "enemy_ids": 11,
+            "description": "テスト11"
+        },
+        {
+            "id": 12,
+            "name": "ゴーレムの集落2",
+            "req_lv": 130,
+            "enemy_ids": 12,
+            "description": "テスト12"
+        },
+        {
+            "id": 13,
+            "name": "ゴーレムの集落3",
+            "req_lv": 160,
+            "enemy_ids": 13,
+            "description": "テスト13"
+        },
+        {
+            "id": 14,
+            "name": "ゴーレムの集落4",
+            "req_lv": 190,
+            "enemy_ids": 14,
+            "description": "テスト14"
+        },
+        {
+            "id": 15,
+            "name": "ゴーレムの集落5",
+            "req_lv": 220,
+            "enemy_ids": 15,
+            "description": "テスト15"
+        },
+        {
+            "id": 16,
+            "name": "お化け屋敷1",
+            "req_lv": 250,
+            "enemy_ids": 16,
+            "description": "テスト16"
+        },
+        {
+            "id": 17,
+            "name": "お化け屋敷2",
+            "req_lv": 280,
+            "enemy_ids": 17,
+            "description": "テスト17"
+        },
+        {
+            "id": 18,
+            "name": "お化け屋敷3",
+            "req_lv": 310,
+            "enemy_ids": 18,
+            "description": "テスト18"
+        },
+        {
+            "id": 19,
+            "name": "お化け屋敷4",
+            "req_lv": 340,
+            "enemy_ids": 19,
+            "description": "テスト19"
+        },
+        {
+            "id": 20,
+            "name": "お化け屋敷5",
+            "req_lv": 370,
+            "enemy_ids": 20,
+            "description": "テスト20"
+        },
+        {
+            "id": 21,
+            "name": "ハゲワシのテリトリー1",
+            "req_lv": 400,
+            "enemy_ids": 21,
+            "description": "テスト21"
+        },
+        {
+            "id": 22,
+            "name": "ハゲワシのテリトリー2",
+            "req_lv": 430,
+            "enemy_ids": 22,
+            "description": "テスト22"
+        },
+        {
+            "id": 23,
+            "name": "ハゲワシのテリトリー3",
+            "req_lv": 460,
+            "enemy_ids": 23,
+            "description": "テスト23"
+        },
+        {
+            "id": 24,
+            "name": "ハゲワシのテリトリー4",
+            "req_lv": 490,
+            "enemy_ids": 24,
+            "description": "テスト24"
+        },
+        {
+            "id": 25,
+            "name": "ハゲワシのテリトリー5",
+            "req_lv": 520,
+            "enemy_ids": 25,
+            "description": "テスト25"
+        }
     ]
 }

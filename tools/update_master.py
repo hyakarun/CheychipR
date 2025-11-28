@@ -3,20 +3,18 @@ import json
 import os
 import ssl
 
-# === 【重要】MacのSSLエラーを回避するおまじない ===
+# MacのSSLエラー回避
 ssl._create_default_https_context = ssl._create_unverified_context
-# =================================================
 
-# === 設定：スプレッドシートのIDとGID ===
-# いただいたURLから抽出しました
+# === 設定 ===
 SPREADSHEET_ID = "1dTxRNuMcz4JCbh2Wp-fWxAZE814wcQOWtXdEeNW6FHE"
 SHEETS = {
-    "config": "0",          # GameConfig
-    "exp_table": "6688737", # ExpTable
-    "enemies": "1383753713" # Enemy
+    "config": "0",
+    "exp_table": "6688737",
+    "enemies": "1383753713",
+    "dungeons": "298836659"
 }
 
-# 保存先
 OUTPUT_DIR = "public/data"
 OUTPUT_FILE = "master_data.json"
 
@@ -25,50 +23,33 @@ def get_csv_url(sheet_id, gid):
 
 def main():
     print("--- マスタデータの更新を開始します ---")
-
-    # 1. 保存先フォルダの作成
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-        print(f"フォルダ作成: {OUTPUT_DIR}")
-
+    if not os.path.exists(OUTPUT_DIR): os.makedirs(OUTPUT_DIR)
     master_data = {}
 
     try:
-        # 2. GameConfig の読み込み (Key-Value形式に変換)
+        # Config
         print("Downloading GameConfig...")
-        url = get_csv_url(SPREADSHEET_ID, SHEETS["config"])
-        df_config = pd.read_csv(url)
-        # { "base_atk_interval": 60, ... } の形にする
-        config_dict = {}
-        for _, row in df_config.iterrows():
-            # key列とvalue列があると想定
-            if pd.notna(row.get('key')) and pd.notna(row.get('value')):
-                config_dict[row['key']] = row['value']
-        master_data["config"] = config_dict
+        df_c = pd.read_csv(get_csv_url(SPREADSHEET_ID, SHEETS["config"]))
+        master_data["config"] = {r['key']: r['value'] for _, r in df_c.iterrows() if pd.notna(r.get('key'))}
 
-        # 3. ExpTable の読み込み
+        # ExpTable
         print("Downloading ExpTable...")
-        url = get_csv_url(SPREADSHEET_ID, SHEETS["exp_table"])
-        df_exp = pd.read_csv(url)
-        master_data["exp_table"] = df_exp.to_dict(orient='records')
+        master_data["exp_table"] = pd.read_csv(get_csv_url(SPREADSHEET_ID, SHEETS["exp_table"])).to_dict(orient='records')
 
-        # 4. Enemy の読み込み
+        # Enemy
         print("Downloading Enemy...")
-        url = get_csv_url(SPREADSHEET_ID, SHEETS["enemies"])
-        df_enemy = pd.read_csv(url)
-        master_data["enemies"] = df_enemy.to_dict(orient='records')
+        master_data["enemies"] = pd.read_csv(get_csv_url(SPREADSHEET_ID, SHEETS["enemies"])).to_dict(orient='records')
 
-        # 5. JSON保存
-        output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
-        with open(output_path, 'w', encoding='utf-8') as f:
+        # Dungeon (★追加)
+        print("Downloading Dungeon...")
+        master_data["dungeons"] = pd.read_csv(get_csv_url(SPREADSHEET_ID, SHEETS["dungeons"])).to_dict(orient='records')
+
+        # 保存
+        with open(os.path.join(OUTPUT_DIR, OUTPUT_FILE), 'w', encoding='utf-8') as f:
             json.dump(master_data, f, indent=4, ensure_ascii=False)
-        
-        print(f"成功！データを保存しました: {output_path}")
-        print("中身の例(config):", list(master_data["config"].keys())[:3])
+        print("成功！")
 
-    except Exception as e:
-        print(f"\n[エラー] データの取得に失敗しました: {e}")
-        # 詳細なエラー内容を表示
+    except Exception:
         import traceback
         traceback.print_exc()
 
