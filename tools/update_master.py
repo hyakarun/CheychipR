@@ -42,6 +42,10 @@ def main():
 
         # Dungeon (★追加)
         print("Downloading Dungeon...")
+
+        dungeon_url = get_csv_url(SPREADSHEET_ID, SHEETS["dungeons"])
+        print(f"URL Check: {dungeon_url}")  # ←ここで犯人がわかります
+        
         master_data["dungeons"] = pd.read_csv(get_csv_url(SPREADSHEET_ID, SHEETS["dungeons"])).to_dict(orient='records')
 
         # 保存

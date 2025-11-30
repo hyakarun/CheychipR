@@ -30,18 +30,22 @@ let player = {
   width: 30,
   height: 30,
   lastLogin: Date.now(),
+  // ★追加: 現在のダンジョンIDと攻略状況
+  currentDungeonId: 1,
+  dungeonProgress: {},
 };
 
-// 敵管理
 let enemies = [];
 let damageTexts = [];
 const lanes = [0.25, 0.5, 0.75];
 let spawnTimer = 0;
 let masterData = null;
-
 const imageCache = {};
 let saveTimer = 0;
 let isPaused = false;
+
+// 1ステージのクリアに必要な撃破数
+const KILLS_TO_CLEAR = 10;
 
 // --- 初期化 ---
 async function init() {
@@ -53,6 +57,8 @@ async function init() {
     if (res.ok) {
       masterData = await res.json();
       applyConfig();
+      // ★追加: データ読み込み後にリストを作る
+      initDungeonList();
     }
   } catch (e) {
     console.error(e);
@@ -68,9 +74,84 @@ async function init() {
   document.addEventListener("visibilitychange", handleVisibilityChange);
 }
 
-// ★追加：画面切り替え機能
+// ★★★ ここがダンジョンリストを表示するコードです ★★★
+function initDungeonList() {
+    if (!masterData || !masterData.dungeons) return;
+    
+    const listEl = document.querySelector('.dungeon-list');
+    if (!listEl) return;
+    listEl.innerHTML = ""; 
+
+    // ID順にソート
+    const sortedDungeons = masterData.dungeons.sort((a, b) => Number(a.id) - Number(b.id));
+
+    sortedDungeons.forEach(d => {
+        const id = Number(d.id);
+        
+        // 進捗状況の取得
+        if (!player.dungeonProgress[id]) {
+            player.dungeonProgress[id] = { killCount: 0, cleared: false };
+        }
+        const progress = player.dungeonProgress[id];
+        const prevProgress = player.dungeonProgress[id - 1];
+
+        // ★修正点：表示条件の判定
+        // 1. ID=1 は無条件で表示
+        // 2. それ以外は「前のダンジョンをクリアしている」場合のみ表示
+        // （つまり、挑戦権がないダンジョンは画面に出さない）
+        let isVisible = (id === 1);
+        if (id > 1) {
+            if (prevProgress && prevProgress.cleared) isVisible = true;
+        }
+
+        // 非表示なら要素を作らずスキップ
+        if (!isVisible) return;
+
+        // クリア済みかどうか
+        const isCleared = progress.cleared;
+        const currentKills = progress.killCount;
+        const percent = Math.min(100, (currentKills / KILLS_TO_CLEAR) * 100);
+        
+        // クラス設定
+        let classes = "dungeon-item";
+        if (isCleared) classes += " cleared";
+        
+        // 枠線（選択中）
+        let style = "";
+        if (player.currentDungeonId == id) style = "border: 2px solid #3498db; background:#eaf2f8;";
+
+        const btnText = (player.currentDungeonId == id) ? "探索中" : "移動";
+        const btnDisabled = (player.currentDungeonId == id) ? "disabled" : "";
+        const statusText = isCleared ? "★CLEAR!" : `${currentKills}/${KILLS_TO_CLEAR}`;
+
+        const div = document.createElement('div');
+        div.className = classes;
+        div.style = style;
+        div.innerHTML = `
+            <h4>${d.name}</h4>
+            <div class="dungeon-info">
+                <div>Lv.${d.req_lv}〜</div>
+                <div style="color:${isCleared ? '#f39c12':'#7f8c8d'}">${statusText}</div>
+            </div>
+            <div class="prog-container">
+                <div class="prog-fill" style="width: ${percent}%;"></div>
+            </div>
+            <button onclick="changeDungeon(${id})" ${btnDisabled}>${btnText}</button>
+        `;
+        listEl.appendChild(div);
+    });
+}
+
+// ★追加: ダンジョン移動
+window.changeDungeon = function (dungeonId) {
+  if (player.currentDungeonId == dungeonId) return;
+  player.currentDungeonId = dungeonId;
+  enemies = []; // 敵を一掃
+  initDungeonList();
+  saveGame();
+};
+
 window.switchScreen = function (screenName) {
-  // 全ての画面を非表示
   document
     .querySelectorAll(".screen-content")
     .forEach((el) => (el.style.display = "none"));
@@ -78,17 +159,14 @@ window.switchScreen = function (screenName) {
     .querySelectorAll(".menu-item")
     .forEach((el) => el.classList.remove("active"));
 
-  // 指定された画面を表示
   const targetScreen = document.getElementById("screen-" + screenName);
-  if (targetScreen) {
-    targetScreen.style.display = "block";
-  }
+  if (targetScreen) targetScreen.style.display = "block";
 
-  // メニューのアクティブ化
   const targetMenu = document.getElementById("menu-" + screenName);
-  if (targetMenu) {
-    targetMenu.classList.add("active");
-  }
+  if (targetMenu) targetMenu.classList.add("active");
+
+  // ダンジョン画面を開いた時にリストを更新
+  if (screenName === "dungeon") initDungeonList();
 };
 
 function getImage(fileName) {
@@ -140,9 +218,8 @@ function applyConfig() {
     player.baseAttackInterval = Number(c.base_atk_interval);
 }
 function getConfig(key, defVal) {
-  if (masterData && masterData.config && masterData.config[key] !== undefined) {
+  if (masterData && masterData.config && masterData.config[key] !== undefined)
     return Number(masterData.config[key]);
-  }
   return defVal;
 }
 
@@ -159,12 +236,10 @@ function calcBattleStats() {
   const b = player.battleStats;
   const strMult = getConfig("str_to_atk", 2.0);
   const vitMult = getConfig("vit_to_hp", 10);
-
   b.atk = Math.floor((s.str || 5) * strMult + (s.dex || 5) * 0.5);
   b.def = Math.floor((s.vit || 5) * 1.5);
   b.agi = s.agi || 5;
   b.luk = s.luk || 5;
-
   let oldMax = player.maxHp;
   player.maxHp = 100 + (s.vit || 5) * vitMult + (player.lv - 1) * 20;
   if (player.hp > player.maxHp) player.hp = player.maxHp;
@@ -173,27 +248,27 @@ function calcBattleStats() {
 
 function saveGame() {
   player.lastLogin = Date.now();
-  const saveData = JSON.stringify(player);
-  localStorage.setItem("cc_save_data", saveData);
+  localStorage.setItem("cc_save_data", JSON.stringify(player));
 }
 
 function loadGame() {
   const saveData = localStorage.getItem("cc_save_data");
   if (saveData) {
     try {
-      const loadedPlayer = JSON.parse(saveData);
-      player = { ...player, ...loadedPlayer };
+      player = { ...player, ...JSON.parse(saveData) };
     } catch (e) {
       console.error(e);
     }
   }
+  // ロード後の初期化チェック
+  if (!player.currentDungeonId) player.currentDungeonId = 1;
+  if (!player.dungeonProgress) player.dungeonProgress = {};
 }
 
 function calculateOfflineProgress() {
   const now = Date.now();
   const last = player.lastLogin || now;
   const diffSeconds = (now - last) / 1000;
-
   if (diffSeconds > 10) {
     let agiRed = getConfig("agi_reduction", 0.2);
     let atkInterval = Math.max(
@@ -213,6 +288,16 @@ function calculateOfflineProgress() {
         `Offline: ${diffSeconds}s, ${killCount} kills, ${totalGainedExp} exp`
       );
       gainExp(totalGainedExp);
+
+      // ★追加: オフライン時のキル数加算
+      const dId = player.currentDungeonId;
+      if (!player.dungeonProgress[dId])
+        player.dungeonProgress[dId] = { killCount: 0, cleared: false };
+      player.dungeonProgress[dId].killCount += killCount;
+      if (player.dungeonProgress[dId].killCount >= KILLS_TO_CLEAR) {
+        player.dungeonProgress[dId].cleared = true;
+        player.dungeonProgress[dId].killCount = KILLS_TO_CLEAR;
+      }
     }
   }
   player.lastLogin = now;
@@ -235,7 +320,6 @@ function update() {
     saveGame();
     saveTimer = 0;
   }
-
   spawnTimer++;
   const rate = getConfig("spawn_rate", 100);
   if (spawnTimer > rate) {
@@ -246,7 +330,6 @@ function update() {
   for (let i = enemies.length - 1; i >= 0; i--) {
     let e = enemies[i];
     let dist = e.x - (player.x + player.width);
-
     if (dist <= e.range && dist > -50) {
       e.state = "attack";
       e.attackTimer++;
@@ -271,7 +354,6 @@ function update() {
     player.baseAttackInterval - player.battleStats.agi * agiRed
   );
   player.attackTimer++;
-
   if (player.attackTimer > currentInterval) {
     let target = null;
     let minDist = 9999;
@@ -282,7 +364,6 @@ function update() {
         minDist = dist;
       }
     }
-
     if (target) {
       let dmg = player.battleStats.atk || 5;
       target.hp -= dmg;
@@ -291,27 +372,44 @@ function update() {
       setTimeout(() => {
         player.x -= 10;
       }, 100);
-
       let ey = canvas.height * target.yRatio;
       spawnDamageText(target.x, ey - 20, dmg, "#ffffff");
-
       if (target.hp <= 0) {
         let index = enemies.indexOf(target);
         if (index > -1) {
           enemies.splice(index, 1);
           gainExp(target.exp);
+
+          // ★追加: キルカウント加算処理
+          const dId = player.currentDungeonId;
+          if (!player.dungeonProgress[dId])
+            player.dungeonProgress[dId] = { killCount: 0, cleared: false };
+
+          if (!player.dungeonProgress[dId].cleared) {
+            player.dungeonProgress[dId].killCount++;
+            if (player.dungeonProgress[dId].killCount >= KILLS_TO_CLEAR) {
+              player.dungeonProgress[dId].cleared = true;
+              spawnDamageText(
+                canvas.width / 2,
+                canvas.height / 2,
+                "DUNGEON CLEAR!",
+                "#f1c40f"
+              );
+              initDungeonList(); // 解放状況を更新
+            } else {
+              initDungeonList(); // プログレスバーを更新
+            }
+          }
         }
       }
     }
   }
-
   for (let i = damageTexts.length - 1; i >= 0; i--) {
     let dt = damageTexts[i];
     dt.y += dt.vy;
     dt.life--;
     if (dt.life <= 0) damageTexts.splice(i, 1);
   }
-
   if (player.hp <= 0) {
     player.hp = player.maxHp;
     enemies = [];
@@ -319,12 +417,35 @@ function update() {
   }
 }
 
+// ★修正: 現在のダンジョンIDに対応する敵を出す
 function spawnEnemy() {
   let laneIdx = Math.floor(Math.random() * 3);
+
+  let currentDungeon = null;
+  if (masterData && masterData.dungeons) {
+    currentDungeon = masterData.dungeons.find(
+      (d) => Number(d.id) === player.currentDungeonId
+    );
+  }
+
+  let allowedEnemyIds = [];
+  if (currentDungeon && currentDungeon.enemy_ids) {
+    allowedEnemyIds = String(currentDungeon.enemy_ids)
+      .split(",")
+      .map((s) => Number(s));
+  } else if (masterData && masterData.enemies) {
+    allowedEnemyIds = masterData.enemies.map((e) => Number(e.id));
+  }
+
+  let targetId = null;
+  if (allowedEnemyIds.length > 0) {
+    targetId =
+      allowedEnemyIds[Math.floor(Math.random() * allowedEnemyIds.length)];
+  }
+
   let enemyData = null;
-  if (masterData && masterData.enemies && masterData.enemies.length > 0) {
-    const randIdx = Math.floor(Math.random() * masterData.enemies.length);
-    enemyData = masterData.enemies[randIdx];
+  if (targetId && masterData && masterData.enemies) {
+    enemyData = masterData.enemies.find((e) => Number(e.id) === targetId);
   }
   if (!enemyData)
     enemyData = {
@@ -380,6 +501,7 @@ function gainExp(amount) {
         const nr = masterData.exp_table.find((r) => Number(r.lv) === player.lv);
         if (nr) player.nextExp = Number(nr.next_exp);
       }
+      initDungeonList();
     } else {
       break;
     }
@@ -399,7 +521,6 @@ window.addStat = function (statName) {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
   ctx.strokeStyle = "#ccc";
   ctx.beginPath();
   lanes.forEach((y) => {
@@ -417,9 +538,9 @@ function draw() {
     let w = e.width || 30;
     let h = w;
     let img = getImage(e.image);
-    if (img && img.complete && img.naturalHeight !== 0) {
+    if (img && img.complete && img.naturalHeight !== 0)
       ctx.drawImage(img, e.x, y - h / 2, w, h);
-    } else {
+    else {
       ctx.fillStyle = e.color;
       ctx.fillRect(e.x, y - h / 2, w, h);
     }
