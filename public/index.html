@@ -1,156 +1,107 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browser Game Prototype</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="images/slime.png" />
-  </head>
-  <body>
-    <div id="game-container">
-      <div id="combat-area">
-        <canvas id="gameCanvas"></canvas>
-      </div>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/slime.png"> 
+</head>
+<body>
 
-      <div id="bottom-area">
-        <div id="menu-area">
-          <div
-            class="menu-item active"
-            onclick="switchScreen('status')"
-            id="menu-status"
-          >
-            ステータス
-          </div>
-          <div
-            class="menu-item"
-            onclick="switchScreen('dungeon')"
-            id="menu-dungeon"
-          >
-            ダンジョン
-          </div>
-          <div class="menu-item">装備</div>
-          <div class="menu-item">設定</div>
+    <div id="login-overlay">
+        <div class="login-box">
+            <h2 id="login-title">ログイン</h2>
+            <input type="email" id="email" placeholder="メールアドレス">
+            <input type="password" id="password" placeholder="パスワード">
+            <p id="login-error" class="error-msg"></p>
+            
+            <div id="btn-group-login">
+                <button onclick="doLogin()">ログイン</button>
+                <button class="secondary" onclick="toggleMode()">新規登録へ</button>
+            </div>
+
+            <div id="btn-group-register" class="hidden">
+                <button onclick="doRegister()" style="background-color:#2ecc71;">登録する</button>
+                <button class="secondary" onclick="toggleMode()">ログインへ戻る</button>
+            </div>
         </div>
-
-        <div id="details-area">
-          <div id="screen-status" class="screen-content">
-            <h2>ステータス</h2>
-
-            <div class="status-block header-stats">
-              <div class="status-row">
-                <span class="label">Lv:</span>
-                <span id="val-lv" class="val-big">1</span>
-              </div>
-              <div class="status-row">
-                <span class="label">HP:</span> <span id="val-hp">100</span> /
-                <span id="val-max-hp">100</span>
-                <div class="bar-container">
-                  <div
-                    id="bar-hp"
-                    class="bar-fill hp-bar"
-                    style="width: 100%"
-                  ></div>
-                </div>
-              </div>
-              <div class="status-row">
-                <span class="label">EXP:</span> <span id="val-exp">0</span> /
-                <span id="val-next-exp">100</span>
-                <div class="bar-container">
-                  <div
-                    id="bar-exp"
-                    class="bar-fill exp-bar"
-                    style="width: 0%"
-                  ></div>
-                </div>
-              </div>
-            </div>
-
-            <hr />
-
-            <div class="status-section">
-              <h3>
-                基礎ステータス (残りSP:
-                <span id="val-sp" class="highlight">0</span>)
-              </h3>
-              <div class="stats-grid base-stats">
-                <div class="stat-item">
-                  <span class="stat-name">STR</span>
-                  <button class="btn-plus" onclick="addStat('str')">+</button>
-                  <span id="val-str" class="stat-val">5</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-name">VIT</span>
-                  <button class="btn-plus" onclick="addStat('vit')">+</button>
-                  <span id="val-vit" class="stat-val">5</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-name">AGI</span>
-                  <button class="btn-plus" onclick="addStat('agi')">+</button>
-                  <span id="val-agi" class="stat-val">5</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-name">INT</span>
-                  <button class="btn-plus" onclick="addStat('int')">+</button>
-                  <span id="val-int" class="stat-val">5</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-name">DEX</span>
-                  <button class="btn-plus" onclick="addStat('dex')">+</button>
-                  <span id="val-dex" class="stat-val">5</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-name">LUK</span>
-                  <button class="btn-plus" onclick="addStat('luk')">+</button>
-                  <span id="val-luk" class="stat-val">5</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="status-section">
-              <h3>戦闘能力</h3>
-              <div class="stats-grid battle-stats">
-                <div class="stat-item-read">
-                  ATK: <span id="val-atk">0</span>
-                </div>
-                <div class="stat-item-read">
-                  MATK: <span id="val-matk">0</span>
-                </div>
-                <div class="stat-item-read">
-                  DEF: <span id="val-def">0</span>
-                </div>
-                <div class="stat-item-read">
-                  MDEF: <span id="val-mdef">0</span>
-                </div>
-                <div class="stat-item-read">
-                  HIT: <span id="val-hit">0</span>
-                </div>
-                <div class="stat-item-read">
-                  EVA: <span id="val-eva">0</span>
-                </div>
-                <div class="stat-item-read">
-                  CRI: <span id="val-cri">0</span>%
-                </div>
-                <div class="stat-item-read">
-                  RES: <span id="val-res">0</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="screen-dungeon" class="screen-content" style="display: none">
-            <h2>ダンジョン選択</h2>
-            <p>挑戦するダンジョンを選んでください（現在は自動戦闘中）</p>
-            <div class="dungeon-list">
-              <p style="text-align: center; padding: 20px; color: #666">
-                ダンジョンデータを読み込み中...
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <script src="js/game.js?v=dungeon1"></script>
-  </body>
+    <div id="game-container" style="display:none;">
+        
+        <div id="combat-area">
+            <canvas id="gameCanvas"></canvas>
+            </div>
+
+        <div id="bottom-area">
+            <div id="menu-area">
+                <div class="menu-item active" onclick="switchScreen('status')" id="menu-status">ステータス</div>
+                <div class="menu-item" onclick="switchScreen('dungeon')" id="menu-dungeon">ダンジョン</div>
+                <div class="menu-item">装備</div>
+                <div class="menu-item" onclick="doLogout()" style="margin-top:auto; background-color:#c0392b;">ログアウト</div>
+            </div>
+
+            <div id="details-area">
+                
+                <div id="screen-status" class="screen-content">
+                    <h2>ステータス <small style="font-size:12px;" id="user-email-display"></small></h2>
+                    
+                    <div class="status-block header-stats">
+                        <div class="status-row">
+                            <span class="label">Lv:</span> <span id="val-lv" class="val-big">1</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="label">HP:</span> <span id="val-hp">100</span> / <span id="val-max-hp">100</span>
+                            <div class="bar-container"><div id="bar-hp" class="bar-fill hp-bar" style="width: 100%;"></div></div>
+                        </div>
+                        <div class="status-row">
+                            <span class="label">EXP:</span> <span id="val-exp">0</span> / <span id="val-next-exp">100</span>
+                            <div class="bar-container"><div id="bar-exp" class="bar-fill exp-bar" style="width: 0%;"></div></div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="status-section">
+                        <h3>基礎ステータス (残りSP: <span id="val-sp" class="highlight">0</span>)</h3>
+                        <div class="stats-grid base-stats">
+                            <div class="stat-item"><span class="stat-name">STR</span> <span id="val-str" class="stat-val">5</span> <button class="btn-plus" onclick="addStat('str')">+</button></div>
+                            <div class="stat-item"><span class="stat-name">VIT</span> <span id="val-vit" class="stat-val">5</span> <button class="btn-plus" onclick="addStat('vit')">+</button></div>
+                            <div class="stat-item"><span class="stat-name">AGI</span> <span id="val-agi" class="stat-val">5</span> <button class="btn-plus" onclick="addStat('agi')">+</button></div>
+                            <div class="stat-item"><span class="stat-name">INT</span> <span id="val-int" class="stat-val">5</span> <button class="btn-plus" onclick="addStat('int')">+</button></div>
+                            <div class="stat-item"><span class="stat-name">DEX</span> <span id="val-dex" class="stat-val">5</span> <button class="btn-plus" onclick="addStat('dex')">+</button></div>
+                            <div class="stat-item"><span class="stat-name">LUK</span> <span id="val-luk" class="stat-val">5</span> <button class="btn-plus" onclick="addStat('luk')">+</button></div>
+                        </div>
+                    </div>
+
+                    <div class="status-section">
+                        <h3>戦闘能力</h3>
+                        <div class="stats-grid battle-stats">
+                            <div class="stat-item-read">ATK: <span id="val-atk">0</span></div>
+                            <div class="stat-item-read">MATK: <span id="val-matk">0</span></div>
+                            <div class="stat-item-read">DEF: <span id="val-def">0</span></div>
+                            <div class="stat-item-read">MDEF: <span id="val-mdef">0</span></div>
+                            <div class="stat-item-read">HIT: <span id="val-hit">0</span></div>
+                            <div class="stat-item-read">EVA: <span id="val-eva">0</span></div>
+                            <div class="stat-item-read">CRI: <span id="val-cri">0</span>%</div>
+                            <div class="stat-item-read">RES: <span id="val-res">0</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="screen-dungeon" class="screen-content" style="display: none;">
+                    <h2>ダンジョン選択</h2>
+                    <p>挑戦するダンジョンを選んでください（現在は自動戦闘中）</p>
+                    <div class="dungeon-list">
+                        <p style="text-align:center; padding:20px; color:#666;">ダンジョンデータを読み込み中...</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js?v=full_restore"></script>
+</body>
 </html>

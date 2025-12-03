@@ -3,4997 +3,4997 @@
     "exp_table": [
         {
             "lv": 1,
-            " next_exp ": "  10 ",
+            "next_exp": 10,
             "reward_sp": 3
         },
         {
             "lv": 2,
-            " next_exp ": "  50 ",
+            "next_exp": 50,
             "reward_sp": 3
         },
         {
             "lv": 3,
-            " next_exp ": "  100 ",
+            "next_exp": 100,
             "reward_sp": 3
         },
         {
             "lv": 4,
-            " next_exp ": "  250 ",
+            "next_exp": 250,
             "reward_sp": 3
         },
         {
             "lv": 5,
-            " next_exp ": "  550 ",
+            "next_exp": 550,
             "reward_sp": 3
         },
         {
             "lv": 6,
-            " next_exp ": "  1,050 ",
+            "next_exp": 1050,
             "reward_sp": 3
         },
         {
             "lv": 7,
-            " next_exp ": "  1,800 ",
+            "next_exp": 1800,
             "reward_sp": 3
         },
         {
             "lv": 8,
-            " next_exp ": "  2,850 ",
+            "next_exp": 2850,
             "reward_sp": 3
         },
         {
             "lv": 9,
-            " next_exp ": "  4,250 ",
+            "next_exp": 4250,
             "reward_sp": 3
         },
         {
             "lv": 10,
-            " next_exp ": "  6,050 ",
+            "next_exp": 6050,
             "reward_sp": 3
         },
         {
             "lv": 11,
-            " next_exp ": "  8,300 ",
+            "next_exp": 8300,
             "reward_sp": 4
         },
         {
             "lv": 12,
-            " next_exp ": "  11,050 ",
+            "next_exp": 11050,
             "reward_sp": 4
         },
         {
             "lv": 13,
-            " next_exp ": "  14,350 ",
+            "next_exp": 14350,
             "reward_sp": 4
         },
         {
             "lv": 14,
-            " next_exp ": "  18,250 ",
+            "next_exp": 18250,
             "reward_sp": 4
         },
         {
             "lv": 15,
-            " next_exp ": "  22,800 ",
+            "next_exp": 22800,
             "reward_sp": 4
         },
         {
             "lv": 16,
-            " next_exp ": "  28,050 ",
+            "next_exp": 28050,
             "reward_sp": 4
         },
         {
             "lv": 17,
-            " next_exp ": "  34,050 ",
+            "next_exp": 34050,
             "reward_sp": 4
         },
         {
             "lv": 18,
-            " next_exp ": "  40,850 ",
+            "next_exp": 40850,
             "reward_sp": 4
         },
         {
             "lv": 19,
-            " next_exp ": "  48,500 ",
+            "next_exp": 48500,
             "reward_sp": 4
         },
         {
             "lv": 20,
-            " next_exp ": "  57,050 ",
+            "next_exp": 57050,
             "reward_sp": 5
         },
         {
             "lv": 21,
-            " next_exp ": "  66,550 ",
+            "next_exp": 66550,
             "reward_sp": 5
         },
         {
             "lv": 22,
-            " next_exp ": "  77,050 ",
+            "next_exp": 77050,
             "reward_sp": 5
         },
         {
             "lv": 23,
-            " next_exp ": "  88,650 ",
+            "next_exp": 88650,
             "reward_sp": 5
         },
         {
             "lv": 24,
-            " next_exp ": "  101,450 ",
+            "next_exp": 101450,
             "reward_sp": 5
         },
         {
             "lv": 25,
-            " next_exp ": "  115,550 ",
+            "next_exp": 115550,
             "reward_sp": 5
         },
         {
             "lv": 26,
-            " next_exp ": "  131,050 ",
+            "next_exp": 131050,
             "reward_sp": 5
         },
         {
             "lv": 27,
-            " next_exp ": "  148,050 ",
+            "next_exp": 148050,
             "reward_sp": 5
         },
         {
             "lv": 28,
-            " next_exp ": "  166,650 ",
+            "next_exp": 166650,
             "reward_sp": 5
         },
         {
             "lv": 29,
-            " next_exp ": "  186,950 ",
+            "next_exp": 186950,
             "reward_sp": 6
         },
         {
             "lv": 30,
-            " next_exp ": "  209,050 ",
+            "next_exp": 209050,
             "reward_sp": 6
         },
         {
             "lv": 31,
-            " next_exp ": "  233,050 ",
+            "next_exp": 233050,
             "reward_sp": 6
         },
         {
             "lv": 32,
-            " next_exp ": "  259,050 ",
+            "next_exp": 259050,
             "reward_sp": 6
         },
         {
             "lv": 33,
-            " next_exp ": "  287,150 ",
+            "next_exp": 287150,
             "reward_sp": 6
         },
         {
             "lv": 34,
-            " next_exp ": "  317,450 ",
+            "next_exp": 317450,
             "reward_sp": 6
         },
         {
             "lv": 35,
-            " next_exp ": "  350,050 ",
+            "next_exp": 350050,
             "reward_sp": 6
         },
         {
             "lv": 36,
-            " next_exp ": "  385,050 ",
+            "next_exp": 385050,
             "reward_sp": 6
         },
         {
             "lv": 37,
-            " next_exp ": "  422,550 ",
+            "next_exp": 422550,
             "reward_sp": 6
         },
         {
             "lv": 38,
-            " next_exp ": "  462,650 ",
+            "next_exp": 462650,
             "reward_sp": 7
         },
         {
             "lv": 39,
-            " next_exp ": "  505,450 ",
+            "next_exp": 505450,
             "reward_sp": 7
         },
         {
             "lv": 40,
-            " next_exp ": "  551,050 ",
+            "next_exp": 551050,
             "reward_sp": 7
         },
         {
             "lv": 41,
-            " next_exp ": "  599,550 ",
+            "next_exp": 599550,
             "reward_sp": 7
         },
         {
             "lv": 42,
-            " next_exp ": "  651,050 ",
+            "next_exp": 651050,
             "reward_sp": 7
         },
         {
             "lv": 43,
-            " next_exp ": "  705,650 ",
+            "next_exp": 705650,
             "reward_sp": 7
         },
         {
             "lv": 44,
-            " next_exp ": "  763,450 ",
+            "next_exp": 763450,
             "reward_sp": 7
         },
         {
             "lv": 45,
-            " next_exp ": "  824,550 ",
+            "next_exp": 824550,
             "reward_sp": 7
         },
         {
             "lv": 46,
-            " next_exp ": "  889,050 ",
+            "next_exp": 889050,
             "reward_sp": 7
         },
         {
             "lv": 47,
-            " next_exp ": "  957,050 ",
+            "next_exp": 957050,
             "reward_sp": 8
         },
         {
             "lv": 48,
-            " next_exp ": "  1,028,650 ",
+            "next_exp": 1028650,
             "reward_sp": 8
         },
         {
             "lv": 49,
-            " next_exp ": "  1,103,950 ",
+            "next_exp": 1103950,
             "reward_sp": 8
         },
         {
             "lv": 50,
-            " next_exp ": "  1,183,050 ",
+            "next_exp": 1183050,
             "reward_sp": 8
         },
         {
             "lv": 51,
-            " next_exp ": "  1,266,050 ",
+            "next_exp": 1266050,
             "reward_sp": 8
         },
         {
             "lv": 52,
-            " next_exp ": "  1,353,050 ",
+            "next_exp": 1353050,
             "reward_sp": 8
         },
         {
             "lv": 53,
-            " next_exp ": "  1,444,150 ",
+            "next_exp": 1444150,
             "reward_sp": 8
         },
         {
             "lv": 54,
-            " next_exp ": "  1,539,450 ",
+            "next_exp": 1539450,
             "reward_sp": 8
         },
         {
             "lv": 55,
-            " next_exp ": "  1,639,050 ",
+            "next_exp": 1639050,
             "reward_sp": 8
         },
         {
             "lv": 56,
-            " next_exp ": "  1,743,050 ",
+            "next_exp": 1743050,
             "reward_sp": 9
         },
         {
             "lv": 57,
-            " next_exp ": "  1,851,550 ",
+            "next_exp": 1851550,
             "reward_sp": 9
         },
         {
             "lv": 58,
-            " next_exp ": "  1,964,650 ",
+            "next_exp": 1964650,
             "reward_sp": 9
         },
         {
             "lv": 59,
-            " next_exp ": "  2,082,450 ",
+            "next_exp": 2082450,
             "reward_sp": 9
         },
         {
             "lv": 60,
-            " next_exp ": "  2,205,050 ",
+            "next_exp": 2205050,
             "reward_sp": 9
         },
         {
             "lv": 61,
-            " next_exp ": "  2,332,550 ",
+            "next_exp": 2332550,
             "reward_sp": 9
         },
         {
             "lv": 62,
-            " next_exp ": "  2,465,050 ",
+            "next_exp": 2465050,
             "reward_sp": 9
         },
         {
             "lv": 63,
-            " next_exp ": "  2,603,550 ",
+            "next_exp": 2603550,
             "reward_sp": 9
         },
         {
             "lv": 64,
-            " next_exp ": "  2,749,050 ",
+            "next_exp": 2749050,
             "reward_sp": 9
         },
         {
             "lv": 65,
-            " next_exp ": "  2,902,550 ",
+            "next_exp": 2902550,
             "reward_sp": 10
         },
         {
             "lv": 66,
-            " next_exp ": "  3,065,050 ",
+            "next_exp": 3065050,
             "reward_sp": 10
         },
         {
             "lv": 67,
-            " next_exp ": "  3,237,550 ",
+            "next_exp": 3237550,
             "reward_sp": 10
         },
         {
             "lv": 68,
-            " next_exp ": "  3,421,050 ",
+            "next_exp": 3421050,
             "reward_sp": 10
         },
         {
             "lv": 69,
-            " next_exp ": "  3,616,550 ",
+            "next_exp": 3616550,
             "reward_sp": 10
         },
         {
             "lv": 70,
-            " next_exp ": "  3,825,050 ",
+            "next_exp": 3825050,
             "reward_sp": 10
         },
         {
             "lv": 71,
-            " next_exp ": "  4,047,550 ",
+            "next_exp": 4047550,
             "reward_sp": 10
         },
         {
             "lv": 72,
-            " next_exp ": "  4,285,050 ",
+            "next_exp": 4285050,
             "reward_sp": 10
         },
         {
             "lv": 73,
-            " next_exp ": "  4,538,550 ",
+            "next_exp": 4538550,
             "reward_sp": 10
         },
         {
             "lv": 74,
-            " next_exp ": "  4,809,050 ",
+            "next_exp": 4809050,
             "reward_sp": 11
         },
         {
             "lv": 75,
-            " next_exp ": "  5,097,550 ",
+            "next_exp": 5097550,
             "reward_sp": 11
         },
         {
             "lv": 76,
-            " next_exp ": "  5,405,050 ",
+            "next_exp": 5405050,
             "reward_sp": 11
         },
         {
             "lv": 77,
-            " next_exp ": "  5,732,550 ",
+            "next_exp": 5732550,
             "reward_sp": 11
         },
         {
             "lv": 78,
-            " next_exp ": "  6,081,050 ",
+            "next_exp": 6081050,
             "reward_sp": 11
         },
         {
             "lv": 79,
-            " next_exp ": "  6,451,550 ",
+            "next_exp": 6451550,
             "reward_sp": 11
         },
         {
             "lv": 80,
-            " next_exp ": "  6,845,050 ",
+            "next_exp": 6845050,
             "reward_sp": 11
         },
         {
             "lv": 81,
-            " next_exp ": "  7,262,550 ",
+            "next_exp": 7262550,
             "reward_sp": 11
         },
         {
             "lv": 82,
-            " next_exp ": "  7,705,050 ",
+            "next_exp": 7705050,
             "reward_sp": 11
         },
         {
             "lv": 83,
-            " next_exp ": "  8,173,550 ",
+            "next_exp": 8173550,
             "reward_sp": 12
         },
         {
             "lv": 84,
-            " next_exp ": "  8,669,050 ",
+            "next_exp": 8669050,
             "reward_sp": 12
         },
         {
             "lv": 85,
-            " next_exp ": "  9,192,550 ",
+            "next_exp": 9192550,
             "reward_sp": 12
         },
         {
             "lv": 86,
-            " next_exp ": "  9,745,050 ",
+            "next_exp": 9745050,
             "reward_sp": 12
         },
         {
             "lv": 87,
-            " next_exp ": "  10,327,550 ",
+            "next_exp": 10327550,
             "reward_sp": 12
         },
         {
             "lv": 88,
-            " next_exp ": "  10,941,050 ",
+            "next_exp": 10941050,
             "reward_sp": 12
         },
         {
             "lv": 89,
-            " next_exp ": "  11,586,550 ",
+            "next_exp": 11586550,
             "reward_sp": 12
         },
         {
             "lv": 90,
-            " next_exp ": "  12,265,050 ",
+            "next_exp": 12265050,
             "reward_sp": 12
         },
         {
             "lv": 91,
-            " next_exp ": "  12,977,550 ",
+            "next_exp": 12977550,
             "reward_sp": 12
         },
         {
             "lv": 92,
-            " next_exp ": "  13,725,050 ",
+            "next_exp": 13725050,
             "reward_sp": 13
         },
         {
             "lv": 93,
-            " next_exp ": "  14,508,550 ",
+            "next_exp": 14508550,
             "reward_sp": 13
         },
         {
             "lv": 94,
-            " next_exp ": "  15,329,050 ",
+            "next_exp": 15329050,
             "reward_sp": 13
         },
         {
             "lv": 95,
-            " next_exp ": "  16,187,550 ",
+            "next_exp": 16187550,
             "reward_sp": 13
         },
         {
             "lv": 96,
-            " next_exp ": "  17,085,050 ",
+            "next_exp": 17085050,
             "reward_sp": 13
         },
         {
             "lv": 97,
-            " next_exp ": "  18,022,550 ",
+            "next_exp": 18022550,
             "reward_sp": 13
         },
         {
             "lv": 98,
-            " next_exp ": "  19,001,050 ",
+            "next_exp": 19001050,
             "reward_sp": 13
         },
         {
             "lv": 99,
-            " next_exp ": "  20,021,550 ",
+            "next_exp": 20021550,
             "reward_sp": 13
         },
         {
             "lv": 100,
-            " next_exp ": "  21,085,050 ",
+            "next_exp": 21085050,
             "reward_sp": 13
         },
         {
             "lv": 101,
-            " next_exp ": "  22,192,550 ",
+            "next_exp": 22192550,
             "reward_sp": 14
         },
         {
             "lv": 102,
-            " next_exp ": "  23,345,050 ",
+            "next_exp": 23345050,
             "reward_sp": 14
         },
         {
             "lv": 103,
-            " next_exp ": "  24,543,550 ",
+            "next_exp": 24543550,
             "reward_sp": 14
         },
         {
             "lv": 104,
-            " next_exp ": "  25,789,050 ",
+            "next_exp": 25789050,
             "reward_sp": 14
         },
         {
             "lv": 105,
-            " next_exp ": "  27,082,550 ",
+            "next_exp": 27082550,
             "reward_sp": 14
         },
         {
             "lv": 106,
-            " next_exp ": "  28,425,050 ",
+            "next_exp": 28425050,
             "reward_sp": 14
         },
         {
             "lv": 107,
-            " next_exp ": "  29,817,550 ",
+            "next_exp": 29817550,
             "reward_sp": 14
         },
         {
             "lv": 108,
-            " next_exp ": "  31,265,050 ",
+            "next_exp": 31265050,
             "reward_sp": 14
         },
         {
             "lv": 109,
-            " next_exp ": "  32,772,550 ",
+            "next_exp": 32772550,
             "reward_sp": 14
         },
         {
             "lv": 110,
-            " next_exp ": "  34,345,050 ",
+            "next_exp": 34345050,
             "reward_sp": 15
         },
         {
             "lv": 111,
-            " next_exp ": "  35,987,550 ",
+            "next_exp": 35987550,
             "reward_sp": 15
         },
         {
             "lv": 112,
-            " next_exp ": "  37,705,050 ",
+            "next_exp": 37705050,
             "reward_sp": 15
         },
         {
             "lv": 113,
-            " next_exp ": "  39,502,550 ",
+            "next_exp": 39502550,
             "reward_sp": 15
         },
         {
             "lv": 114,
-            " next_exp ": "  41,385,050 ",
+            "next_exp": 41385050,
             "reward_sp": 15
         },
         {
             "lv": 115,
-            " next_exp ": "  43,357,550 ",
+            "next_exp": 43357550,
             "reward_sp": 15
         },
         {
             "lv": 116,
-            " next_exp ": "  45,425,050 ",
+            "next_exp": 45425050,
             "reward_sp": 15
         },
         {
             "lv": 117,
-            " next_exp ": "  47,592,550 ",
+            "next_exp": 47592550,
             "reward_sp": 15
         },
         {
             "lv": 118,
-            " next_exp ": "  49,865,050 ",
+            "next_exp": 49865050,
             "reward_sp": 15
         },
         {
             "lv": 119,
-            " next_exp ": "  52,247,550 ",
+            "next_exp": 52247550,
             "reward_sp": 16
         },
         {
             "lv": 120,
-            " next_exp ": "  54,745,050 ",
+            "next_exp": 54745050,
             "reward_sp": 16
         },
         {
             "lv": 121,
-            " next_exp ": "  57,362,550 ",
+            "next_exp": 57362550,
             "reward_sp": 16
         },
         {
             "lv": 122,
-            " next_exp ": "  60,105,050 ",
+            "next_exp": 60105050,
             "reward_sp": 16
         },
         {
             "lv": 123,
-            " next_exp ": "  62,977,550 ",
+            "next_exp": 62977550,
             "reward_sp": 16
         },
         {
             "lv": 124,
-            " next_exp ": "  65,985,050 ",
+            "next_exp": 65985050,
             "reward_sp": 16
         },
         {
             "lv": 125,
-            " next_exp ": "  69,132,550 ",
+            "next_exp": 69132550,
             "reward_sp": 16
         },
         {
             "lv": 126,
-            " next_exp ": "  72,425,050 ",
+            "next_exp": 72425050,
             "reward_sp": 16
         },
         {
             "lv": 127,
-            " next_exp ": "  75,867,550 ",
+            "next_exp": 75867550,
             "reward_sp": 16
         },
         {
             "lv": 128,
-            " next_exp ": "  79,465,050 ",
+            "next_exp": 79465050,
             "reward_sp": 17
         },
         {
             "lv": 129,
-            " next_exp ": "  83,222,550 ",
+            "next_exp": 83222550,
             "reward_sp": 17
         },
         {
             "lv": 130,
-            " next_exp ": "  87,145,050 ",
+            "next_exp": 87145050,
             "reward_sp": 17
         },
         {
             "lv": 131,
-            " next_exp ": "  91,237,550 ",
+            "next_exp": 91237550,
             "reward_sp": 17
         },
         {
             "lv": 132,
-            " next_exp ": "  95,505,050 ",
+            "next_exp": 95505050,
             "reward_sp": 17
         },
         {
             "lv": 133,
-            " next_exp ": "  99,952,550 ",
+            "next_exp": 99952550,
             "reward_sp": 17
         },
         {
             "lv": 134,
-            " next_exp ": "  104,585,050 ",
+            "next_exp": 104585050,
             "reward_sp": 17
         },
         {
             "lv": 135,
-            " next_exp ": "  109,407,550 ",
+            "next_exp": 109407550,
             "reward_sp": 17
         },
         {
             "lv": 136,
-            " next_exp ": "  114,425,050 ",
+            "next_exp": 114425050,
             "reward_sp": 17
         },
         {
             "lv": 137,
-            " next_exp ": "  119,642,550 ",
+            "next_exp": 119642550,
             "reward_sp": 18
         },
         {
             "lv": 138,
-            " next_exp ": "  125,065,050 ",
+            "next_exp": 125065050,
             "reward_sp": 18
         },
         {
             "lv": 139,
-            " next_exp ": "  130,697,550 ",
+            "next_exp": 130697550,
             "reward_sp": 18
         },
         {
             "lv": 140,
-            " next_exp ": "  136,545,050 ",
+            "next_exp": 136545050,
             "reward_sp": 18
         },
         {
             "lv": 141,
-            " next_exp ": "  142,612,550 ",
+            "next_exp": 142612550,
             "reward_sp": 18
         },
         {
             "lv": 142,
-            " next_exp ": "  148,905,050 ",
+            "next_exp": 148905050,
             "reward_sp": 18
         },
         {
             "lv": 143,
-            " next_exp ": "  155,427,550 ",
+            "next_exp": 155427550,
             "reward_sp": 18
         },
         {
             "lv": 144,
-            " next_exp ": "  162,185,050 ",
+            "next_exp": 162185050,
             "reward_sp": 18
         },
         {
             "lv": 145,
-            " next_exp ": "  169,182,550 ",
+            "next_exp": 169182550,
             "reward_sp": 18
         },
         {
             "lv": 146,
-            " next_exp ": "  176,425,050 ",
+            "next_exp": 176425050,
             "reward_sp": 19
         },
         {
             "lv": 147,
-            " next_exp ": "  183,917,550 ",
+            "next_exp": 183917550,
             "reward_sp": 19
         },
         {
             "lv": 148,
-            " next_exp ": "  191,665,050 ",
+            "next_exp": 191665050,
             "reward_sp": 19
         },
         {
             "lv": 149,
-            " next_exp ": "  199,672,550 ",
+            "next_exp": 199672550,
             "reward_sp": 19
         },
         {
             "lv": 150,
-            " next_exp ": "  207,945,050 ",
+            "next_exp": 207945050,
             "reward_sp": 19
         },
         {
             "lv": 151,
-            " next_exp ": "  216,487,550 ",
+            "next_exp": 216487550,
             "reward_sp": 19
         },
         {
             "lv": 152,
-            " next_exp ": "  225,305,050 ",
+            "next_exp": 225305050,
             "reward_sp": 19
         },
         {
             "lv": 153,
-            " next_exp ": "  234,402,550 ",
+            "next_exp": 234402550,
             "reward_sp": 19
         },
         {
             "lv": 154,
-            " next_exp ": "  243,785,050 ",
+            "next_exp": 243785050,
             "reward_sp": 19
         },
         {
             "lv": 155,
-            " next_exp ": "  253,457,550 ",
+            "next_exp": 253457550,
             "reward_sp": 20
         },
         {
             "lv": 156,
-            " next_exp ": "  263,425,050 ",
+            "next_exp": 263425050,
             "reward_sp": 20
         },
         {
             "lv": 157,
-            " next_exp ": "  273,692,550 ",
+            "next_exp": 273692550,
             "reward_sp": 20
         },
         {
             "lv": 158,
-            " next_exp ": "  284,265,050 ",
+            "next_exp": 284265050,
             "reward_sp": 20
         },
         {
             "lv": 159,
-            " next_exp ": "  295,147,550 ",
+            "next_exp": 295147550,
             "reward_sp": 20
         },
         {
             "lv": 160,
-            " next_exp ": "  306,345,050 ",
+            "next_exp": 306345050,
             "reward_sp": 20
         },
         {
             "lv": 161,
-            " next_exp ": "  317,862,550 ",
+            "next_exp": 317862550,
             "reward_sp": 20
         },
         {
             "lv": 162,
-            " next_exp ": "  329,705,050 ",
+            "next_exp": 329705050,
             "reward_sp": 20
         },
         {
             "lv": 163,
-            " next_exp ": "  341,877,550 ",
+            "next_exp": 341877550,
             "reward_sp": 20
         },
         {
             "lv": 164,
-            " next_exp ": "  354,385,050 ",
+            "next_exp": 354385050,
             "reward_sp": 21
         },
         {
             "lv": 165,
-            " next_exp ": "  367,232,550 ",
+            "next_exp": 367232550,
             "reward_sp": 21
         },
         {
             "lv": 166,
-            " next_exp ": "  380,425,050 ",
+            "next_exp": 380425050,
             "reward_sp": 21
         },
         {
             "lv": 167,
-            " next_exp ": "  393,967,550 ",
+            "next_exp": 393967550,
             "reward_sp": 21
         },
         {
             "lv": 168,
-            " next_exp ": "  407,865,050 ",
+            "next_exp": 407865050,
             "reward_sp": 21
         },
         {
             "lv": 169,
-            " next_exp ": "  422,122,550 ",
+            "next_exp": 422122550,
             "reward_sp": 21
         },
         {
             "lv": 170,
-            " next_exp ": "  436,745,050 ",
+            "next_exp": 436745050,
             "reward_sp": 21
         },
         {
             "lv": 171,
-            " next_exp ": "  451,737,550 ",
+            "next_exp": 451737550,
             "reward_sp": 21
         },
         {
             "lv": 172,
-            " next_exp ": "  467,105,050 ",
+            "next_exp": 467105050,
             "reward_sp": 21
         },
         {
             "lv": 173,
-            " next_exp ": "  482,852,550 ",
+            "next_exp": 482852550,
             "reward_sp": 22
         },
         {
             "lv": 174,
-            " next_exp ": "  498,985,050 ",
+            "next_exp": 498985050,
             "reward_sp": 22
         },
         {
             "lv": 175,
-            " next_exp ": "  515,507,550 ",
+            "next_exp": 515507550,
             "reward_sp": 22
         },
         {
             "lv": 176,
-            " next_exp ": "  532,425,050 ",
+            "next_exp": 532425050,
             "reward_sp": 22
         },
         {
             "lv": 177,
-            " next_exp ": "  549,742,550 ",
+            "next_exp": 549742550,
             "reward_sp": 22
         },
         {
             "lv": 178,
-            " next_exp ": "  567,465,050 ",
+            "next_exp": 567465050,
             "reward_sp": 22
         },
         {
             "lv": 179,
-            " next_exp ": "  585,597,550 ",
+            "next_exp": 585597550,
             "reward_sp": 22
         },
         {
             "lv": 180,
-            " next_exp ": "  604,145,050 ",
+            "next_exp": 604145050,
             "reward_sp": 22
         },
         {
             "lv": 181,
-            " next_exp ": "  623,112,550 ",
+            "next_exp": 623112550,
             "reward_sp": 22
         },
         {
             "lv": 182,
-            " next_exp ": "  642,505,050 ",
+            "next_exp": 642505050,
             "reward_sp": 23
         },
         {
             "lv": 183,
-            " next_exp ": "  662,327,550 ",
+            "next_exp": 662327550,
             "reward_sp": 23
         },
         {
             "lv": 184,
-            " next_exp ": "  682,585,050 ",
+            "next_exp": 682585050,
             "reward_sp": 23
         },
         {
             "lv": 185,
-            " next_exp ": "  703,282,550 ",
+            "next_exp": 703282550,
             "reward_sp": 23
         },
         {
             "lv": 186,
-            " next_exp ": "  724,425,050 ",
+            "next_exp": 724425050,
             "reward_sp": 23
         },
         {
             "lv": 187,
-            " next_exp ": "  746,017,550 ",
+            "next_exp": 746017550,
             "reward_sp": 23
         },
         {
             "lv": 188,
-            " next_exp ": "  768,065,050 ",
+            "next_exp": 768065050,
             "reward_sp": 23
         },
         {
             "lv": 189,
-            " next_exp ": "  790,572,550 ",
+            "next_exp": 790572550,
             "reward_sp": 23
         },
         {
             "lv": 190,
-            " next_exp ": "  813,545,050 ",
+            "next_exp": 813545050,
             "reward_sp": 23
         },
         {
             "lv": 191,
-            " next_exp ": "  836,987,550 ",
+            "next_exp": 836987550,
             "reward_sp": 24
         },
         {
             "lv": 192,
-            " next_exp ": "  860,905,050 ",
+            "next_exp": 860905050,
             "reward_sp": 24
         },
         {
             "lv": 193,
-            " next_exp ": "  885,302,550 ",
+            "next_exp": 885302550,
             "reward_sp": 24
         },
         {
             "lv": 194,
-            " next_exp ": "  910,185,050 ",
+            "next_exp": 910185050,
             "reward_sp": 24
         },
         {
             "lv": 195,
-            " next_exp ": "  935,557,550 ",
+            "next_exp": 935557550,
             "reward_sp": 24
         },
         {
             "lv": 196,
-            " next_exp ": "  961,425,050 ",
+            "next_exp": 961425050,
             "reward_sp": 24
         },
         {
             "lv": 197,
-            " next_exp ": "  987,792,550 ",
+            "next_exp": 987792550,
             "reward_sp": 24
         },
         {
             "lv": 198,
-            " next_exp ": "  1,014,670,050 ",
+            "next_exp": 1014670050,
             "reward_sp": 24
         },
         {
             "lv": 199,
-            " next_exp ": "  1,042,067,550 ",
+            "next_exp": 1042067550,
             "reward_sp": 24
         },
         {
             "lv": 200,
-            " next_exp ": "  1,069,995,050 ",
+            "next_exp": 1069995050,
             "reward_sp": 25
         },
         {
             "lv": 201,
-            " next_exp ": "  1,098,462,550 ",
+            "next_exp": 1098462550,
             "reward_sp": 25
         },
         {
             "lv": 202,
-            " next_exp ": "  1,127,480,050 ",
+            "next_exp": 1127480050,
             "reward_sp": 25
         },
         {
             "lv": 203,
-            " next_exp ": "  1,157,057,550 ",
+            "next_exp": 1157057550,
             "reward_sp": 25
         },
         {
             "lv": 204,
-            " next_exp ": "  1,187,205,050 ",
+            "next_exp": 1187205050,
             "reward_sp": 25
         },
         {
             "lv": 205,
-            " next_exp ": "  1,217,932,550 ",
+            "next_exp": 1217932550,
             "reward_sp": 25
         },
         {
             "lv": 206,
-            " next_exp ": "  1,249,250,050 ",
+            "next_exp": 1249250050,
             "reward_sp": 25
         },
         {
             "lv": 207,
-            " next_exp ": "  1,281,167,550 ",
+            "next_exp": 1281167550,
             "reward_sp": 25
         },
         {
             "lv": 208,
-            " next_exp ": "  1,313,695,050 ",
+            "next_exp": 1313695050,
             "reward_sp": 25
         },
         {
             "lv": 209,
-            " next_exp ": "  1,346,842,550 ",
+            "next_exp": 1346842550,
             "reward_sp": 26
         },
         {
             "lv": 210,
-            " next_exp ": "  1,380,620,050 ",
+            "next_exp": 1380620050,
             "reward_sp": 26
         },
         {
             "lv": 211,
-            " next_exp ": "  1,415,037,550 ",
+            "next_exp": 1415037550,
             "reward_sp": 26
         },
         {
             "lv": 212,
-            " next_exp ": "  1,450,105,050 ",
+            "next_exp": 1450105050,
             "reward_sp": 26
         },
         {
             "lv": 213,
-            " next_exp ": "  1,485,832,550 ",
+            "next_exp": 1485832550,
             "reward_sp": 26
         },
         {
             "lv": 214,
-            " next_exp ": "  1,522,230,050 ",
+            "next_exp": 1522230050,
             "reward_sp": 26
         },
         {
             "lv": 215,
-            " next_exp ": "  1,559,307,550 ",
+            "next_exp": 1559307550,
             "reward_sp": 26
         },
         {
             "lv": 216,
-            " next_exp ": "  1,597,075,050 ",
+            "next_exp": 1597075050,
             "reward_sp": 26
         },
         {
             "lv": 217,
-            " next_exp ": "  1,635,542,550 ",
+            "next_exp": 1635542550,
             "reward_sp": 26
         },
         {
             "lv": 218,
-            " next_exp ": "  1,674,720,050 ",
+            "next_exp": 1674720050,
             "reward_sp": 27
         },
         {
             "lv": 219,
-            " next_exp ": "  1,714,617,550 ",
+            "next_exp": 1714617550,
             "reward_sp": 27
         },
         {
             "lv": 220,
-            " next_exp ": "  1,755,245,050 ",
+            "next_exp": 1755245050,
             "reward_sp": 27
         },
         {
             "lv": 221,
-            " next_exp ": "  1,796,612,550 ",
+            "next_exp": 1796612550,
             "reward_sp": 27
         },
         {
             "lv": 222,
-            " next_exp ": "  1,838,730,050 ",
+            "next_exp": 1838730050,
             "reward_sp": 27
         },
         {
             "lv": 223,
-            " next_exp ": "  1,881,607,550 ",
+            "next_exp": 1881607550,
             "reward_sp": 27
         },
         {
             "lv": 224,
-            " next_exp ": "  1,925,255,050 ",
+            "next_exp": 1925255050,
             "reward_sp": 27
         },
         {
             "lv": 225,
-            " next_exp ": "  1,969,682,550 ",
+            "next_exp": 1969682550,
             "reward_sp": 27
         },
         {
             "lv": 226,
-            " next_exp ": "  2,014,900,050 ",
+            "next_exp": 2014900050,
             "reward_sp": 27
         },
         {
             "lv": 227,
-            " next_exp ": "  2,060,917,550 ",
+            "next_exp": 2060917550,
             "reward_sp": 28
         },
         {
             "lv": 228,
-            " next_exp ": "  2,107,745,050 ",
+            "next_exp": 2107745050,
             "reward_sp": 28
         },
         {
             "lv": 229,
-            " next_exp ": "  2,155,392,550 ",
+            "next_exp": 2155392550,
             "reward_sp": 28
         },
         {
             "lv": 230,
-            " next_exp ": "  2,203,870,050 ",
+            "next_exp": 2203870050,
             "reward_sp": 28
         },
         {
             "lv": 231,
-            " next_exp ": "  2,253,187,550 ",
+            "next_exp": 2253187550,
             "reward_sp": 28
         },
         {
             "lv": 232,
-            " next_exp ": "  2,303,355,050 ",
+            "next_exp": 2303355050,
             "reward_sp": 28
         },
         {
             "lv": 233,
-            " next_exp ": "  2,354,382,550 ",
+            "next_exp": 2354382550,
             "reward_sp": 28
         },
         {
             "lv": 234,
-            " next_exp ": "  2,406,280,050 ",
+            "next_exp": 2406280050,
             "reward_sp": 28
         },
         {
             "lv": 235,
-            " next_exp ": "  2,459,057,550 ",
+            "next_exp": 2459057550,
             "reward_sp": 28
         },
         {
             "lv": 236,
-            " next_exp ": "  2,512,725,050 ",
+            "next_exp": 2512725050,
             "reward_sp": 29
         },
         {
             "lv": 237,
-            " next_exp ": "  2,567,292,550 ",
+            "next_exp": 2567292550,
             "reward_sp": 29
         },
         {
             "lv": 238,
-            " next_exp ": "  2,622,770,050 ",
+            "next_exp": 2622770050,
             "reward_sp": 29
         },
         {
             "lv": 239,
-            " next_exp ": "  2,679,167,550 ",
+            "next_exp": 2679167550,
             "reward_sp": 29
         },
         {
             "lv": 240,
-            " next_exp ": "  2,736,495,050 ",
+            "next_exp": 2736495050,
             "reward_sp": 29
         },
         {
             "lv": 241,
-            " next_exp ": "  2,794,762,550 ",
+            "next_exp": 2794762550,
             "reward_sp": 29
         },
         {
             "lv": 242,
-            " next_exp ": "  2,853,980,050 ",
+            "next_exp": 2853980050,
             "reward_sp": 29
         },
         {
             "lv": 243,
-            " next_exp ": "  2,914,157,550 ",
+            "next_exp": 2914157550,
             "reward_sp": 29
         },
         {
             "lv": 244,
-            " next_exp ": "  2,975,305,050 ",
+            "next_exp": 2975305050,
             "reward_sp": 29
         },
         {
             "lv": 245,
-            " next_exp ": "  3,037,432,550 ",
+            "next_exp": 3037432550,
             "reward_sp": 30
         },
         {
             "lv": 246,
-            " next_exp ": "  3,100,550,050 ",
+            "next_exp": 3100550050,
             "reward_sp": 30
         },
         {
             "lv": 247,
-            " next_exp ": "  3,164,667,550 ",
+            "next_exp": 3164667550,
             "reward_sp": 30
         },
         {
             "lv": 248,
-            " next_exp ": "  3,229,885,050 ",
+            "next_exp": 3229885050,
             "reward_sp": 30
         },
         {
             "lv": 249,
-            " next_exp ": "  3,296,302,550 ",
+            "next_exp": 3296302550,
             "reward_sp": 30
         },
         {
             "lv": 250,
-            " next_exp ": "  3,364,020,050 ",
+            "next_exp": 3364020050,
             "reward_sp": 30
         },
         {
             "lv": 251,
-            " next_exp ": "  3,433,137,550 ",
+            "next_exp": 3433137550,
             "reward_sp": 30
         },
         {
             "lv": 252,
-            " next_exp ": "  3,503,755,050 ",
+            "next_exp": 3503755050,
             "reward_sp": 30
         },
         {
             "lv": 253,
-            " next_exp ": "  3,575,972,550 ",
+            "next_exp": 3575972550,
             "reward_sp": 30
         },
         {
             "lv": 254,
-            " next_exp ": "  3,649,890,050 ",
+            "next_exp": 3649890050,
             "reward_sp": 31
         },
         {
             "lv": 255,
-            " next_exp ": "  3,725,607,550 ",
+            "next_exp": 3725607550,
             "reward_sp": 31
         },
         {
             "lv": 256,
-            " next_exp ": "  3,803,225,050 ",
+            "next_exp": 3803225050,
             "reward_sp": 31
         },
         {
             "lv": 257,
-            " next_exp ": "  3,882,842,550 ",
+            "next_exp": 3882842550,
             "reward_sp": 31
         },
         {
             "lv": 258,
-            " next_exp ": "  3,964,560,050 ",
+            "next_exp": 3964560050,
             "reward_sp": 31
         },
         {
             "lv": 259,
-            " next_exp ": "  4,048,477,550 ",
+            "next_exp": 4048477550,
             "reward_sp": 31
         },
         {
             "lv": 260,
-            " next_exp ": "  4,134,695,050 ",
+            "next_exp": 4134695050,
             "reward_sp": 31
         },
         {
             "lv": 261,
-            " next_exp ": "  4,223,312,550 ",
+            "next_exp": 4223312550,
             "reward_sp": 31
         },
         {
             "lv": 262,
-            " next_exp ": "  4,314,430,050 ",
+            "next_exp": 4314430050,
             "reward_sp": 31
         },
         {
             "lv": 263,
-            " next_exp ": "  4,408,147,550 ",
+            "next_exp": 4408147550,
             "reward_sp": 32
         },
         {
             "lv": 264,
-            " next_exp ": "  4,504,565,050 ",
+            "next_exp": 4504565050,
             "reward_sp": 32
         },
         {
             "lv": 265,
-            " next_exp ": "  4,603,782,550 ",
+            "next_exp": 4603782550,
             "reward_sp": 32
         },
         {
             "lv": 266,
-            " next_exp ": "  4,705,900,050 ",
+            "next_exp": 4705900050,
             "reward_sp": 32
         },
         {
             "lv": 267,
-            " next_exp ": "  4,811,017,550 ",
+            "next_exp": 4811017550,
             "reward_sp": 32
         },
         {
             "lv": 268,
-            " next_exp ": "  4,919,235,050 ",
+            "next_exp": 4919235050,
             "reward_sp": 32
         },
         {
             "lv": 269,
-            " next_exp ": "  5,030,652,550 ",
+            "next_exp": 5030652550,
             "reward_sp": 32
         },
         {
             "lv": 270,
-            " next_exp ": "  5,145,370,050 ",
+            "next_exp": 5145370050,
             "reward_sp": 32
         },
         {
             "lv": 271,
-            " next_exp ": "  5,263,487,550 ",
+            "next_exp": 5263487550,
             "reward_sp": 32
         },
         {
             "lv": 272,
-            " next_exp ": "  5,385,105,050 ",
+            "next_exp": 5385105050,
             "reward_sp": 33
         },
         {
             "lv": 273,
-            " next_exp ": "  5,510,322,550 ",
+            "next_exp": 5510322550,
             "reward_sp": 33
         },
         {
             "lv": 274,
-            " next_exp ": "  5,639,240,050 ",
+            "next_exp": 5639240050,
             "reward_sp": 33
         },
         {
             "lv": 275,
-            " next_exp ": "  5,771,957,550 ",
+            "next_exp": 5771957550,
             "reward_sp": 33
         },
         {
             "lv": 276,
-            " next_exp ": "  5,908,575,050 ",
+            "next_exp": 5908575050,
             "reward_sp": 33
         },
         {
             "lv": 277,
-            " next_exp ": "  6,049,192,550 ",
+            "next_exp": 6049192550,
             "reward_sp": 33
         },
         {
             "lv": 278,
-            " next_exp ": "  6,193,910,050 ",
+            "next_exp": 6193910050,
             "reward_sp": 33
         },
         {
             "lv": 279,
-            " next_exp ": "  6,342,827,550 ",
+            "next_exp": 6342827550,
             "reward_sp": 33
         },
         {
             "lv": 280,
-            " next_exp ": "  6,496,045,050 ",
+            "next_exp": 6496045050,
             "reward_sp": 33
         },
         {
             "lv": 281,
-            " next_exp ": "  6,653,662,550 ",
+            "next_exp": 6653662550,
             "reward_sp": 34
         },
         {
             "lv": 282,
-            " next_exp ": "  6,815,780,050 ",
+            "next_exp": 6815780050,
             "reward_sp": 34
         },
         {
             "lv": 283,
-            " next_exp ": "  6,982,497,550 ",
+            "next_exp": 6982497550,
             "reward_sp": 34
         },
         {
             "lv": 284,
-            " next_exp ": "  7,153,915,050 ",
+            "next_exp": 7153915050,
             "reward_sp": 34
         },
         {
             "lv": 285,
-            " next_exp ": "  7,330,132,550 ",
+            "next_exp": 7330132550,
             "reward_sp": 34
         },
         {
             "lv": 286,
-            " next_exp ": "  7,511,250,050 ",
+            "next_exp": 7511250050,
             "reward_sp": 34
         },
         {
             "lv": 287,
-            " next_exp ": "  7,697,367,550 ",
+            "next_exp": 7697367550,
             "reward_sp": 34
         },
         {
             "lv": 288,
-            " next_exp ": "  7,888,485,050 ",
+            "next_exp": 7888485050,
             "reward_sp": 34
         },
         {
             "lv": 289,
-            " next_exp ": "  8,084,602,550 ",
+            "next_exp": 8084602550,
             "reward_sp": 34
         },
         {
             "lv": 290,
-            " next_exp ": "  8,285,720,050 ",
+            "next_exp": 8285720050,
             "reward_sp": 35
         },
         {
             "lv": 291,
-            " next_exp ": "  8,491,837,550 ",
+            "next_exp": 8491837550,
             "reward_sp": 35
         },
         {
             "lv": 292,
-            " next_exp ": "  8,702,955,050 ",
+            "next_exp": 8702955050,
             "reward_sp": 35
         },
         {
             "lv": 293,
-            " next_exp ": "  8,919,072,550 ",
+            "next_exp": 8919072550,
             "reward_sp": 35
         },
         {
             "lv": 294,
-            " next_exp ": "  9,140,190,050 ",
+            "next_exp": 9140190050,
             "reward_sp": 35
         },
         {
             "lv": 295,
-            " next_exp ": "  9,366,307,550 ",
+            "next_exp": 9366307550,
             "reward_sp": 35
         },
         {
             "lv": 296,
-            " next_exp ": "  9,597,425,050 ",
+            "next_exp": 9597425050,
             "reward_sp": 35
         },
         {
             "lv": 297,
-            " next_exp ": "  9,833,542,550 ",
+            "next_exp": 9833542550,
             "reward_sp": 35
         },
         {
             "lv": 298,
-            " next_exp ": "  10,074,660,050 ",
+            "next_exp": 10074660050,
             "reward_sp": 35
         },
         {
             "lv": 299,
-            " next_exp ": "  10,320,777,550 ",
+            "next_exp": 10320777550,
             "reward_sp": 36
         },
         {
             "lv": 300,
-            " next_exp ": "  10,571,895,050 ",
+            "next_exp": 10571895050,
             "reward_sp": 36
         },
         {
             "lv": 301,
-            " next_exp ": "  10,828,012,550 ",
+            "next_exp": 10828012550,
             "reward_sp": 36
         },
         {
             "lv": 302,
-            " next_exp ": "  11,089,130,050 ",
+            "next_exp": 11089130050,
             "reward_sp": 36
         },
         {
             "lv": 303,
-            " next_exp ": "  11,355,247,550 ",
+            "next_exp": 11355247550,
             "reward_sp": 36
         },
         {
             "lv": 304,
-            " next_exp ": "  11,626,365,050 ",
+            "next_exp": 11626365050,
             "reward_sp": 36
         },
         {
             "lv": 305,
-            " next_exp ": "  11,902,482,550 ",
+            "next_exp": 11902482550,
             "reward_sp": 36
         },
         {
             "lv": 306,
-            " next_exp ": "  12,183,600,050 ",
+            "next_exp": 12183600050,
             "reward_sp": 36
         },
         {
             "lv": 307,
-            " next_exp ": "  12,469,717,550 ",
+            "next_exp": 12469717550,
             "reward_sp": 36
         },
         {
             "lv": 308,
-            " next_exp ": "  12,760,835,050 ",
+            "next_exp": 12760835050,
             "reward_sp": 37
         },
         {
             "lv": 309,
-            " next_exp ": "  13,056,952,550 ",
+            "next_exp": 13056952550,
             "reward_sp": 37
         },
         {
             "lv": 310,
-            " next_exp ": "  13,358,070,050 ",
+            "next_exp": 13358070050,
             "reward_sp": 37
         },
         {
             "lv": 311,
-            " next_exp ": "  13,664,187,550 ",
+            "next_exp": 13664187550,
             "reward_sp": 37
         },
         {
             "lv": 312,
-            " next_exp ": "  13,975,305,050 ",
+            "next_exp": 13975305050,
             "reward_sp": 37
         },
         {
             "lv": 313,
-            " next_exp ": "  14,291,422,550 ",
+            "next_exp": 14291422550,
             "reward_sp": 37
         },
         {
             "lv": 314,
-            " next_exp ": "  14,612,540,050 ",
+            "next_exp": 14612540050,
             "reward_sp": 37
         },
         {
             "lv": 315,
-            " next_exp ": "  14,938,657,550 ",
+            "next_exp": 14938657550,
             "reward_sp": 37
         },
         {
             "lv": 316,
-            " next_exp ": "  15,269,775,050 ",
+            "next_exp": 15269775050,
             "reward_sp": 37
         },
         {
             "lv": 317,
-            " next_exp ": "  15,605,892,550 ",
+            "next_exp": 15605892550,
             "reward_sp": 38
         },
         {
             "lv": 318,
-            " next_exp ": "  15,947,010,050 ",
+            "next_exp": 15947010050,
             "reward_sp": 38
         },
         {
             "lv": 319,
-            " next_exp ": "  16,293,127,550 ",
+            "next_exp": 16293127550,
             "reward_sp": 38
         },
         {
             "lv": 320,
-            " next_exp ": "  16,644,245,050 ",
+            "next_exp": 16644245050,
             "reward_sp": 38
         },
         {
             "lv": 321,
-            " next_exp ": "  17,000,362,550 ",
+            "next_exp": 17000362550,
             "reward_sp": 38
         },
         {
             "lv": 322,
-            " next_exp ": "  17,361,480,050 ",
+            "next_exp": 17361480050,
             "reward_sp": 38
         },
         {
             "lv": 323,
-            " next_exp ": "  17,727,597,550 ",
+            "next_exp": 17727597550,
             "reward_sp": 38
         },
         {
             "lv": 324,
-            " next_exp ": "  18,098,715,050 ",
+            "next_exp": 18098715050,
             "reward_sp": 38
         },
         {
             "lv": 325,
-            " next_exp ": "  18,474,832,550 ",
+            "next_exp": 18474832550,
             "reward_sp": 38
         },
         {
             "lv": 326,
-            " next_exp ": "  18,855,950,050 ",
+            "next_exp": 18855950050,
             "reward_sp": 39
         },
         {
             "lv": 327,
-            " next_exp ": "  19,242,067,550 ",
+            "next_exp": 19242067550,
             "reward_sp": 39
         },
         {
             "lv": 328,
-            " next_exp ": "  19,633,185,050 ",
+            "next_exp": 19633185050,
             "reward_sp": 39
         },
         {
             "lv": 329,
-            " next_exp ": "  20,029,302,550 ",
+            "next_exp": 20029302550,
             "reward_sp": 39
         },
         {
             "lv": 330,
-            " next_exp ": "  20,430,420,050 ",
+            "next_exp": 20430420050,
             "reward_sp": 39
         },
         {
             "lv": 331,
-            " next_exp ": "  20,836,537,550 ",
+            "next_exp": 20836537550,
             "reward_sp": 39
         },
         {
             "lv": 332,
-            " next_exp ": "  21,247,655,050 ",
+            "next_exp": 21247655050,
             "reward_sp": 39
         },
         {
             "lv": 333,
-            " next_exp ": "  21,663,772,550 ",
+            "next_exp": 21663772550,
             "reward_sp": 39
         },
         {
             "lv": 334,
-            " next_exp ": "  22,084,890,050 ",
+            "next_exp": 22084890050,
             "reward_sp": 39
         },
         {
             "lv": 335,
-            " next_exp ": "  22,511,007,550 ",
+            "next_exp": 22511007550,
             "reward_sp": 40
         },
         {
             "lv": 336,
-            " next_exp ": "  22,942,125,050 ",
+            "next_exp": 22942125050,
             "reward_sp": 40
         },
         {
             "lv": 337,
-            " next_exp ": "  23,378,242,550 ",
+            "next_exp": 23378242550,
             "reward_sp": 40
         },
         {
             "lv": 338,
-            " next_exp ": "  23,819,360,050 ",
+            "next_exp": 23819360050,
             "reward_sp": 40
         },
         {
             "lv": 339,
-            " next_exp ": "  24,265,477,550 ",
+            "next_exp": 24265477550,
             "reward_sp": 40
         },
         {
             "lv": 340,
-            " next_exp ": "  24,716,595,050 ",
+            "next_exp": 24716595050,
             "reward_sp": 40
         },
         {
             "lv": 341,
-            " next_exp ": "  25,172,712,550 ",
+            "next_exp": 25172712550,
             "reward_sp": 40
         },
         {
             "lv": 342,
-            " next_exp ": "  25,633,830,050 ",
+            "next_exp": 25633830050,
             "reward_sp": 40
         },
         {
             "lv": 343,
-            " next_exp ": "  26,099,947,550 ",
+            "next_exp": 26099947550,
             "reward_sp": 40
         },
         {
             "lv": 344,
-            " next_exp ": "  26,571,065,050 ",
+            "next_exp": 26571065050,
             "reward_sp": 41
         },
         {
             "lv": 345,
-            " next_exp ": "  27,047,182,550 ",
+            "next_exp": 27047182550,
             "reward_sp": 41
         },
         {
             "lv": 346,
-            " next_exp ": "  27,528,300,050 ",
+            "next_exp": 27528300050,
             "reward_sp": 41
         },
         {
             "lv": 347,
-            " next_exp ": "  28,014,417,550 ",
+            "next_exp": 28014417550,
             "reward_sp": 41
         },
         {
             "lv": 348,
-            " next_exp ": "  28,505,535,050 ",
+            "next_exp": 28505535050,
             "reward_sp": 41
         },
         {
             "lv": 349,
-            " next_exp ": "  29,001,652,550 ",
+            "next_exp": 29001652550,
             "reward_sp": 41
         },
         {
             "lv": 350,
-            " next_exp ": "  29,502,770,050 ",
+            "next_exp": 29502770050,
             "reward_sp": 41
         },
         {
             "lv": 351,
-            " next_exp ": "  30,008,887,550 ",
+            "next_exp": 30008887550,
             "reward_sp": 41
         },
         {
             "lv": 352,
-            " next_exp ": "  30,520,005,050 ",
+            "next_exp": 30520005050,
             "reward_sp": 41
         },
         {
             "lv": 353,
-            " next_exp ": "  31,036,122,550 ",
+            "next_exp": 31036122550,
             "reward_sp": 42
         },
         {
             "lv": 354,
-            " next_exp ": "  31,557,240,050 ",
+            "next_exp": 31557240050,
             "reward_sp": 42
         },
         {
             "lv": 355,
-            " next_exp ": "  32,083,357,550 ",
+            "next_exp": 32083357550,
             "reward_sp": 42
         },
         {
             "lv": 356,
-            " next_exp ": "  32,614,475,050 ",
+            "next_exp": 32614475050,
             "reward_sp": 42
         },
         {
             "lv": 357,
-            " next_exp ": "  33,150,592,550 ",
+            "next_exp": 33150592550,
             "reward_sp": 42
         },
         {
             "lv": 358,
-            " next_exp ": "  33,691,710,050 ",
+            "next_exp": 33691710050,
             "reward_sp": 42
         },
         {
             "lv": 359,
-            " next_exp ": "  34,237,827,550 ",
+            "next_exp": 34237827550,
             "reward_sp": 42
         },
         {
             "lv": 360,
-            " next_exp ": "  34,788,945,050 ",
+            "next_exp": 34788945050,
             "reward_sp": 42
         },
         {
             "lv": 361,
-            " next_exp ": "  35,345,062,550 ",
+            "next_exp": 35345062550,
             "reward_sp": 42
         },
         {
             "lv": 362,
-            " next_exp ": "  35,906,180,050 ",
+            "next_exp": 35906180050,
             "reward_sp": 43
         },
         {
             "lv": 363,
-            " next_exp ": "  36,472,297,550 ",
+            "next_exp": 36472297550,
             "reward_sp": 43
         },
         {
             "lv": 364,
-            " next_exp ": "  37,043,415,050 ",
+            "next_exp": 37043415050,
             "reward_sp": 43
         },
         {
             "lv": 365,
-            " next_exp ": "  37,619,532,550 ",
+            "next_exp": 37619532550,
             "reward_sp": 43
         },
         {
             "lv": 366,
-            " next_exp ": "  38,200,650,050 ",
+            "next_exp": 38200650050,
             "reward_sp": 43
         },
         {
             "lv": 367,
-            " next_exp ": "  38,786,767,550 ",
+            "next_exp": 38786767550,
             "reward_sp": 43
         },
         {
             "lv": 368,
-            " next_exp ": "  39,377,885,050 ",
+            "next_exp": 39377885050,
             "reward_sp": 43
         },
         {
             "lv": 369,
-            " next_exp ": "  39,974,002,550 ",
+            "next_exp": 39974002550,
             "reward_sp": 43
         },
         {
             "lv": 370,
-            " next_exp ": "  40,575,120,050 ",
+            "next_exp": 40575120050,
             "reward_sp": 43
         },
         {
             "lv": 371,
-            " next_exp ": "  41,181,237,550 ",
+            "next_exp": 41181237550,
             "reward_sp": 44
         },
         {
             "lv": 372,
-            " next_exp ": "  41,792,355,050 ",
+            "next_exp": 41792355050,
             "reward_sp": 44
         },
         {
             "lv": 373,
-            " next_exp ": "  42,408,472,550 ",
+            "next_exp": 42408472550,
             "reward_sp": 44
         },
         {
             "lv": 374,
-            " next_exp ": "  43,029,590,050 ",
+            "next_exp": 43029590050,
             "reward_sp": 44
         },
         {
             "lv": 375,
-            " next_exp ": "  43,655,707,550 ",
+            "next_exp": 43655707550,
             "reward_sp": 44
         },
         {
             "lv": 376,
-            " next_exp ": "  44,286,825,050 ",
+            "next_exp": 44286825050,
             "reward_sp": 44
         },
         {
             "lv": 377,
-            " next_exp ": "  44,922,942,550 ",
+            "next_exp": 44922942550,
             "reward_sp": 44
         },
         {
             "lv": 378,
-            " next_exp ": "  45,564,060,050 ",
+            "next_exp": 45564060050,
             "reward_sp": 44
         },
         {
             "lv": 379,
-            " next_exp ": "  46,210,177,550 ",
+            "next_exp": 46210177550,
             "reward_sp": 44
         },
         {
             "lv": 380,
-            " next_exp ": "  46,861,295,050 ",
+            "next_exp": 46861295050,
             "reward_sp": 45
         },
         {
             "lv": 381,
-            " next_exp ": "  47,517,412,550 ",
+            "next_exp": 47517412550,
             "reward_sp": 45
         },
         {
             "lv": 382,
-            " next_exp ": "  48,178,530,050 ",
+            "next_exp": 48178530050,
             "reward_sp": 45
         },
         {
             "lv": 383,
-            " next_exp ": "  48,844,647,550 ",
+            "next_exp": 48844647550,
             "reward_sp": 45
         },
         {
             "lv": 384,
-            " next_exp ": "  49,515,765,050 ",
+            "next_exp": 49515765050,
             "reward_sp": 45
         },
         {
             "lv": 385,
-            " next_exp ": "  50,191,882,550 ",
+            "next_exp": 50191882550,
             "reward_sp": 45
         },
         {
             "lv": 386,
-            " next_exp ": "  50,873,000,050 ",
+            "next_exp": 50873000050,
             "reward_sp": 45
         },
         {
             "lv": 387,
-            " next_exp ": "  51,559,117,550 ",
+            "next_exp": 51559117550,
             "reward_sp": 45
         },
         {
             "lv": 388,
-            " next_exp ": "  52,250,235,050 ",
+            "next_exp": 52250235050,
             "reward_sp": 45
         },
         {
             "lv": 389,
-            " next_exp ": "  52,946,352,550 ",
+            "next_exp": 52946352550,
             "reward_sp": 46
         },
         {
             "lv": 390,
-            " next_exp ": "  53,647,470,050 ",
+            "next_exp": 53647470050,
             "reward_sp": 46
         },
         {
             "lv": 391,
-            " next_exp ": "  54,353,587,550 ",
+            "next_exp": 54353587550,
             "reward_sp": 46
         },
         {
             "lv": 392,
-            " next_exp ": "  55,064,705,050 ",
+            "next_exp": 55064705050,
             "reward_sp": 46
         },
         {
             "lv": 393,
-            " next_exp ": "  55,780,822,550 ",
+            "next_exp": 55780822550,
             "reward_sp": 46
         },
         {
             "lv": 394,
-            " next_exp ": "  56,501,940,050 ",
+            "next_exp": 56501940050,
             "reward_sp": 46
         },
         {
             "lv": 395,
-            " next_exp ": "  57,228,057,550 ",
+            "next_exp": 57228057550,
             "reward_sp": 46
         },
         {
             "lv": 396,
-            " next_exp ": "  57,959,175,050 ",
+            "next_exp": 57959175050,
             "reward_sp": 46
         },
         {
             "lv": 397,
-            " next_exp ": "  58,695,292,550 ",
+            "next_exp": 58695292550,
             "reward_sp": 46
         },
         {
             "lv": 398,
-            " next_exp ": "  59,436,410,050 ",
+            "next_exp": 59436410050,
             "reward_sp": 47
         },
         {
             "lv": 399,
-            " next_exp ": "  60,182,527,550 ",
+            "next_exp": 60182527550,
             "reward_sp": 47
         },
         {
             "lv": 400,
-            " next_exp ": "  60,933,645,050 ",
+            "next_exp": 60933645050,
             "reward_sp": 47
         },
         {
             "lv": 401,
-            " next_exp ": "  61,689,762,550 ",
+            "next_exp": 61689762550,
             "reward_sp": 47
         },
         {
             "lv": 402,
-            " next_exp ": "  62,450,880,050 ",
+            "next_exp": 62450880050,
             "reward_sp": 47
         },
         {
             "lv": 403,
-            " next_exp ": "  63,216,997,550 ",
+            "next_exp": 63216997550,
             "reward_sp": 47
         },
         {
             "lv": 404,
-            " next_exp ": "  63,988,115,050 ",
+            "next_exp": 63988115050,
             "reward_sp": 47
         },
         {
             "lv": 405,
-            " next_exp ": "  64,764,232,550 ",
+            "next_exp": 64764232550,
             "reward_sp": 47
         },
         {
             "lv": 406,
-            " next_exp ": "  65,545,350,050 ",
+            "next_exp": 65545350050,
             "reward_sp": 47
         },
         {
             "lv": 407,
-            " next_exp ": "  66,331,467,550 ",
+            "next_exp": 66331467550,
             "reward_sp": 48
         },
         {
             "lv": 408,
-            " next_exp ": "  67,122,585,050 ",
+            "next_exp": 67122585050,
             "reward_sp": 48
         },
         {
             "lv": 409,
-            " next_exp ": "  67,918,702,550 ",
+            "next_exp": 67918702550,
             "reward_sp": 48
         },
         {
             "lv": 410,
-            " next_exp ": "  68,719,820,050 ",
+            "next_exp": 68719820050,
             "reward_sp": 48
         },
         {
             "lv": 411,
-            " next_exp ": "  69,525,937,550 ",
+            "next_exp": 69525937550,
             "reward_sp": 48
         },
         {
             "lv": 412,
-            " next_exp ": "  70,337,055,050 ",
+            "next_exp": 70337055050,
             "reward_sp": 48
         },
         {
             "lv": 413,
-            " next_exp ": "  71,153,172,550 ",
+            "next_exp": 71153172550,
             "reward_sp": 48
         },
         {
             "lv": 414,
-            " next_exp ": "  71,974,290,050 ",
+            "next_exp": 71974290050,
             "reward_sp": 48
         },
         {
             "lv": 415,
-            " next_exp ": "  72,800,407,550 ",
+            "next_exp": 72800407550,
             "reward_sp": 48
         },
         {
             "lv": 416,
-            " next_exp ": "  73,631,525,050 ",
+            "next_exp": 73631525050,
             "reward_sp": 49
         },
         {
             "lv": 417,
-            " next_exp ": "  74,467,642,550 ",
+            "next_exp": 74467642550,
             "reward_sp": 49
         },
         {
             "lv": 418,
-            " next_exp ": "  75,308,760,050 ",
+            "next_exp": 75308760050,
             "reward_sp": 49
         },
         {
             "lv": 419,
-            " next_exp ": "  76,154,877,550 ",
+            "next_exp": 76154877550,
             "reward_sp": 49
         },
         {
             "lv": 420,
-            " next_exp ": "  77,005,995,050 ",
+            "next_exp": 77005995050,
             "reward_sp": 49
         },
         {
             "lv": 421,
-            " next_exp ": "  77,862,112,550 ",
+            "next_exp": 77862112550,
             "reward_sp": 49
         },
         {
             "lv": 422,
-            " next_exp ": "  78,723,230,050 ",
+            "next_exp": 78723230050,
             "reward_sp": 49
         },
         {
             "lv": 423,
-            " next_exp ": "  79,589,347,550 ",
+            "next_exp": 79589347550,
             "reward_sp": 49
         },
         {
             "lv": 424,
-            " next_exp ": "  80,460,465,050 ",
+            "next_exp": 80460465050,
             "reward_sp": 49
         },
         {
             "lv": 425,
-            " next_exp ": "  81,336,582,550 ",
+            "next_exp": 81336582550,
             "reward_sp": 50
         },
         {
             "lv": 426,
-            " next_exp ": "  82,217,700,050 ",
+            "next_exp": 82217700050,
             "reward_sp": 50
         },
         {
             "lv": 427,
-            " next_exp ": "  83,103,817,550 ",
+            "next_exp": 83103817550,
             "reward_sp": 50
         },
         {
             "lv": 428,
-            " next_exp ": "  83,994,935,050 ",
+            "next_exp": 83994935050,
             "reward_sp": 50
         },
         {
             "lv": 429,
-            " next_exp ": "  84,891,052,550 ",
+            "next_exp": 84891052550,
             "reward_sp": 50
         },
         {
             "lv": 430,
-            " next_exp ": "  85,792,170,050 ",
+            "next_exp": 85792170050,
             "reward_sp": 50
         },
         {
             "lv": 431,
-            " next_exp ": "  86,698,287,550 ",
+            "next_exp": 86698287550,
             "reward_sp": 50
         },
         {
             "lv": 432,
-            " next_exp ": "  87,609,405,050 ",
+            "next_exp": 87609405050,
             "reward_sp": 50
         },
         {
             "lv": 433,
-            " next_exp ": "  88,525,522,550 ",
+            "next_exp": 88525522550,
             "reward_sp": 50
         },
         {
             "lv": 434,
-            " next_exp ": "  89,446,640,050 ",
+            "next_exp": 89446640050,
             "reward_sp": 51
         },
         {
             "lv": 435,
-            " next_exp ": "  90,372,757,550 ",
+            "next_exp": 90372757550,
             "reward_sp": 51
         },
         {
             "lv": 436,
-            " next_exp ": "  91,303,875,050 ",
+            "next_exp": 91303875050,
             "reward_sp": 51
         },
         {
             "lv": 437,
-            " next_exp ": "  92,239,992,550 ",
+            "next_exp": 92239992550,
             "reward_sp": 51
         },
         {
             "lv": 438,
-            " next_exp ": "  93,181,110,050 ",
+            "next_exp": 93181110050,
             "reward_sp": 51
         },
         {
             "lv": 439,
-            " next_exp ": "  94,127,227,550 ",
+            "next_exp": 94127227550,
             "reward_sp": 51
         },
         {
             "lv": 440,
-            " next_exp ": "  95,078,345,050 ",
+            "next_exp": 95078345050,
             "reward_sp": 51
         },
         {
             "lv": 441,
-            " next_exp ": "  96,034,462,550 ",
+            "next_exp": 96034462550,
             "reward_sp": 51
         },
         {
             "lv": 442,
-            " next_exp ": "  96,995,580,050 ",
+            "next_exp": 96995580050,
             "reward_sp": 51
         },
         {
             "lv": 443,
-            " next_exp ": "  97,961,697,550 ",
+            "next_exp": 97961697550,
             "reward_sp": 52
         },
         {
             "lv": 444,
-            " next_exp ": "  98,932,815,050 ",
+            "next_exp": 98932815050,
             "reward_sp": 52
         },
         {
             "lv": 445,
-            " next_exp ": "  99,908,932,550 ",
+            "next_exp": 99908932550,
             "reward_sp": 52
         },
         {
             "lv": 446,
-            " next_exp ": "  100,890,050,050 ",
+            "next_exp": 100890050050,
             "reward_sp": 52
         },
         {
             "lv": 447,
-            " next_exp ": "  101,876,167,550 ",
+            "next_exp": 101876167550,
             "reward_sp": 52
         },
         {
             "lv": 448,
-            " next_exp ": "  102,867,285,050 ",
+            "next_exp": 102867285050,
             "reward_sp": 52
         },
         {
             "lv": 449,
-            " next_exp ": "  103,863,402,550 ",
+            "next_exp": 103863402550,
             "reward_sp": 52
         },
         {
             "lv": 450,
-            " next_exp ": "  104,864,520,050 ",
+            "next_exp": 104864520050,
             "reward_sp": 52
         },
         {
             "lv": 451,
-            " next_exp ": "  105,870,637,550 ",
+            "next_exp": 105870637550,
             "reward_sp": 52
         },
         {
             "lv": 452,
-            " next_exp ": "  106,881,755,050 ",
+            "next_exp": 106881755050,
             "reward_sp": 53
         },
         {
             "lv": 453,
-            " next_exp ": "  107,897,872,550 ",
+            "next_exp": 107897872550,
             "reward_sp": 53
         },
         {
             "lv": 454,
-            " next_exp ": "  108,918,990,050 ",
+            "next_exp": 108918990050,
             "reward_sp": 53
         },
         {
             "lv": 455,
-            " next_exp ": "  109,945,107,550 ",
+            "next_exp": 109945107550,
             "reward_sp": 53
         },
         {
             "lv": 456,
-            " next_exp ": "  110,976,225,050 ",
+            "next_exp": 110976225050,
             "reward_sp": 53
         },
         {
             "lv": 457,
-            " next_exp ": "  112,012,342,550 ",
+            "next_exp": 112012342550,
             "reward_sp": 53
         },
         {
             "lv": 458,
-            " next_exp ": "  113,053,460,050 ",
+            "next_exp": 113053460050,
             "reward_sp": 53
         },
         {
             "lv": 459,
-            " next_exp ": "  114,099,577,550 ",
+            "next_exp": 114099577550,
             "reward_sp": 53
         },
         {
             "lv": 460,
-            " next_exp ": "  115,150,695,050 ",
+            "next_exp": 115150695050,
             "reward_sp": 53
         },
         {
             "lv": 461,
-            " next_exp ": "  116,206,812,550 ",
+            "next_exp": 116206812550,
             "reward_sp": 54
         },
         {
             "lv": 462,
-            " next_exp ": "  117,267,930,050 ",
+            "next_exp": 117267930050,
             "reward_sp": 54
         },
         {
             "lv": 463,
-            " next_exp ": "  118,334,047,550 ",
+            "next_exp": 118334047550,
             "reward_sp": 54
         },
         {
             "lv": 464,
-            " next_exp ": "  119,405,165,050 ",
+            "next_exp": 119405165050,
             "reward_sp": 54
         },
         {
             "lv": 465,
-            " next_exp ": "  120,481,282,550 ",
+            "next_exp": 120481282550,
             "reward_sp": 54
         },
         {
             "lv": 466,
-            " next_exp ": "  121,562,400,050 ",
+            "next_exp": 121562400050,
             "reward_sp": 54
         },
         {
             "lv": 467,
-            " next_exp ": "  122,648,517,550 ",
+            "next_exp": 122648517550,
             "reward_sp": 54
         },
         {
             "lv": 468,
-            " next_exp ": "  123,739,635,050 ",
+            "next_exp": 123739635050,
             "reward_sp": 54
         },
         {
             "lv": 469,
-            " next_exp ": "  124,835,752,550 ",
+            "next_exp": 124835752550,
             "reward_sp": 54
         },
         {
             "lv": 470,
-            " next_exp ": "  125,936,870,050 ",
+            "next_exp": 125936870050,
             "reward_sp": 55
         },
         {
             "lv": 471,
-            " next_exp ": "  127,042,987,550 ",
+            "next_exp": 127042987550,
             "reward_sp": 55
         },
         {
             "lv": 472,
-            " next_exp ": "  128,154,105,050 ",
+            "next_exp": 128154105050,
             "reward_sp": 55
         },
         {
             "lv": 473,
-            " next_exp ": "  129,270,222,550 ",
+            "next_exp": 129270222550,
             "reward_sp": 55
         },
         {
             "lv": 474,
-            " next_exp ": "  130,391,340,050 ",
+            "next_exp": 130391340050,
             "reward_sp": 55
         },
         {
             "lv": 475,
-            " next_exp ": "  131,517,457,550 ",
+            "next_exp": 131517457550,
             "reward_sp": 55
         },
         {
             "lv": 476,
-            " next_exp ": "  132,648,575,050 ",
+            "next_exp": 132648575050,
             "reward_sp": 55
         },
         {
             "lv": 477,
-            " next_exp ": "  133,784,692,550 ",
+            "next_exp": 133784692550,
             "reward_sp": 55
         },
         {
             "lv": 478,
-            " next_exp ": "  134,925,810,050 ",
+            "next_exp": 134925810050,
             "reward_sp": 55
         },
         {
             "lv": 479,
-            " next_exp ": "  136,071,927,550 ",
+            "next_exp": 136071927550,
             "reward_sp": 56
         },
         {
             "lv": 480,
-            " next_exp ": "  137,223,045,050 ",
+            "next_exp": 137223045050,
             "reward_sp": 56
         },
         {
             "lv": 481,
-            " next_exp ": "  138,379,162,550 ",
+            "next_exp": 138379162550,
             "reward_sp": 56
         },
         {
             "lv": 482,
-            " next_exp ": "  139,540,280,050 ",
+            "next_exp": 139540280050,
             "reward_sp": 56
         },
         {
             "lv": 483,
-            " next_exp ": "  140,706,397,550 ",
+            "next_exp": 140706397550,
             "reward_sp": 56
         },
         {
             "lv": 484,
-            " next_exp ": "  141,877,515,050 ",
+            "next_exp": 141877515050,
             "reward_sp": 56
         },
         {
             "lv": 485,
-            " next_exp ": "  143,053,632,550 ",
+            "next_exp": 143053632550,
             "reward_sp": 56
         },
         {
             "lv": 486,
-            " next_exp ": "  144,234,750,050 ",
+            "next_exp": 144234750050,
             "reward_sp": 56
         },
         {
             "lv": 487,
-            " next_exp ": "  145,420,867,550 ",
+            "next_exp": 145420867550,
             "reward_sp": 56
         },
         {
             "lv": 488,
-            " next_exp ": "  146,611,985,050 ",
+            "next_exp": 146611985050,
             "reward_sp": 57
         },
         {
             "lv": 489,
-            " next_exp ": "  147,808,102,550 ",
+            "next_exp": 147808102550,
             "reward_sp": 57
         },
         {
             "lv": 490,
-            " next_exp ": "  149,009,220,050 ",
+            "next_exp": 149009220050,
             "reward_sp": 57
         },
         {
             "lv": 491,
-            " next_exp ": "  150,215,337,550 ",
+            "next_exp": 150215337550,
             "reward_sp": 57
         },
         {
             "lv": 492,
-            " next_exp ": "  151,426,455,050 ",
+            "next_exp": 151426455050,
             "reward_sp": 57
         },
         {
             "lv": 493,
-            " next_exp ": "  152,642,572,550 ",
+            "next_exp": 152642572550,
             "reward_sp": 57
         },
         {
             "lv": 494,
-            " next_exp ": "  153,863,690,050 ",
+            "next_exp": 153863690050,
             "reward_sp": 57
         },
         {
             "lv": 495,
-            " next_exp ": "  155,089,807,550 ",
+            "next_exp": 155089807550,
             "reward_sp": 57
         },
         {
             "lv": 496,
-            " next_exp ": "  156,320,925,050 ",
+            "next_exp": 156320925050,
             "reward_sp": 57
         },
         {
             "lv": 497,
-            " next_exp ": "  157,557,042,550 ",
+            "next_exp": 157557042550,
             "reward_sp": 58
         },
         {
             "lv": 498,
-            " next_exp ": "  158,798,160,050 ",
+            "next_exp": 158798160050,
             "reward_sp": 58
         },
         {
             "lv": 499,
-            " next_exp ": "  160,044,277,550 ",
+            "next_exp": 160044277550,
             "reward_sp": 58
         },
         {
             "lv": 500,
-            " next_exp ": "  161,295,395,050 ",
+            "next_exp": 161295395050,
             "reward_sp": 58
         },
         {
             "lv": 501,
-            " next_exp ": "  162,551,512,550 ",
+            "next_exp": 162551512550,
             "reward_sp": 58
         },
         {
             "lv": 502,
-            " next_exp ": "  163,812,630,050 ",
+            "next_exp": 163812630050,
             "reward_sp": 58
         },
         {
             "lv": 503,
-            " next_exp ": "  165,078,747,550 ",
+            "next_exp": 165078747550,
             "reward_sp": 58
         },
         {
             "lv": 504,
-            " next_exp ": "  166,349,865,050 ",
+            "next_exp": 166349865050,
             "reward_sp": 58
         },
         {
             "lv": 505,
-            " next_exp ": "  167,625,982,550 ",
+            "next_exp": 167625982550,
             "reward_sp": 58
         },
         {
             "lv": 506,
-            " next_exp ": "  168,907,100,050 ",
+            "next_exp": 168907100050,
             "reward_sp": 59
         },
         {
             "lv": 507,
-            " next_exp ": "  170,193,217,550 ",
+            "next_exp": 170193217550,
             "reward_sp": 59
         },
         {
             "lv": 508,
-            " next_exp ": "  171,484,335,050 ",
+            "next_exp": 171484335050,
             "reward_sp": 59
         },
         {
             "lv": 509,
-            " next_exp ": "  172,780,452,550 ",
+            "next_exp": 172780452550,
             "reward_sp": 59
         },
         {
             "lv": 510,
-            " next_exp ": "  174,081,570,050 ",
+            "next_exp": 174081570050,
             "reward_sp": 59
         },
         {
             "lv": 511,
-            " next_exp ": "  175,387,687,550 ",
+            "next_exp": 175387687550,
             "reward_sp": 59
         },
         {
             "lv": 512,
-            " next_exp ": "  176,698,805,050 ",
+            "next_exp": 176698805050,
             "reward_sp": 59
         },
         {
             "lv": 513,
-            " next_exp ": "  178,014,922,550 ",
+            "next_exp": 178014922550,
             "reward_sp": 59
         },
         {
             "lv": 514,
-            " next_exp ": "  179,336,040,050 ",
+            "next_exp": 179336040050,
             "reward_sp": 59
         },
         {
             "lv": 515,
-            " next_exp ": "  180,662,157,550 ",
+            "next_exp": 180662157550,
             "reward_sp": 60
         },
         {
             "lv": 516,
-            " next_exp ": "  181,993,275,050 ",
+            "next_exp": 181993275050,
             "reward_sp": 60
         },
         {
             "lv": 517,
-            " next_exp ": "  183,329,392,550 ",
+            "next_exp": 183329392550,
             "reward_sp": 60
         },
         {
             "lv": 518,
-            " next_exp ": "  184,670,510,050 ",
+            "next_exp": 184670510050,
             "reward_sp": 60
         },
         {
             "lv": 519,
-            " next_exp ": "  186,016,627,550 ",
+            "next_exp": 186016627550,
             "reward_sp": 60
         },
         {
             "lv": 520,
-            " next_exp ": "  187,367,745,050 ",
+            "next_exp": 187367745050,
             "reward_sp": 60
         },
         {
             "lv": 521,
-            " next_exp ": "  188,723,862,550 ",
+            "next_exp": 188723862550,
             "reward_sp": 60
         },
         {
             "lv": 522,
-            " next_exp ": "  190,084,980,050 ",
+            "next_exp": 190084980050,
             "reward_sp": 60
         },
         {
             "lv": 523,
-            " next_exp ": "  191,451,097,550 ",
+            "next_exp": 191451097550,
             "reward_sp": 60
         },
         {
             "lv": 524,
-            " next_exp ": "  192,822,215,050 ",
+            "next_exp": 192822215050,
             "reward_sp": 61
         },
         {
             "lv": 525,
-            " next_exp ": "  194,198,332,550 ",
+            "next_exp": 194198332550,
             "reward_sp": 61
         },
         {
             "lv": 526,
-            " next_exp ": "  195,579,450,050 ",
+            "next_exp": 195579450050,
             "reward_sp": 61
         },
         {
             "lv": 527,
-            " next_exp ": "  196,965,567,550 ",
+            "next_exp": 196965567550,
             "reward_sp": 61
         },
         {
             "lv": 528,
-            " next_exp ": "  198,356,685,050 ",
+            "next_exp": 198356685050,
             "reward_sp": 61
         },
         {
             "lv": 529,
-            " next_exp ": "  199,752,802,550 ",
+            "next_exp": 199752802550,
             "reward_sp": 61
         },
         {
             "lv": 530,
-            " next_exp ": "  201,153,920,050 ",
+            "next_exp": 201153920050,
             "reward_sp": 61
         },
         {
             "lv": 531,
-            " next_exp ": "  202,560,037,550 ",
+            "next_exp": 202560037550,
             "reward_sp": 61
         },
         {
             "lv": 532,
-            " next_exp ": "  203,971,155,050 ",
+            "next_exp": 203971155050,
             "reward_sp": 61
         },
         {
             "lv": 533,
-            " next_exp ": "  205,387,272,550 ",
+            "next_exp": 205387272550,
             "reward_sp": 62
         },
         {
             "lv": 534,
-            " next_exp ": "  206,808,390,050 ",
+            "next_exp": 206808390050,
             "reward_sp": 62
         },
         {
             "lv": 535,
-            " next_exp ": "  208,234,507,550 ",
+            "next_exp": 208234507550,
             "reward_sp": 62
         },
         {
             "lv": 536,
-            " next_exp ": "  209,665,625,050 ",
+            "next_exp": 209665625050,
             "reward_sp": 62
         },
         {
             "lv": 537,
-            " next_exp ": "  211,101,742,550 ",
+            "next_exp": 211101742550,
             "reward_sp": 62
         },
         {
             "lv": 538,
-            " next_exp ": "  212,542,860,050 ",
+            "next_exp": 212542860050,
             "reward_sp": 62
         },
         {
             "lv": 539,
-            " next_exp ": "  213,988,977,550 ",
+            "next_exp": 213988977550,
             "reward_sp": 62
         },
         {
             "lv": 540,
-            " next_exp ": "  215,440,095,050 ",
+            "next_exp": 215440095050,
             "reward_sp": 62
         },
         {
             "lv": 541,
-            " next_exp ": "  216,896,212,550 ",
+            "next_exp": 216896212550,
             "reward_sp": 62
         },
         {
             "lv": 542,
-            " next_exp ": "  218,357,330,050 ",
+            "next_exp": 218357330050,
             "reward_sp": 63
         },
         {
             "lv": 543,
-            " next_exp ": "  219,823,447,550 ",
+            "next_exp": 219823447550,
             "reward_sp": 63
         },
         {
             "lv": 544,
-            " next_exp ": "  221,294,565,050 ",
+            "next_exp": 221294565050,
             "reward_sp": 63
         },
         {
             "lv": 545,
-            " next_exp ": "  222,770,682,550 ",
+            "next_exp": 222770682550,
             "reward_sp": 63
         },
         {
             "lv": 546,
-            " next_exp ": "  224,251,800,050 ",
+            "next_exp": 224251800050,
             "reward_sp": 63
         },
         {
             "lv": 547,
-            " next_exp ": "  225,737,917,550 ",
+            "next_exp": 225737917550,
             "reward_sp": 63
         },
         {
             "lv": 548,
-            " next_exp ": "  227,229,035,050 ",
+            "next_exp": 227229035050,
             "reward_sp": 63
         },
         {
             "lv": 549,
-            " next_exp ": "  228,725,152,550 ",
+            "next_exp": 228725152550,
             "reward_sp": 63
         },
         {
             "lv": 550,
-            " next_exp ": "  230,226,270,050 ",
+            "next_exp": 230226270050,
             "reward_sp": 63
         },
         {
             "lv": 551,
-            " next_exp ": "  231,732,387,550 ",
+            "next_exp": 231732387550,
             "reward_sp": 64
         },
         {
             "lv": 552,
-            " next_exp ": "  233,243,505,050 ",
+            "next_exp": 233243505050,
             "reward_sp": 64
         },
         {
             "lv": 553,
-            " next_exp ": "  234,759,622,550 ",
+            "next_exp": 234759622550,
             "reward_sp": 64
         },
         {
             "lv": 554,
-            " next_exp ": "  236,280,740,050 ",
+            "next_exp": 236280740050,
             "reward_sp": 64
         },
         {
             "lv": 555,
-            " next_exp ": "  237,806,857,550 ",
+            "next_exp": 237806857550,
             "reward_sp": 64
         },
         {
             "lv": 556,
-            " next_exp ": "  239,337,975,050 ",
+            "next_exp": 239337975050,
             "reward_sp": 64
         },
         {
             "lv": 557,
-            " next_exp ": "  240,874,092,550 ",
+            "next_exp": 240874092550,
             "reward_sp": 64
         },
         {
             "lv": 558,
-            " next_exp ": "  242,415,210,050 ",
+            "next_exp": 242415210050,
             "reward_sp": 64
         },
         {
             "lv": 559,
-            " next_exp ": "  243,961,327,550 ",
+            "next_exp": 243961327550,
             "reward_sp": 64
         },
         {
             "lv": 560,
-            " next_exp ": "  245,512,445,050 ",
+            "next_exp": 245512445050,
             "reward_sp": 65
         },
         {
             "lv": 561,
-            " next_exp ": "  247,068,562,550 ",
+            "next_exp": 247068562550,
             "reward_sp": 65
         },
         {
             "lv": 562,
-            " next_exp ": "  248,629,680,050 ",
+            "next_exp": 248629680050,
             "reward_sp": 65
         },
         {
             "lv": 563,
-            " next_exp ": "  250,195,797,550 ",
+            "next_exp": 250195797550,
             "reward_sp": 65
         },
         {
             "lv": 564,
-            " next_exp ": "  251,766,915,050 ",
+            "next_exp": 251766915050,
             "reward_sp": 65
         },
         {
             "lv": 565,
-            " next_exp ": "  253,343,032,550 ",
+            "next_exp": 253343032550,
             "reward_sp": 65
         },
         {
             "lv": 566,
-            " next_exp ": "  254,924,150,050 ",
+            "next_exp": 254924150050,
             "reward_sp": 65
         },
         {
             "lv": 567,
-            " next_exp ": "  256,510,267,550 ",
+            "next_exp": 256510267550,
             "reward_sp": 65
         },
         {
             "lv": 568,
-            " next_exp ": "  258,101,385,050 ",
+            "next_exp": 258101385050,
             "reward_sp": 65
         },
         {
             "lv": 569,
-            " next_exp ": "  259,697,502,550 ",
+            "next_exp": 259697502550,
             "reward_sp": 66
         },
         {
             "lv": 570,
-            " next_exp ": "  261,298,620,050 ",
+            "next_exp": 261298620050,
             "reward_sp": 66
         },
         {
             "lv": 571,
-            " next_exp ": "  262,904,737,550 ",
+            "next_exp": 262904737550,
             "reward_sp": 66
         },
         {
             "lv": 572,
-            " next_exp ": "  264,515,855,050 ",
+            "next_exp": 264515855050,
             "reward_sp": 66
         },
         {
             "lv": 573,
-            " next_exp ": "  266,131,972,550 ",
+            "next_exp": 266131972550,
             "reward_sp": 66
         },
         {
             "lv": 574,
-            " next_exp ": "  267,753,090,050 ",
+            "next_exp": 267753090050,
             "reward_sp": 66
         },
         {
             "lv": 575,
-            " next_exp ": "  269,379,207,550 ",
+            "next_exp": 269379207550,
             "reward_sp": 66
         },
         {
             "lv": 576,
-            " next_exp ": "  271,010,325,050 ",
+            "next_exp": 271010325050,
             "reward_sp": 66
         },
         {
             "lv": 577,
-            " next_exp ": "  272,646,442,550 ",
+            "next_exp": 272646442550,
             "reward_sp": 66
         },
         {
             "lv": 578,
-            " next_exp ": "  274,287,560,050 ",
+            "next_exp": 274287560050,
             "reward_sp": 67
         },
         {
             "lv": 579,
-            " next_exp ": "  275,933,677,550 ",
+            "next_exp": 275933677550,
             "reward_sp": 67
         },
         {
             "lv": 580,
-            " next_exp ": "  277,584,795,050 ",
+            "next_exp": 277584795050,
             "reward_sp": 67
         },
         {
             "lv": 581,
-            " next_exp ": "  279,240,912,550 ",
+            "next_exp": 279240912550,
             "reward_sp": 67
         },
         {
             "lv": 582,
-            " next_exp ": "  280,902,030,050 ",
+            "next_exp": 280902030050,
             "reward_sp": 67
         },
         {
             "lv": 583,
-            " next_exp ": "  282,568,147,550 ",
+            "next_exp": 282568147550,
             "reward_sp": 67
         },
         {
             "lv": 584,
-            " next_exp ": "  284,239,265,050 ",
+            "next_exp": 284239265050,
             "reward_sp": 67
         },
         {
             "lv": 585,
-            " next_exp ": "  285,915,382,550 ",
+            "next_exp": 285915382550,
             "reward_sp": 67
         },
         {
             "lv": 586,
-            " next_exp ": "  287,596,500,050 ",
+            "next_exp": 287596500050,
             "reward_sp": 67
         },
         {
             "lv": 587,
-            " next_exp ": "  289,282,617,550 ",
+            "next_exp": 289282617550,
             "reward_sp": 68
         },
         {
             "lv": 588,
-            " next_exp ": "  290,973,735,050 ",
+            "next_exp": 290973735050,
             "reward_sp": 68
         },
         {
             "lv": 589,
-            " next_exp ": "  292,669,852,550 ",
+            "next_exp": 292669852550,
             "reward_sp": 68
         },
         {
             "lv": 590,
-            " next_exp ": "  294,370,970,050 ",
+            "next_exp": 294370970050,
             "reward_sp": 68
         },
         {
             "lv": 591,
-            " next_exp ": "  296,077,087,550 ",
+            "next_exp": 296077087550,
             "reward_sp": 68
         },
         {
             "lv": 592,
-            " next_exp ": "  297,788,205,050 ",
+            "next_exp": 297788205050,
             "reward_sp": 68
         },
         {
             "lv": 593,
-            " next_exp ": "  299,504,322,550 ",
+            "next_exp": 299504322550,
             "reward_sp": 68
         },
         {
             "lv": 594,
-            " next_exp ": "  301,225,440,050 ",
+            "next_exp": 301225440050,
             "reward_sp": 68
         },
         {
             "lv": 595,
-            " next_exp ": "  302,951,557,550 ",
+            "next_exp": 302951557550,
             "reward_sp": 68
         },
         {
             "lv": 596,
-            " next_exp ": "  304,682,675,050 ",
+            "next_exp": 304682675050,
             "reward_sp": 69
         },
         {
             "lv": 597,
-            " next_exp ": "  306,418,792,550 ",
+            "next_exp": 306418792550,
             "reward_sp": 69
         },
         {
             "lv": 598,
-            " next_exp ": "  308,159,910,050 ",
+            "next_exp": 308159910050,
             "reward_sp": 69
         },
         {
             "lv": 599,
-            " next_exp ": "  309,906,027,550 ",
+            "next_exp": 309906027550,
             "reward_sp": 69
         },
         {
             "lv": 600,
-            " next_exp ": "  311,657,145,050 ",
+            "next_exp": 311657145050,
             "reward_sp": 69
         },
         {
             "lv": 601,
-            " next_exp ": "  313,413,262,550 ",
+            "next_exp": 313413262550,
             "reward_sp": 69
         },
         {
             "lv": 602,
-            " next_exp ": "  315,174,380,050 ",
+            "next_exp": 315174380050,
             "reward_sp": 69
         },
         {
             "lv": 603,
-            " next_exp ": "  316,940,497,550 ",
+            "next_exp": 316940497550,
             "reward_sp": 69
         },
         {
             "lv": 604,
-            " next_exp ": "  318,711,615,050 ",
+            "next_exp": 318711615050,
             "reward_sp": 69
         },
         {
             "lv": 605,
-            " next_exp ": "  320,487,732,550 ",
+            "next_exp": 320487732550,
             "reward_sp": 70
         },
         {
             "lv": 606,
-            " next_exp ": "  322,268,850,050 ",
+            "next_exp": 322268850050,
             "reward_sp": 70
         },
         {
             "lv": 607,
-            " next_exp ": "  324,054,967,550 ",
+            "next_exp": 324054967550,
             "reward_sp": 70
         },
         {
             "lv": 608,
-            " next_exp ": "  325,846,085,050 ",
+            "next_exp": 325846085050,
             "reward_sp": 70
         },
         {
             "lv": 609,
-            " next_exp ": "  327,642,202,550 ",
+            "next_exp": 327642202550,
             "reward_sp": 70
         },
         {
             "lv": 610,
-            " next_exp ": "  329,443,320,050 ",
+            "next_exp": 329443320050,
             "reward_sp": 70
         },
         {
             "lv": 611,
-            " next_exp ": "  331,249,437,550 ",
+            "next_exp": 331249437550,
             "reward_sp": 70
         },
         {
             "lv": 612,
-            " next_exp ": "  333,060,555,050 ",
+            "next_exp": 333060555050,
             "reward_sp": 70
         },
         {
             "lv": 613,
-            " next_exp ": "  334,876,672,550 ",
+            "next_exp": 334876672550,
             "reward_sp": 70
         },
         {
             "lv": 614,
-            " next_exp ": "  336,697,790,050 ",
+            "next_exp": 336697790050,
             "reward_sp": 71
         },
         {
             "lv": 615,
-            " next_exp ": "  338,523,907,550 ",
+            "next_exp": 338523907550,
             "reward_sp": 71
         },
         {
             "lv": 616,
-            " next_exp ": "  340,355,025,050 ",
+            "next_exp": 340355025050,
             "reward_sp": 71
         },
         {
             "lv": 617,
-            " next_exp ": "  342,191,142,550 ",
+            "next_exp": 342191142550,
             "reward_sp": 71
         },
         {
             "lv": 618,
-            " next_exp ": "  344,032,260,050 ",
+            "next_exp": 344032260050,
             "reward_sp": 71
         },
         {
             "lv": 619,
-            " next_exp ": "  345,878,377,550 ",
+            "next_exp": 345878377550,
             "reward_sp": 71
         },
         {
             "lv": 620,
-            " next_exp ": "  347,729,495,050 ",
+            "next_exp": 347729495050,
             "reward_sp": 71
         },
         {
             "lv": 621,
-            " next_exp ": "  349,585,612,550 ",
+            "next_exp": 349585612550,
             "reward_sp": 71
         },
         {
             "lv": 622,
-            " next_exp ": "  351,446,730,050 ",
+            "next_exp": 351446730050,
             "reward_sp": 71
         },
         {
             "lv": 623,
-            " next_exp ": "  353,312,847,550 ",
+            "next_exp": 353312847550,
             "reward_sp": 72
         },
         {
             "lv": 624,
-            " next_exp ": "  355,183,965,050 ",
+            "next_exp": 355183965050,
             "reward_sp": 72
         },
         {
             "lv": 625,
-            " next_exp ": "  357,060,082,550 ",
+            "next_exp": 357060082550,
             "reward_sp": 72
         },
         {
             "lv": 626,
-            " next_exp ": "  358,941,200,050 ",
+            "next_exp": 358941200050,
             "reward_sp": 72
         },
         {
             "lv": 627,
-            " next_exp ": "  360,827,317,550 ",
+            "next_exp": 360827317550,
             "reward_sp": 72
         },
         {
             "lv": 628,
-            " next_exp ": "  362,718,435,050 ",
+            "next_exp": 362718435050,
             "reward_sp": 72
         },
         {
             "lv": 629,
-            " next_exp ": "  364,614,552,550 ",
+            "next_exp": 364614552550,
             "reward_sp": 72
         },
         {
             "lv": 630,
-            " next_exp ": "  366,515,670,050 ",
+            "next_exp": 366515670050,
             "reward_sp": 72
         },
         {
             "lv": 631,
-            " next_exp ": "  368,421,787,550 ",
+            "next_exp": 368421787550,
             "reward_sp": 72
         },
         {
             "lv": 632,
-            " next_exp ": "  370,332,905,050 ",
+            "next_exp": 370332905050,
             "reward_sp": 73
         },
         {
             "lv": 633,
-            " next_exp ": "  372,249,022,550 ",
+            "next_exp": 372249022550,
             "reward_sp": 73
         },
         {
             "lv": 634,
-            " next_exp ": "  374,170,140,050 ",
+            "next_exp": 374170140050,
             "reward_sp": 73
         },
         {
             "lv": 635,
-            " next_exp ": "  376,096,257,550 ",
+            "next_exp": 376096257550,
             "reward_sp": 73
         },
         {
             "lv": 636,
-            " next_exp ": "  378,027,375,050 ",
+            "next_exp": 378027375050,
             "reward_sp": 73
         },
         {
             "lv": 637,
-            " next_exp ": "  379,963,492,550 ",
+            "next_exp": 379963492550,
             "reward_sp": 73
         },
         {
             "lv": 638,
-            " next_exp ": "  381,904,610,050 ",
+            "next_exp": 381904610050,
             "reward_sp": 73
         },
         {
             "lv": 639,
-            " next_exp ": "  383,850,727,550 ",
+            "next_exp": 383850727550,
             "reward_sp": 73
         },
         {
             "lv": 640,
-            " next_exp ": "  385,801,845,050 ",
+            "next_exp": 385801845050,
             "reward_sp": 73
         },
         {
             "lv": 641,
-            " next_exp ": "  387,757,962,550 ",
+            "next_exp": 387757962550,
             "reward_sp": 74
         },
         {
             "lv": 642,
-            " next_exp ": "  389,719,080,050 ",
+            "next_exp": 389719080050,
             "reward_sp": 74
         },
         {
             "lv": 643,
-            " next_exp ": "  391,685,197,550 ",
+            "next_exp": 391685197550,
             "reward_sp": 74
         },
         {
             "lv": 644,
-            " next_exp ": "  393,656,315,050 ",
+            "next_exp": 393656315050,
             "reward_sp": 74
         },
         {
             "lv": 645,
-            " next_exp ": "  395,632,432,550 ",
+            "next_exp": 395632432550,
             "reward_sp": 74
         },
         {
             "lv": 646,
-            " next_exp ": "  397,613,550,050 ",
+            "next_exp": 397613550050,
             "reward_sp": 74
         },
         {
             "lv": 647,
-            " next_exp ": "  399,599,667,550 ",
+            "next_exp": 399599667550,
             "reward_sp": 74
         },
         {
             "lv": 648,
-            " next_exp ": "  401,590,785,050 ",
+            "next_exp": 401590785050,
             "reward_sp": 74
         },
         {
             "lv": 649,
-            " next_exp ": "  403,586,902,550 ",
+            "next_exp": 403586902550,
             "reward_sp": 74
         },
         {
             "lv": 650,
-            " next_exp ": "  405,588,020,050 ",
+            "next_exp": 405588020050,
             "reward_sp": 75
         },
         {
             "lv": 651,
-            " next_exp ": "  407,594,137,550 ",
+            "next_exp": 407594137550,
             "reward_sp": 75
         },
         {
             "lv": 652,
-            " next_exp ": "  409,605,255,050 ",
+            "next_exp": 409605255050,
             "reward_sp": 75
         },
         {
             "lv": 653,
-            " next_exp ": "  411,621,372,550 ",
+            "next_exp": 411621372550,
             "reward_sp": 75
         },
         {
             "lv": 654,
-            " next_exp ": "  413,642,490,050 ",
+            "next_exp": 413642490050,
             "reward_sp": 75
         },
         {
             "lv": 655,
-            " next_exp ": "  415,668,607,550 ",
+            "next_exp": 415668607550,
             "reward_sp": 75
         },
         {
             "lv": 656,
-            " next_exp ": "  417,699,725,050 ",
+            "next_exp": 417699725050,
             "reward_sp": 75
         },
         {
             "lv": 657,
-            " next_exp ": "  419,735,842,550 ",
+            "next_exp": 419735842550,
             "reward_sp": 75
         },
         {
             "lv": 658,
-            " next_exp ": "  421,776,960,050 ",
+            "next_exp": 421776960050,
             "reward_sp": 75
         },
         {
             "lv": 659,
-            " next_exp ": "  423,823,077,550 ",
+            "next_exp": 423823077550,
             "reward_sp": 76
         },
         {
             "lv": 660,
-            " next_exp ": "  425,874,195,050 ",
+            "next_exp": 425874195050,
             "reward_sp": 76
         },
         {
             "lv": 661,
-            " next_exp ": "  427,930,312,550 ",
+            "next_exp": 427930312550,
             "reward_sp": 76
         },
         {
             "lv": 662,
-            " next_exp ": "  429,991,430,050 ",
+            "next_exp": 429991430050,
             "reward_sp": 76
         },
         {
             "lv": 663,
-            " next_exp ": "  432,057,547,550 ",
+            "next_exp": 432057547550,
             "reward_sp": 76
         },
         {
             "lv": 664,
-            " next_exp ": "  434,128,665,050 ",
+            "next_exp": 434128665050,
             "reward_sp": 76
         },
         {
             "lv": 665,
-            " next_exp ": "  436,204,782,550 ",
+            "next_exp": 436204782550,
             "reward_sp": 76
         },
         {
             "lv": 666,
-            " next_exp ": "  438,285,900,050 ",
+            "next_exp": 438285900050,
             "reward_sp": 76
         },
         {
             "lv": 667,
-            " next_exp ": "  440,372,017,550 ",
+            "next_exp": 440372017550,
             "reward_sp": 76
         },
         {
             "lv": 668,
-            " next_exp ": "  442,463,135,050 ",
+            "next_exp": 442463135050,
             "reward_sp": 77
         },
         {
             "lv": 669,
-            " next_exp ": "  444,559,252,550 ",
+            "next_exp": 444559252550,
             "reward_sp": 77
         },
         {
             "lv": 670,
-            " next_exp ": "  446,660,370,050 ",
+            "next_exp": 446660370050,
             "reward_sp": 77
         },
         {
             "lv": 671,
-            " next_exp ": "  448,766,487,550 ",
+            "next_exp": 448766487550,
             "reward_sp": 77
         },
         {
             "lv": 672,
-            " next_exp ": "  450,877,605,050 ",
+            "next_exp": 450877605050,
             "reward_sp": 77
         },
         {
             "lv": 673,
-            " next_exp ": "  452,993,722,550 ",
+            "next_exp": 452993722550,
             "reward_sp": 77
         },
         {
             "lv": 674,
-            " next_exp ": "  455,114,840,050 ",
+            "next_exp": 455114840050,
             "reward_sp": 77
         },
         {
             "lv": 675,
-            " next_exp ": "  457,240,957,550 ",
+            "next_exp": 457240957550,
             "reward_sp": 77
         },
         {
             "lv": 676,
-            " next_exp ": "  459,372,075,050 ",
+            "next_exp": 459372075050,
             "reward_sp": 77
         },
         {
             "lv": 677,
-            " next_exp ": "  461,508,192,550 ",
+            "next_exp": 461508192550,
             "reward_sp": 78
         },
         {
             "lv": 678,
-            " next_exp ": "  463,649,310,050 ",
+            "next_exp": 463649310050,
             "reward_sp": 78
         },
         {
             "lv": 679,
-            " next_exp ": "  465,795,427,550 ",
+            "next_exp": 465795427550,
             "reward_sp": 78
         },
         {
             "lv": 680,
-            " next_exp ": "  467,946,545,050 ",
+            "next_exp": 467946545050,
             "reward_sp": 78
         },
         {
             "lv": 681,
-            " next_exp ": "  470,102,662,550 ",
+            "next_exp": 470102662550,
             "reward_sp": 78
         },
         {
             "lv": 682,
-            " next_exp ": "  472,263,780,050 ",
+            "next_exp": 472263780050,
             "reward_sp": 78
         },
         {
             "lv": 683,
-            " next_exp ": "  474,429,897,550 ",
+            "next_exp": 474429897550,
             "reward_sp": 78
         },
         {
             "lv": 684,
-            " next_exp ": "  476,601,015,050 ",
+            "next_exp": 476601015050,
             "reward_sp": 78
         },
         {
             "lv": 685,
-            " next_exp ": "  478,777,132,550 ",
+            "next_exp": 478777132550,
             "reward_sp": 78
         },
         {
             "lv": 686,
-            " next_exp ": "  480,958,250,050 ",
+            "next_exp": 480958250050,
             "reward_sp": 79
         },
         {
             "lv": 687,
-            " next_exp ": "  483,144,367,550 ",
+            "next_exp": 483144367550,
             "reward_sp": 79
         },
         {
             "lv": 688,
-            " next_exp ": "  485,335,485,050 ",
+            "next_exp": 485335485050,
             "reward_sp": 79
         },
         {
             "lv": 689,
-            " next_exp ": "  487,531,602,550 ",
+            "next_exp": 487531602550,
             "reward_sp": 79
         },
         {
             "lv": 690,
-            " next_exp ": "  489,732,720,050 ",
+            "next_exp": 489732720050,
             "reward_sp": 79
         },
         {
             "lv": 691,
-            " next_exp ": "  491,938,837,550 ",
+            "next_exp": 491938837550,
             "reward_sp": 79
         },
         {
             "lv": 692,
-            " next_exp ": "  494,149,955,050 ",
+            "next_exp": 494149955050,
             "reward_sp": 79
         },
         {
             "lv": 693,
-            " next_exp ": "  496,366,072,550 ",
+            "next_exp": 496366072550,
             "reward_sp": 79
         },
         {
             "lv": 694,
-            " next_exp ": "  498,587,190,050 ",
+            "next_exp": 498587190050,
             "reward_sp": 79
         },
         {
             "lv": 695,
-            " next_exp ": "  500,813,307,550 ",
+            "next_exp": 500813307550,
             "reward_sp": 80
         },
         {
             "lv": 696,
-            " next_exp ": "  503,044,425,050 ",
+            "next_exp": 503044425050,
             "reward_sp": 80
         },
         {
             "lv": 697,
-            " next_exp ": "  505,280,542,550 ",
+            "next_exp": 505280542550,
             "reward_sp": 80
         },
         {
             "lv": 698,
-            " next_exp ": "  507,521,660,050 ",
+            "next_exp": 507521660050,
             "reward_sp": 80
         },
         {
             "lv": 699,
-            " next_exp ": "  509,767,777,550 ",
+            "next_exp": 509767777550,
             "reward_sp": 80
         },
         {
             "lv": 700,
-            " next_exp ": "  512,018,895,050 ",
+            "next_exp": 512018895050,
             "reward_sp": 80
         },
         {
             "lv": 701,
-            " next_exp ": "  514,275,012,550 ",
+            "next_exp": 514275012550,
             "reward_sp": 80
         },
         {
             "lv": 702,
-            " next_exp ": "  516,536,130,050 ",
+            "next_exp": 516536130050,
             "reward_sp": 80
         },
         {
             "lv": 703,
-            " next_exp ": "  518,802,247,550 ",
+            "next_exp": 518802247550,
             "reward_sp": 80
         },
         {
             "lv": 704,
-            " next_exp ": "  521,073,365,050 ",
+            "next_exp": 521073365050,
             "reward_sp": 81
         },
         {
             "lv": 705,
-            " next_exp ": "  523,349,482,550 ",
+            "next_exp": 523349482550,
             "reward_sp": 81
         },
         {
             "lv": 706,
-            " next_exp ": "  525,630,600,050 ",
+            "next_exp": 525630600050,
             "reward_sp": 81
         },
         {
             "lv": 707,
-            " next_exp ": "  527,916,717,550 ",
+            "next_exp": 527916717550,
             "reward_sp": 81
         },
         {
             "lv": 708,
-            " next_exp ": "  530,207,835,050 ",
+            "next_exp": 530207835050,
             "reward_sp": 81
         },
         {
             "lv": 709,
-            " next_exp ": "  532,503,952,550 ",
+            "next_exp": 532503952550,
             "reward_sp": 81
         },
         {
             "lv": 710,
-            " next_exp ": "  534,805,070,050 ",
+            "next_exp": 534805070050,
             "reward_sp": 81
         },
         {
             "lv": 711,
-            " next_exp ": "  537,111,187,550 ",
+            "next_exp": 537111187550,
             "reward_sp": 81
         },
         {
             "lv": 712,
-            " next_exp ": "  539,422,305,050 ",
+            "next_exp": 539422305050,
             "reward_sp": 81
         },
         {
             "lv": 713,
-            " next_exp ": "  541,738,422,550 ",
+            "next_exp": 541738422550,
             "reward_sp": 82
         },
         {
             "lv": 714,
-            " next_exp ": "  544,059,540,050 ",
+            "next_exp": 544059540050,
             "reward_sp": 82
         },
         {
             "lv": 715,
-            " next_exp ": "  546,385,657,550 ",
+            "next_exp": 546385657550,
             "reward_sp": 82
         },
         {
             "lv": 716,
-            " next_exp ": "  548,716,775,050 ",
+            "next_exp": 548716775050,
             "reward_sp": 82
         },
         {
             "lv": 717,
-            " next_exp ": "  551,052,892,550 ",
+            "next_exp": 551052892550,
             "reward_sp": 82
         },
         {
             "lv": 718,
-            " next_exp ": "  553,394,010,050 ",
+            "next_exp": 553394010050,
             "reward_sp": 82
         },
         {
             "lv": 719,
-            " next_exp ": "  555,740,127,550 ",
+            "next_exp": 555740127550,
             "reward_sp": 82
         },
         {
             "lv": 720,
-            " next_exp ": "  558,091,245,050 ",
+            "next_exp": 558091245050,
             "reward_sp": 82
         },
         {
             "lv": 721,
-            " next_exp ": "  560,447,362,550 ",
+            "next_exp": 560447362550,
             "reward_sp": 82
         },
         {
             "lv": 722,
-            " next_exp ": "  562,808,480,050 ",
+            "next_exp": 562808480050,
             "reward_sp": 83
         },
         {
             "lv": 723,
-            " next_exp ": "  565,174,597,550 ",
+            "next_exp": 565174597550,
             "reward_sp": 83
         },
         {
             "lv": 724,
-            " next_exp ": "  567,545,715,050 ",
+            "next_exp": 567545715050,
             "reward_sp": 83
         },
         {
             "lv": 725,
-            " next_exp ": "  569,921,832,550 ",
+            "next_exp": 569921832550,
             "reward_sp": 83
         },
         {
             "lv": 726,
-            " next_exp ": "  572,302,950,050 ",
+            "next_exp": 572302950050,
             "reward_sp": 83
         },
         {
             "lv": 727,
-            " next_exp ": "  574,689,067,550 ",
+            "next_exp": 574689067550,
             "reward_sp": 83
         },
         {
             "lv": 728,
-            " next_exp ": "  577,080,185,050 ",
+            "next_exp": 577080185050,
             "reward_sp": 83
         },
         {
             "lv": 729,
-            " next_exp ": "  579,476,302,550 ",
+            "next_exp": 579476302550,
             "reward_sp": 83
         },
         {
             "lv": 730,
-            " next_exp ": "  581,877,420,050 ",
+            "next_exp": 581877420050,
             "reward_sp": 83
         },
         {
             "lv": 731,
-            " next_exp ": "  584,283,537,550 ",
+            "next_exp": 584283537550,
             "reward_sp": 84
         },
         {
             "lv": 732,
-            " next_exp ": "  586,694,655,050 ",
+            "next_exp": 586694655050,
             "reward_sp": 84
         },
         {
             "lv": 733,
-            " next_exp ": "  589,110,772,550 ",
+            "next_exp": 589110772550,
             "reward_sp": 84
         },
         {
             "lv": 734,
-            " next_exp ": "  591,531,890,050 ",
+            "next_exp": 591531890050,
             "reward_sp": 84
         },
         {
             "lv": 735,
-            " next_exp ": "  593,958,007,550 ",
+            "next_exp": 593958007550,
             "reward_sp": 84
         },
         {
             "lv": 736,
-            " next_exp ": "  596,389,125,050 ",
+            "next_exp": 596389125050,
             "reward_sp": 84
         },
         {
             "lv": 737,
-            " next_exp ": "  598,825,242,550 ",
+            "next_exp": 598825242550,
             "reward_sp": 84
         },
         {
             "lv": 738,
-            " next_exp ": "  601,266,360,050 ",
+            "next_exp": 601266360050,
             "reward_sp": 84
         },
         {
             "lv": 739,
-            " next_exp ": "  603,712,477,550 ",
+            "next_exp": 603712477550,
             "reward_sp": 84
         },
         {
             "lv": 740,
-            " next_exp ": "  606,163,595,050 ",
+            "next_exp": 606163595050,
             "reward_sp": 85
         },
         {
             "lv": 741,
-            " next_exp ": "  608,619,712,550 ",
+            "next_exp": 608619712550,
             "reward_sp": 85
         },
         {
             "lv": 742,
-            " next_exp ": "  611,080,830,050 ",
+            "next_exp": 611080830050,
             "reward_sp": 85
         },
         {
             "lv": 743,
-            " next_exp ": "  613,546,947,550 ",
+            "next_exp": 613546947550,
             "reward_sp": 85
         },
         {
             "lv": 744,
-            " next_exp ": "  616,018,065,050 ",
+            "next_exp": 616018065050,
             "reward_sp": 85
         },
         {
             "lv": 745,
-            " next_exp ": "  618,494,182,550 ",
+            "next_exp": 618494182550,
             "reward_sp": 85
         },
         {
             "lv": 746,
-            " next_exp ": "  620,975,300,050 ",
+            "next_exp": 620975300050,
             "reward_sp": 85
         },
         {
             "lv": 747,
-            " next_exp ": "  623,461,417,550 ",
+            "next_exp": 623461417550,
             "reward_sp": 85
         },
         {
             "lv": 748,
-            " next_exp ": "  625,952,535,050 ",
+            "next_exp": 625952535050,
             "reward_sp": 85
         },
         {
             "lv": 749,
-            " next_exp ": "  628,448,652,550 ",
+            "next_exp": 628448652550,
             "reward_sp": 86
         },
         {
             "lv": 750,
-            " next_exp ": "  630,949,770,050 ",
+            "next_exp": 630949770050,
             "reward_sp": 86
         },
         {
             "lv": 751,
-            " next_exp ": "  633,455,887,550 ",
+            "next_exp": 633455887550,
             "reward_sp": 86
         },
         {
             "lv": 752,
-            " next_exp ": "  635,967,005,050 ",
+            "next_exp": 635967005050,
             "reward_sp": 86
         },
         {
             "lv": 753,
-            " next_exp ": "  638,483,122,550 ",
+            "next_exp": 638483122550,
             "reward_sp": 86
         },
         {
             "lv": 754,
-            " next_exp ": "  641,004,240,050 ",
+            "next_exp": 641004240050,
             "reward_sp": 86
         },
         {
             "lv": 755,
-            " next_exp ": "  643,530,357,550 ",
+            "next_exp": 643530357550,
             "reward_sp": 86
         },
         {
             "lv": 756,
-            " next_exp ": "  646,061,475,050 ",
+            "next_exp": 646061475050,
             "reward_sp": 86
         },
         {
             "lv": 757,
-            " next_exp ": "  648,597,592,550 ",
+            "next_exp": 648597592550,
             "reward_sp": 86
         },
         {
             "lv": 758,
-            " next_exp ": "  651,138,710,050 ",
+            "next_exp": 651138710050,
             "reward_sp": 87
         },
         {
             "lv": 759,
-            " next_exp ": "  653,684,827,550 ",
+            "next_exp": 653684827550,
             "reward_sp": 87
         },
         {
             "lv": 760,
-            " next_exp ": "  656,235,945,050 ",
+            "next_exp": 656235945050,
             "reward_sp": 87
         },
         {
             "lv": 761,
-            " next_exp ": "  658,792,062,550 ",
+            "next_exp": 658792062550,
             "reward_sp": 87
         },
         {
             "lv": 762,
-            " next_exp ": "  661,353,180,050 ",
+            "next_exp": 661353180050,
             "reward_sp": 87
         },
         {
             "lv": 763,
-            " next_exp ": "  663,919,297,550 ",
+            "next_exp": 663919297550,
             "reward_sp": 87
         },
         {
             "lv": 764,
-            " next_exp ": "  666,490,415,050 ",
+            "next_exp": 666490415050,
             "reward_sp": 87
         },
         {
             "lv": 765,
-            " next_exp ": "  669,066,532,550 ",
+            "next_exp": 669066532550,
             "reward_sp": 87
         },
         {
             "lv": 766,
-            " next_exp ": "  671,647,650,050 ",
+            "next_exp": 671647650050,
             "reward_sp": 87
         },
         {
             "lv": 767,
-            " next_exp ": "  674,233,767,550 ",
+            "next_exp": 674233767550,
             "reward_sp": 88
         },
         {
             "lv": 768,
-            " next_exp ": "  676,824,885,050 ",
+            "next_exp": 676824885050,
             "reward_sp": 88
         },
         {
             "lv": 769,
-            " next_exp ": "  679,421,002,550 ",
+            "next_exp": 679421002550,
             "reward_sp": 88
         },
         {
             "lv": 770,
-            " next_exp ": "  682,022,120,050 ",
+            "next_exp": 682022120050,
             "reward_sp": 88
         },
         {
             "lv": 771,
-            " next_exp ": "  684,628,237,550 ",
+            "next_exp": 684628237550,
             "reward_sp": 88
         },
         {
             "lv": 772,
-            " next_exp ": "  687,239,355,050 ",
+            "next_exp": 687239355050,
             "reward_sp": 88
         },
         {
             "lv": 773,
-            " next_exp ": "  689,855,472,550 ",
+            "next_exp": 689855472550,
             "reward_sp": 88
         },
         {
             "lv": 774,
-            " next_exp ": "  692,476,590,050 ",
+            "next_exp": 692476590050,
             "reward_sp": 88
         },
         {
             "lv": 775,
-            " next_exp ": "  695,102,707,550 ",
+            "next_exp": 695102707550,
             "reward_sp": 88
         },
         {
             "lv": 776,
-            " next_exp ": "  697,733,825,050 ",
+            "next_exp": 697733825050,
             "reward_sp": 89
         },
         {
             "lv": 777,
-            " next_exp ": "  700,369,942,550 ",
+            "next_exp": 700369942550,
             "reward_sp": 89
         },
         {
             "lv": 778,
-            " next_exp ": "  703,011,060,050 ",
+            "next_exp": 703011060050,
             "reward_sp": 89
         },
         {
             "lv": 779,
-            " next_exp ": "  705,657,177,550 ",
+            "next_exp": 705657177550,
             "reward_sp": 89
         },
         {
             "lv": 780,
-            " next_exp ": "  708,308,295,050 ",
+            "next_exp": 708308295050,
             "reward_sp": 89
         },
         {
             "lv": 781,
-            " next_exp ": "  710,964,412,550 ",
+            "next_exp": 710964412550,
             "reward_sp": 89
         },
         {
             "lv": 782,
-            " next_exp ": "  713,625,530,050 ",
+            "next_exp": 713625530050,
             "reward_sp": 89
         },
         {
             "lv": 783,
-            " next_exp ": "  716,291,647,550 ",
+            "next_exp": 716291647550,
             "reward_sp": 89
         },
         {
             "lv": 784,
-            " next_exp ": "  718,962,765,050 ",
+            "next_exp": 718962765050,
             "reward_sp": 89
         },
         {
             "lv": 785,
-            " next_exp ": "  721,638,882,550 ",
+            "next_exp": 721638882550,
             "reward_sp": 90
         },
         {
             "lv": 786,
-            " next_exp ": "  724,320,000,050 ",
+            "next_exp": 724320000050,
             "reward_sp": 90
         },
         {
             "lv": 787,
-            " next_exp ": "  727,006,117,550 ",
+            "next_exp": 727006117550,
             "reward_sp": 90
         },
         {
             "lv": 788,
-            " next_exp ": "  729,697,235,050 ",
+            "next_exp": 729697235050,
             "reward_sp": 90
         },
         {
             "lv": 789,
-            " next_exp ": "  732,393,352,550 ",
+            "next_exp": 732393352550,
             "reward_sp": 90
         },
         {
             "lv": 790,
-            " next_exp ": "  735,094,470,050 ",
+            "next_exp": 735094470050,
             "reward_sp": 90
         },
         {
             "lv": 791,
-            " next_exp ": "  737,800,587,550 ",
+            "next_exp": 737800587550,
             "reward_sp": 90
         },
         {
             "lv": 792,
-            " next_exp ": "  740,511,705,050 ",
+            "next_exp": 740511705050,
             "reward_sp": 90
         },
         {
             "lv": 793,
-            " next_exp ": "  743,227,822,550 ",
+            "next_exp": 743227822550,
             "reward_sp": 90
         },
         {
             "lv": 794,
-            " next_exp ": "  745,948,940,050 ",
+            "next_exp": 745948940050,
             "reward_sp": 91
         },
         {
             "lv": 795,
-            " next_exp ": "  748,675,057,550 ",
+            "next_exp": 748675057550,
             "reward_sp": 91
         },
         {
             "lv": 796,
-            " next_exp ": "  751,406,175,050 ",
+            "next_exp": 751406175050,
             "reward_sp": 91
         },
         {
             "lv": 797,
-            " next_exp ": "  754,142,292,550 ",
+            "next_exp": 754142292550,
             "reward_sp": 91
         },
         {
             "lv": 798,
-            " next_exp ": "  756,883,410,050 ",
+            "next_exp": 756883410050,
             "reward_sp": 91
         },
         {
             "lv": 799,
-            " next_exp ": "  759,629,527,550 ",
+            "next_exp": 759629527550,
             "reward_sp": 91
         },
         {
             "lv": 800,
-            " next_exp ": "  762,380,645,050 ",
+            "next_exp": 762380645050,
             "reward_sp": 91
         },
         {
             "lv": 801,
-            " next_exp ": "  765,136,762,550 ",
+            "next_exp": 765136762550,
             "reward_sp": 91
         },
         {
             "lv": 802,
-            " next_exp ": "  767,897,880,050 ",
+            "next_exp": 767897880050,
             "reward_sp": 91
         },
         {
             "lv": 803,
-            " next_exp ": "  770,663,997,550 ",
+            "next_exp": 770663997550,
             "reward_sp": 92
         },
         {
             "lv": 804,
-            " next_exp ": "  773,435,115,050 ",
+            "next_exp": 773435115050,
             "reward_sp": 92
         },
         {
             "lv": 805,
-            " next_exp ": "  776,211,232,550 ",
+            "next_exp": 776211232550,
             "reward_sp": 92
         },
         {
             "lv": 806,
-            " next_exp ": "  778,992,350,050 ",
+            "next_exp": 778992350050,
             "reward_sp": 92
         },
         {
             "lv": 807,
-            " next_exp ": "  781,778,467,550 ",
+            "next_exp": 781778467550,
             "reward_sp": 92
         },
         {
             "lv": 808,
-            " next_exp ": "  784,569,585,050 ",
+            "next_exp": 784569585050,
             "reward_sp": 92
         },
         {
             "lv": 809,
-            " next_exp ": "  787,365,702,550 ",
+            "next_exp": 787365702550,
             "reward_sp": 92
         },
         {
             "lv": 810,
-            " next_exp ": "  790,166,820,050 ",
+            "next_exp": 790166820050,
             "reward_sp": 92
         },
         {
             "lv": 811,
-            " next_exp ": "  792,972,937,550 ",
+            "next_exp": 792972937550,
             "reward_sp": 92
         },
         {
             "lv": 812,
-            " next_exp ": "  795,784,055,050 ",
+            "next_exp": 795784055050,
             "reward_sp": 93
         },
         {
             "lv": 813,
-            " next_exp ": "  798,600,172,550 ",
+            "next_exp": 798600172550,
             "reward_sp": 93
         },
         {
             "lv": 814,
-            " next_exp ": "  801,421,290,050 ",
+            "next_exp": 801421290050,
             "reward_sp": 93
         },
         {
             "lv": 815,
-            " next_exp ": "  804,247,407,550 ",
+            "next_exp": 804247407550,
             "reward_sp": 93
         },
         {
             "lv": 816,
-            " next_exp ": "  807,078,525,050 ",
+            "next_exp": 807078525050,
             "reward_sp": 93
         },
         {
             "lv": 817,
-            " next_exp ": "  809,914,642,550 ",
+            "next_exp": 809914642550,
             "reward_sp": 93
         },
         {
             "lv": 818,
-            " next_exp ": "  812,755,760,050 ",
+            "next_exp": 812755760050,
             "reward_sp": 93
         },
         {
             "lv": 819,
-            " next_exp ": "  815,601,877,550 ",
+            "next_exp": 815601877550,
             "reward_sp": 93
         },
         {
             "lv": 820,
-            " next_exp ": "  818,452,995,050 ",
+            "next_exp": 818452995050,
             "reward_sp": 93
         },
         {
             "lv": 821,
-            " next_exp ": "  821,309,112,550 ",
+            "next_exp": 821309112550,
             "reward_sp": 94
         },
         {
             "lv": 822,
-            " next_exp ": "  824,170,230,050 ",
+            "next_exp": 824170230050,
             "reward_sp": 94
         },
         {
             "lv": 823,
-            " next_exp ": "  827,036,347,550 ",
+            "next_exp": 827036347550,
             "reward_sp": 94
         },
         {
             "lv": 824,
-            " next_exp ": "  829,907,465,050 ",
+            "next_exp": 829907465050,
             "reward_sp": 94
         },
         {
             "lv": 825,
-            " next_exp ": "  832,783,582,550 ",
+            "next_exp": 832783582550,
             "reward_sp": 94
         },
         {
             "lv": 826,
-            " next_exp ": "  835,664,700,050 ",
+            "next_exp": 835664700050,
             "reward_sp": 94
         },
         {
             "lv": 827,
-            " next_exp ": "  838,550,817,550 ",
+            "next_exp": 838550817550,
             "reward_sp": 94
         },
         {
             "lv": 828,
-            " next_exp ": "  841,441,935,050 ",
+            "next_exp": 841441935050,
             "reward_sp": 94
         },
         {
             "lv": 829,
-            " next_exp ": "  844,338,052,550 ",
+            "next_exp": 844338052550,
             "reward_sp": 94
         },
         {
             "lv": 830,
-            " next_exp ": "  847,239,170,050 ",
+            "next_exp": 847239170050,
             "reward_sp": 95
         },
         {
             "lv": 831,
-            " next_exp ": "  850,145,287,550 ",
+            "next_exp": 850145287550,
             "reward_sp": 95
         },
         {
             "lv": 832,
-            " next_exp ": "  853,056,405,050 ",
+            "next_exp": 853056405050,
             "reward_sp": 95
         },
         {
             "lv": 833,
-            " next_exp ": "  855,972,522,550 ",
+            "next_exp": 855972522550,
             "reward_sp": 95
         },
         {
             "lv": 834,
-            " next_exp ": "  858,893,640,050 ",
+            "next_exp": 858893640050,
             "reward_sp": 95
         },
         {
             "lv": 835,
-            " next_exp ": "  861,819,757,550 ",
+            "next_exp": 861819757550,
             "reward_sp": 95
         },
         {
             "lv": 836,
-            " next_exp ": "  864,750,875,050 ",
+            "next_exp": 864750875050,
             "reward_sp": 95
         },
         {
             "lv": 837,
-            " next_exp ": "  867,686,992,550 ",
+            "next_exp": 867686992550,
             "reward_sp": 95
         },
         {
             "lv": 838,
-            " next_exp ": "  870,628,110,050 ",
+            "next_exp": 870628110050,
             "reward_sp": 95
         },
         {
             "lv": 839,
-            " next_exp ": "  873,574,227,550 ",
+            "next_exp": 873574227550,
             "reward_sp": 96
         },
         {
             "lv": 840,
-            " next_exp ": "  876,525,345,050 ",
+            "next_exp": 876525345050,
             "reward_sp": 96
         },
         {
             "lv": 841,
-            " next_exp ": "  879,481,462,550 ",
+            "next_exp": 879481462550,
             "reward_sp": 96
         },
         {
             "lv": 842,
-            " next_exp ": "  882,442,580,050 ",
+            "next_exp": 882442580050,
             "reward_sp": 96
         },
         {
             "lv": 843,
-            " next_exp ": "  885,408,697,550 ",
+            "next_exp": 885408697550,
             "reward_sp": 96
         },
         {
             "lv": 844,
-            " next_exp ": "  888,379,815,050 ",
+            "next_exp": 888379815050,
             "reward_sp": 96
         },
         {
             "lv": 845,
-            " next_exp ": "  891,355,932,550 ",
+            "next_exp": 891355932550,
             "reward_sp": 96
         },
         {
             "lv": 846,
-            " next_exp ": "  894,337,050,050 ",
+            "next_exp": 894337050050,
             "reward_sp": 96
         },
         {
             "lv": 847,
-            " next_exp ": "  897,323,167,550 ",
+            "next_exp": 897323167550,
             "reward_sp": 96
         },
         {
             "lv": 848,
-            " next_exp ": "  900,314,285,050 ",
+            "next_exp": 900314285050,
             "reward_sp": 97
         },
         {
             "lv": 849,
-            " next_exp ": "  903,310,402,550 ",
+            "next_exp": 903310402550,
             "reward_sp": 97
         },
         {
             "lv": 850,
-            " next_exp ": "  906,311,520,050 ",
+            "next_exp": 906311520050,
             "reward_sp": 97
         },
         {
             "lv": 851,
-            " next_exp ": "  909,317,637,550 ",
+            "next_exp": 909317637550,
             "reward_sp": 97
         },
         {
             "lv": 852,
-            " next_exp ": "  912,328,755,050 ",
+            "next_exp": 912328755050,
             "reward_sp": 97
         },
         {
             "lv": 853,
-            " next_exp ": "  915,344,872,550 ",
+            "next_exp": 915344872550,
             "reward_sp": 97
         },
         {
             "lv": 854,
-            " next_exp ": "  918,365,990,050 ",
+            "next_exp": 918365990050,
             "reward_sp": 97
         },
         {
             "lv": 855,
-            " next_exp ": "  921,392,107,550 ",
+            "next_exp": 921392107550,
             "reward_sp": 97
         },
         {
             "lv": 856,
-            " next_exp ": "  924,423,225,050 ",
+            "next_exp": 924423225050,
             "reward_sp": 97
         },
         {
             "lv": 857,
-            " next_exp ": "  927,459,342,550 ",
+            "next_exp": 927459342550,
             "reward_sp": 98
         },
         {
             "lv": 858,
-            " next_exp ": "  930,500,460,050 ",
+            "next_exp": 930500460050,
             "reward_sp": 98
         },
         {
             "lv": 859,
-            " next_exp ": "  933,546,577,550 ",
+            "next_exp": 933546577550,
             "reward_sp": 98
         },
         {
             "lv": 860,
-            " next_exp ": "  936,597,695,050 ",
+            "next_exp": 936597695050,
             "reward_sp": 98
         },
         {
             "lv": 861,
-            " next_exp ": "  939,653,812,550 ",
+            "next_exp": 939653812550,
             "reward_sp": 98
         },
         {
             "lv": 862,
-            " next_exp ": "  942,714,930,050 ",
+            "next_exp": 942714930050,
             "reward_sp": 98
         },
         {
             "lv": 863,
-            " next_exp ": "  945,781,047,550 ",
+            "next_exp": 945781047550,
             "reward_sp": 98
         },
         {
             "lv": 864,
-            " next_exp ": "  948,852,165,050 ",
+            "next_exp": 948852165050,
             "reward_sp": 98
         },
         {
             "lv": 865,
-            " next_exp ": "  951,928,282,550 ",
+            "next_exp": 951928282550,
             "reward_sp": 98
         },
         {
             "lv": 866,
-            " next_exp ": "  955,009,400,050 ",
+            "next_exp": 955009400050,
             "reward_sp": 99
         },
         {
             "lv": 867,
-            " next_exp ": "  958,095,517,550 ",
+            "next_exp": 958095517550,
             "reward_sp": 99
         },
         {
             "lv": 868,
-            " next_exp ": "  961,186,635,050 ",
+            "next_exp": 961186635050,
             "reward_sp": 99
         },
         {
             "lv": 869,
-            " next_exp ": "  964,282,752,550 ",
+            "next_exp": 964282752550,
             "reward_sp": 99
         },
         {
             "lv": 870,
-            " next_exp ": "  967,383,870,050 ",
+            "next_exp": 967383870050,
             "reward_sp": 99
         },
         {
             "lv": 871,
-            " next_exp ": "  970,489,987,550 ",
+            "next_exp": 970489987550,
             "reward_sp": 99
         },
         {
             "lv": 872,
-            " next_exp ": "  973,601,105,050 ",
+            "next_exp": 973601105050,
             "reward_sp": 99
         },
         {
             "lv": 873,
-            " next_exp ": "  976,717,222,550 ",
+            "next_exp": 976717222550,
             "reward_sp": 99
         },
         {
             "lv": 874,
-            " next_exp ": "  979,838,340,050 ",
+            "next_exp": 979838340050,
             "reward_sp": 99
         },
         {
             "lv": 875,
-            " next_exp ": "  982,964,457,550 ",
+            "next_exp": 982964457550,
             "reward_sp": 100
         },
         {
             "lv": 876,
-            " next_exp ": "  986,095,575,050 ",
+            "next_exp": 986095575050,
             "reward_sp": 100
         },
         {
             "lv": 877,
-            " next_exp ": "  989,231,692,550 ",
+            "next_exp": 989231692550,
             "reward_sp": 100
         },
         {
             "lv": 878,
-            " next_exp ": "  992,372,810,050 ",
+            "next_exp": 992372810050,
             "reward_sp": 100
         },
         {
             "lv": 879,
-            " next_exp ": "  995,518,927,550 ",
+            "next_exp": 995518927550,
             "reward_sp": 100
         },
         {
             "lv": 880,
-            " next_exp ": "  998,670,045,050 ",
+            "next_exp": 998670045050,
             "reward_sp": 100
         },
         {
             "lv": 881,
-            " next_exp ": "  1,001,826,162,550 ",
+            "next_exp": 1001826162550,
             "reward_sp": 100
         },
         {
             "lv": 882,
-            " next_exp ": "  1,004,987,280,050 ",
+            "next_exp": 1004987280050,
             "reward_sp": 100
         },
         {
             "lv": 883,
-            " next_exp ": "  1,008,153,397,550 ",
+            "next_exp": 1008153397550,
             "reward_sp": 100
         },
         {
             "lv": 884,
-            " next_exp ": "  1,011,324,515,050 ",
+            "next_exp": 1011324515050,
             "reward_sp": 101
         },
         {
             "lv": 885,
-            " next_exp ": "  1,014,500,632,550 ",
+            "next_exp": 1014500632550,
             "reward_sp": 101
         },
         {
             "lv": 886,
-            " next_exp ": "  1,017,681,750,050 ",
+            "next_exp": 1017681750050,
             "reward_sp": 101
         },
         {
             "lv": 887,
-            " next_exp ": "  1,020,867,867,550 ",
+            "next_exp": 1020867867550,
             "reward_sp": 101
         },
         {
             "lv": 888,
-            " next_exp ": "  1,024,058,985,050 ",
+            "next_exp": 1024058985050,
             "reward_sp": 101
         },
         {
             "lv": 889,
-            " next_exp ": "  1,027,255,102,550 ",
+            "next_exp": 1027255102550,
             "reward_sp": 101
         },
         {
             "lv": 890,
-            " next_exp ": "  1,030,456,220,050 ",
+            "next_exp": 1030456220050,
             "reward_sp": 101
         },
         {
             "lv": 891,
-            " next_exp ": "  1,033,662,337,550 ",
+            "next_exp": 1033662337550,
             "reward_sp": 101
         },
         {
             "lv": 892,
-            " next_exp ": "  1,036,873,455,050 ",
+            "next_exp": 1036873455050,
             "reward_sp": 101
         },
         {
             "lv": 893,
-            " next_exp ": "  1,040,089,572,550 ",
+            "next_exp": 1040089572550,
             "reward_sp": 102
         },
         {
             "lv": 894,
-            " next_exp ": "  1,043,310,690,050 ",
+            "next_exp": 1043310690050,
             "reward_sp": 102
         },
         {
             "lv": 895,
-            " next_exp ": "  1,046,536,807,550 ",
+            "next_exp": 1046536807550,
             "reward_sp": 102
         },
         {
             "lv": 896,
-            " next_exp ": "  1,049,767,925,050 ",
+            "next_exp": 1049767925050,
             "reward_sp": 102
         },
         {
             "lv": 897,
-            " next_exp ": "  1,053,004,042,550 ",
+            "next_exp": 1053004042550,
             "reward_sp": 102
         },
         {
             "lv": 898,
-            " next_exp ": "  1,056,245,160,050 ",
+            "next_exp": 1056245160050,
             "reward_sp": 102
         },
         {
             "lv": 899,
-            " next_exp ": "  1,059,491,277,550 ",
+            "next_exp": 1059491277550,
             "reward_sp": 102
         },
         {
             "lv": 900,
-            " next_exp ": "  1,062,742,395,050 ",
+            "next_exp": 1062742395050,
             "reward_sp": 102
         },
         {
             "lv": 901,
-            " next_exp ": "  1,065,998,512,550 ",
+            "next_exp": 1065998512550,
             "reward_sp": 102
         },
         {
             "lv": 902,
-            " next_exp ": "  1,069,259,630,050 ",
+            "next_exp": 1069259630050,
             "reward_sp": 103
         },
         {
             "lv": 903,
-            " next_exp ": "  1,072,525,747,550 ",
+            "next_exp": 1072525747550,
             "reward_sp": 103
         },
         {
             "lv": 904,
-            " next_exp ": "  1,075,796,865,050 ",
+            "next_exp": 1075796865050,
             "reward_sp": 103
         },
         {
             "lv": 905,
-            " next_exp ": "  1,079,072,982,550 ",
+            "next_exp": 1079072982550,
             "reward_sp": 103
         },
         {
             "lv": 906,
-            " next_exp ": "  1,082,354,100,050 ",
+            "next_exp": 1082354100050,
             "reward_sp": 103
         },
         {
             "lv": 907,
-            " next_exp ": "  1,085,640,217,550 ",
+            "next_exp": 1085640217550,
             "reward_sp": 103
         },
         {
             "lv": 908,
-            " next_exp ": "  1,088,931,335,050 ",
+            "next_exp": 1088931335050,
             "reward_sp": 103
         },
         {
             "lv": 909,
-            " next_exp ": "  1,092,227,452,550 ",
+            "next_exp": 1092227452550,
             "reward_sp": 103
         },
         {
             "lv": 910,
-            " next_exp ": "  1,095,528,570,050 ",
+            "next_exp": 1095528570050,
             "reward_sp": 103
         },
         {
             "lv": 911,
-            " next_exp ": "  1,098,834,687,550 ",
+            "next_exp": 1098834687550,
             "reward_sp": 104
         },
         {
             "lv": 912,
-            " next_exp ": "  1,102,145,805,050 ",
+            "next_exp": 1102145805050,
             "reward_sp": 104
         },
         {
             "lv": 913,
-            " next_exp ": "  1,105,461,922,550 ",
+            "next_exp": 1105461922550,
             "reward_sp": 104
         },
         {
             "lv": 914,
-            " next_exp ": "  1,108,783,040,050 ",
+            "next_exp": 1108783040050,
             "reward_sp": 104
         },
         {
             "lv": 915,
-            " next_exp ": "  1,112,109,157,550 ",
+            "next_exp": 1112109157550,
             "reward_sp": 104
         },
         {
             "lv": 916,
-            " next_exp ": "  1,115,440,275,050 ",
+            "next_exp": 1115440275050,
             "reward_sp": 104
         },
         {
             "lv": 917,
-            " next_exp ": "  1,118,776,392,550 ",
+            "next_exp": 1118776392550,
             "reward_sp": 104
         },
         {
             "lv": 918,
-            " next_exp ": "  1,122,117,510,050 ",
+            "next_exp": 1122117510050,
             "reward_sp": 104
         },
         {
             "lv": 919,
-            " next_exp ": "  1,125,463,627,550 ",
+            "next_exp": 1125463627550,
             "reward_sp": 104
         },
         {
             "lv": 920,
-            " next_exp ": "  1,128,814,745,050 ",
+            "next_exp": 1128814745050,
             "reward_sp": 105
         },
         {
             "lv": 921,
-            " next_exp ": "  1,132,170,862,550 ",
+            "next_exp": 1132170862550,
             "reward_sp": 105
         },
         {
             "lv": 922,
-            " next_exp ": "  1,135,531,980,050 ",
+            "next_exp": 1135531980050,
             "reward_sp": 105
         },
         {
             "lv": 923,
-            " next_exp ": "  1,138,898,097,550 ",
+            "next_exp": 1138898097550,
             "reward_sp": 105
         },
         {
             "lv": 924,
-            " next_exp ": "  1,142,269,215,050 ",
+            "next_exp": 1142269215050,
             "reward_sp": 105
         },
         {
             "lv": 925,
-            " next_exp ": "  1,145,645,332,550 ",
+            "next_exp": 1145645332550,
             "reward_sp": 105
         },
         {
             "lv": 926,
-            " next_exp ": "  1,149,026,450,050 ",
+            "next_exp": 1149026450050,
             "reward_sp": 105
         },
         {
             "lv": 927,
-            " next_exp ": "  1,152,412,567,550 ",
+            "next_exp": 1152412567550,
             "reward_sp": 105
         },
         {
             "lv": 928,
-            " next_exp ": "  1,155,803,685,050 ",
+            "next_exp": 1155803685050,
             "reward_sp": 105
         },
         {
             "lv": 929,
-            " next_exp ": "  1,159,199,802,550 ",
+            "next_exp": 1159199802550,
             "reward_sp": 106
         },
         {
             "lv": 930,
-            " next_exp ": "  1,162,600,920,050 ",
+            "next_exp": 1162600920050,
             "reward_sp": 106
         },
         {
             "lv": 931,
-            " next_exp ": "  1,166,007,037,550 ",
+            "next_exp": 1166007037550,
             "reward_sp": 106
         },
         {
             "lv": 932,
-            " next_exp ": "  1,169,418,155,050 ",
+            "next_exp": 1169418155050,
             "reward_sp": 106
         },
         {
             "lv": 933,
-            " next_exp ": "  1,172,834,272,550 ",
+            "next_exp": 1172834272550,
             "reward_sp": 106
         },
         {
             "lv": 934,
-            " next_exp ": "  1,176,255,390,050 ",
+            "next_exp": 1176255390050,
             "reward_sp": 106
         },
         {
             "lv": 935,
-            " next_exp ": "  1,179,681,507,550 ",
+            "next_exp": 1179681507550,
             "reward_sp": 106
         },
         {
             "lv": 936,
-            " next_exp ": "  1,183,112,625,050 ",
+            "next_exp": 1183112625050,
             "reward_sp": 106
         },
         {
             "lv": 937,
-            " next_exp ": "  1,186,548,742,550 ",
+            "next_exp": 1186548742550,
             "reward_sp": 106
         },
         {
             "lv": 938,
-            " next_exp ": "  1,189,989,860,050 ",
+            "next_exp": 1189989860050,
             "reward_sp": 107
         },
         {
             "lv": 939,
-            " next_exp ": "  1,193,435,977,550 ",
+            "next_exp": 1193435977550,
             "reward_sp": 107
         },
         {
             "lv": 940,
-            " next_exp ": "  1,196,887,095,050 ",
+            "next_exp": 1196887095050,
             "reward_sp": 107
         },
         {
             "lv": 941,
-            " next_exp ": "  1,200,343,212,550 ",
+            "next_exp": 1200343212550,
             "reward_sp": 107
         },
         {
             "lv": 942,
-            " next_exp ": "  1,203,804,330,050 ",
+            "next_exp": 1203804330050,
             "reward_sp": 107
         },
         {
             "lv": 943,
-            " next_exp ": "  1,207,270,447,550 ",
+            "next_exp": 1207270447550,
             "reward_sp": 107
         },
         {
             "lv": 944,
-            " next_exp ": "  1,210,741,565,050 ",
+            "next_exp": 1210741565050,
             "reward_sp": 107
         },
         {
             "lv": 945,
-            " next_exp ": "  1,214,217,682,550 ",
+            "next_exp": 1214217682550,
             "reward_sp": 107
         },
         {
             "lv": 946,
-            " next_exp ": "  1,217,698,800,050 ",
+            "next_exp": 1217698800050,
             "reward_sp": 107
         },
         {
             "lv": 947,
-            " next_exp ": "  1,221,184,917,550 ",
+            "next_exp": 1221184917550,
             "reward_sp": 108
         },
         {
             "lv": 948,
-            " next_exp ": "  1,224,676,035,050 ",
+            "next_exp": 1224676035050,
             "reward_sp": 108
         },
         {
             "lv": 949,
-            " next_exp ": "  1,228,172,152,550 ",
+            "next_exp": 1228172152550,
             "reward_sp": 108
         },
         {
             "lv": 950,
-            " next_exp ": "  1,231,673,270,050 ",
+            "next_exp": 1231673270050,
             "reward_sp": 108
         },
         {
             "lv": 951,
-            " next_exp ": "  1,235,179,387,550 ",
+            "next_exp": 1235179387550,
             "reward_sp": 108
         },
         {
             "lv": 952,
-            " next_exp ": "  1,238,690,505,050 ",
+            "next_exp": 1238690505050,
             "reward_sp": 108
         },
         {
             "lv": 953,
-            " next_exp ": "  1,242,206,622,550 ",
+            "next_exp": 1242206622550,
             "reward_sp": 108
         },
         {
             "lv": 954,
-            " next_exp ": "  1,245,727,740,050 ",
+            "next_exp": 1245727740050,
             "reward_sp": 108
         },
         {
             "lv": 955,
-            " next_exp ": "  1,249,253,857,550 ",
+            "next_exp": 1249253857550,
             "reward_sp": 108
         },
         {
             "lv": 956,
-            " next_exp ": "  1,252,784,975,050 ",
+            "next_exp": 1252784975050,
             "reward_sp": 109
         },
         {
             "lv": 957,
-            " next_exp ": "  1,256,321,092,550 ",
+            "next_exp": 1256321092550,
             "reward_sp": 109
         },
         {
             "lv": 958,
-            " next_exp ": "  1,259,862,210,050 ",
+            "next_exp": 1259862210050,
             "reward_sp": 109
         },
         {
             "lv": 959,
-            " next_exp ": "  1,263,408,327,550 ",
+            "next_exp": 1263408327550,
             "reward_sp": 109
         },
         {
             "lv": 960,
-            " next_exp ": "  1,266,959,445,050 ",
+            "next_exp": 1266959445050,
             "reward_sp": 109
         },
         {
             "lv": 961,
-            " next_exp ": "  1,270,515,562,550 ",
+            "next_exp": 1270515562550,
             "reward_sp": 109
         },
         {
             "lv": 962,
-            " next_exp ": "  1,274,076,680,050 ",
+            "next_exp": 1274076680050,
             "reward_sp": 109
         },
         {
             "lv": 963,
-            " next_exp ": "  1,277,642,797,550 ",
+            "next_exp": 1277642797550,
             "reward_sp": 109
         },
         {
             "lv": 964,
-            " next_exp ": "  1,281,213,915,050 ",
+            "next_exp": 1281213915050,
             "reward_sp": 109
         },
         {
             "lv": 965,
-            " next_exp ": "  1,284,790,032,550 ",
+            "next_exp": 1284790032550,
             "reward_sp": 110
         },
         {
             "lv": 966,
-            " next_exp ": "  1,288,371,150,050 ",
+            "next_exp": 1288371150050,
             "reward_sp": 110
         },
         {
             "lv": 967,
-            " next_exp ": "  1,291,957,267,550 ",
+            "next_exp": 1291957267550,
             "reward_sp": 110
         },
         {
             "lv": 968,
-            " next_exp ": "  1,295,548,385,050 ",
+            "next_exp": 1295548385050,
             "reward_sp": 110
         },
         {
             "lv": 969,
-            " next_exp ": "  1,299,144,502,550 ",
+            "next_exp": 1299144502550,
             "reward_sp": 110
         },
         {
             "lv": 970,
-            " next_exp ": "  1,302,745,620,050 ",
+            "next_exp": 1302745620050,
             "reward_sp": 110
         },
         {
             "lv": 971,
-            " next_exp ": "  1,306,351,737,550 ",
+            "next_exp": 1306351737550,
             "reward_sp": 110
         },
         {
             "lv": 972,
-            " next_exp ": "  1,309,962,855,050 ",
+            "next_exp": 1309962855050,
             "reward_sp": 110
         },
         {
             "lv": 973,
-            " next_exp ": "  1,313,578,972,550 ",
+            "next_exp": 1313578972550,
             "reward_sp": 110
         },
         {
             "lv": 974,
-            " next_exp ": "  1,317,200,090,050 ",
+            "next_exp": 1317200090050,
             "reward_sp": 111
         },
         {
             "lv": 975,
-            " next_exp ": "  1,320,826,207,550 ",
+            "next_exp": 1320826207550,
             "reward_sp": 111
         },
         {
             "lv": 976,
-            " next_exp ": "  1,324,457,325,050 ",
+            "next_exp": 1324457325050,
             "reward_sp": 111
         },
         {
             "lv": 977,
-            " next_exp ": "  1,328,093,442,550 ",
+            "next_exp": 1328093442550,
             "reward_sp": 111
         },
         {
             "lv": 978,
-            " next_exp ": "  1,331,734,560,050 ",
+            "next_exp": 1331734560050,
             "reward_sp": 111
         },
         {
             "lv": 979,
-            " next_exp ": "  1,335,380,677,550 ",
+            "next_exp": 1335380677550,
             "reward_sp": 111
         },
         {
             "lv": 980,
-            " next_exp ": "  1,339,031,795,050 ",
+            "next_exp": 1339031795050,
             "reward_sp": 111
         },
         {
             "lv": 981,
-            " next_exp ": "  1,342,687,912,550 ",
+            "next_exp": 1342687912550,
             "reward_sp": 111
         },
         {
             "lv": 982,
-            " next_exp ": "  1,346,349,030,050 ",
+            "next_exp": 1346349030050,
             "reward_sp": 111
         },
         {
             "lv": 983,
-            " next_exp ": "  1,350,015,147,550 ",
+            "next_exp": 1350015147550,
             "reward_sp": 112
         },
         {
             "lv": 984,
-            " next_exp ": "  1,353,686,265,050 ",
+            "next_exp": 1353686265050,
             "reward_sp": 112
         },
         {
             "lv": 985,
-            " next_exp ": "  1,357,362,382,550 ",
+            "next_exp": 1357362382550,
             "reward_sp": 112
         },
         {
             "lv": 986,
-            " next_exp ": "  1,361,043,500,050 ",
+            "next_exp": 1361043500050,
             "reward_sp": 112
         },
         {
             "lv": 987,
-            " next_exp ": "  1,364,729,617,550 ",
+            "next_exp": 1364729617550,
             "reward_sp": 112
         },
         {
             "lv": 988,
-            " next_exp ": "  1,368,420,735,050 ",
+            "next_exp": 1368420735050,
             "reward_sp": 112
         },
         {
             "lv": 989,
-            " next_exp ": "  1,372,116,852,550 ",
+            "next_exp": 1372116852550,
             "reward_sp": 112
         },
         {
             "lv": 990,
-            " next_exp ": "  1,375,817,970,050 ",
+            "next_exp": 1375817970050,
             "reward_sp": 112
         },
         {
             "lv": 991,
-            " next_exp ": "  1,379,524,087,550 ",
+            "next_exp": 1379524087550,
             "reward_sp": 112
         },
         {
             "lv": 992,
-            " next_exp ": "  1,383,235,205,050 ",
+            "next_exp": 1383235205050,
             "reward_sp": 113
         },
         {
             "lv": 993,
-            " next_exp ": "  1,386,951,322,550 ",
+            "next_exp": 1386951322550,
             "reward_sp": 113
         },
         {
             "lv": 994,
-            " next_exp ": "  1,390,672,440,050 ",
+            "next_exp": 1390672440050,
             "reward_sp": 113
         },
         {
             "lv": 995,
-            " next_exp ": "  1,394,398,557,550 ",
+            "next_exp": 1394398557550,
             "reward_sp": 113
         },
         {
             "lv": 996,
-            " next_exp ": "  1,398,129,675,050 ",
+            "next_exp": 1398129675050,
             "reward_sp": 113
         },
         {
             "lv": 997,
-            " next_exp ": "  1,401,865,792,550 ",
+            "next_exp": 1401865792550,
             "reward_sp": 113
         },
         {
             "lv": 998,
-            " next_exp ": "  1,405,606,910,050 ",
+            "next_exp": 1405606910050,
             "reward_sp": 113
         },
         {
             "lv": 999,
-            " next_exp ": "  1,409,353,027,550 ",
+            "next_exp": 1409353027550,
             "reward_sp": 113
         }
     ],
@@ -5004,7 +5004,7 @@
             "hp": 10,
             "atk": 10,
             "exp": 2,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "スライム.svg"
@@ -5015,7 +5015,7 @@
             "hp": 20,
             "atk": 20,
             "exp": 5,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "ねっとりスライム.svg"
@@ -5026,7 +5026,7 @@
             "hp": 30,
             "atk": 30,
             "exp": 10,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "かたそうなスライム.svg"
@@ -5037,7 +5037,7 @@
             "hp": 40,
             "atk": 40,
             "exp": 20,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "やからスライム.svg"
@@ -5048,7 +5048,7 @@
             "hp": 60,
             "atk": 60,
             "exp": 40,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "リザードマン.svg"
@@ -5059,7 +5059,7 @@
             "hp": 80,
             "atk": 80,
             "exp": 60,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "どんよりリザードマン.svg"
@@ -5070,7 +5070,7 @@
             "hp": 100,
             "atk": 100,
             "exp": 80,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "リザードマンたいちょう.svg"
@@ -5081,7 +5081,7 @@
             "hp": 120,
             "atk": 120,
             "exp": 100,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "リザードマンあにき.svg"
@@ -5092,7 +5092,7 @@
             "hp": 150,
             "atk": 150,
             "exp": 150,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 100,
             "image": "ゴーレム.svg"
@@ -5103,7 +5103,7 @@
             "hp": 180,
             "atk": 180,
             "exp": 200,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 100,
             "image": "こけゴーレム.svg"
@@ -5114,7 +5114,7 @@
             "hp": 210,
             "atk": 210,
             "exp": 250,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 100,
             "image": "にいさんゴーレム.svg"
@@ -5125,7 +5125,7 @@
             "hp": 240,
             "atk": 240,
             "exp": 300,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 100,
             "image": "ふるそうなゴーレム.svg"
@@ -5136,7 +5136,7 @@
             "hp": 300,
             "atk": 300,
             "exp": 400,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "はげたか.svg"
@@ -5147,7 +5147,7 @@
             "hp": 360,
             "atk": 360,
             "exp": 500,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "どくっぽいはげたか.svg"
@@ -5158,7 +5158,7 @@
             "hp": 420,
             "atk": 420,
             "exp": 600,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "いかりのはげたか.svg"
@@ -5169,7 +5169,7 @@
             "hp": 480,
             "atk": 480,
             "exp": 700,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 75,
             "image": "わんぱくはげたか.svg"
@@ -5180,7 +5180,7 @@
             "hp": 600,
             "atk": 600,
             "exp": 800,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "おばけ.svg"
@@ -5191,7 +5191,7 @@
             "hp": 720,
             "atk": 720,
             "exp": 900,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "となりのおばけ.svg"
@@ -5202,7 +5202,7 @@
             "hp": 840,
             "atk": 840,
             "exp": 1000,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "おばけさん.svg"
@@ -5213,7 +5213,7 @@
             "hp": 960,
             "atk": 960,
             "exp": 1100,
-            "speed": 1,
+            "speed": 3,
             "color": "#000000",
             "width": 50,
             "image": "かなしそうなおばけ.svg"
@@ -5223,11 +5223,11 @@
         {
             "id": 1,
             "name": "スライム平原1",
-            "wave_count": 10,
+            "wave_count": 3,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 5,
+            "req_clears": 3,
             "req_lv": 1,
             "enemy_ids": 1001,
             "description": "テスト1"
@@ -5235,11 +5235,11 @@
         {
             "id": 2,
             "name": "スライム平原2",
-            "wave_count": 10,
+            "wave_count": 3,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 10,
+            "req_clears": 3,
             "req_lv": 5,
             "enemy_ids": 1002,
             "description": "テスト2"
@@ -5247,11 +5247,11 @@
         {
             "id": 3,
             "name": "スライム平原3",
-            "wave_count": 10,
+            "wave_count": 3,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 20,
+            "req_clears": 3,
             "req_lv": 10,
             "enemy_ids": 1003,
             "description": "テスト3"
@@ -5259,11 +5259,11 @@
         {
             "id": 4,
             "name": "スライム平原4",
-            "wave_count": 10,
+            "wave_count": 3,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 30,
+            "req_clears": 3,
             "req_lv": 15,
             "enemy_ids": 1004,
             "description": "テスト4"
@@ -5271,11 +5271,11 @@
         {
             "id": 5,
             "name": "スライム平原5",
-            "wave_count": 10,
+            "wave_count": 3,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 40,
+            "req_clears": 3,
             "req_lv": 20,
             "enemy_ids": 1004,
             "description": "テスト5"
@@ -5283,11 +5283,11 @@
         {
             "id": 6,
             "name": "リザードマンの巣1",
-            "wave_count": 10,
+            "wave_count": 5,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 5,
             "req_lv": 30,
             "enemy_ids": 2001,
             "description": "テスト6"
@@ -5295,11 +5295,11 @@
         {
             "id": 7,
             "name": "リザードマンの巣2",
-            "wave_count": 10,
+            "wave_count": 5,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 5,
             "req_lv": 40,
             "enemy_ids": 2002,
             "description": "テスト7"
@@ -5307,11 +5307,11 @@
         {
             "id": 8,
             "name": "リザードマンの巣3",
-            "wave_count": 10,
+            "wave_count": 5,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 5,
             "req_lv": 50,
             "enemy_ids": 2003,
             "description": "テスト8"
@@ -5319,11 +5319,11 @@
         {
             "id": 9,
             "name": "リザードマンの巣4",
-            "wave_count": 10,
+            "wave_count": 5,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 5,
             "req_lv": 60,
             "enemy_ids": 2004,
             "description": "テスト9"
@@ -5331,11 +5331,11 @@
         {
             "id": 10,
             "name": "リザードマンの巣5",
-            "wave_count": 10,
+            "wave_count": 5,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 5,
             "req_lv": 70,
             "enemy_ids": 2004,
             "description": "テスト10"
@@ -5343,11 +5343,11 @@
         {
             "id": 11,
             "name": "ゴーレムの集落1",
-            "wave_count": 10,
+            "wave_count": 8,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 8,
             "req_lv": 80,
             "enemy_ids": 3001,
             "description": "テスト11"
@@ -5355,11 +5355,11 @@
         {
             "id": 12,
             "name": "ゴーレムの集落2",
-            "wave_count": 10,
+            "wave_count": 8,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 8,
             "req_lv": 90,
             "enemy_ids": 3002,
             "description": "テスト12"
@@ -5367,11 +5367,11 @@
         {
             "id": 13,
             "name": "ゴーレムの集落3",
-            "wave_count": 10,
+            "wave_count": 8,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 8,
             "req_lv": 100,
             "enemy_ids": 3003,
             "description": "テスト13"
@@ -5379,11 +5379,11 @@
         {
             "id": 14,
             "name": "ゴーレムの集落4",
-            "wave_count": 10,
+            "wave_count": 8,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 8,
             "req_lv": 110,
             "enemy_ids": 3004,
             "description": "テスト14"
@@ -5391,11 +5391,11 @@
         {
             "id": 15,
             "name": "ゴーレムの集落5",
-            "wave_count": 10,
+            "wave_count": 8,
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 8,
             "req_lv": 120,
             "enemy_ids": 3004,
             "description": "テスト15"
@@ -5407,7 +5407,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 130,
             "enemy_ids": 4001,
             "description": "テスト16"
@@ -5419,7 +5419,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 140,
             "enemy_ids": 4002,
             "description": "テスト17"
@@ -5431,7 +5431,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 150,
             "enemy_ids": 4003,
             "description": "テスト18"
@@ -5443,7 +5443,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 160,
             "enemy_ids": 4004,
             "description": "テスト19"
@@ -5455,7 +5455,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 170,
             "enemy_ids": 4004,
             "description": "テスト20"
@@ -5467,7 +5467,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 180,
             "enemy_ids": 5001,
             "description": "テスト21"
@@ -5479,7 +5479,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 190,
             "enemy_ids": 5002,
             "description": "テスト22"
@@ -5491,7 +5491,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 200,
             "enemy_ids": 5003,
             "description": "テスト23"
@@ -5503,7 +5503,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 210,
             "enemy_ids": 5004,
             "description": "テスト24"
@@ -5515,7 +5515,7 @@
             "enemies_per_wave": 20,
             "boss_flag": 0,
             "boss_id": "",
-            "req_clears": 50,
+            "req_clears": 10,
             "req_lv": 220,
             "enemy_ids": 5004,
             "description": "テスト25"

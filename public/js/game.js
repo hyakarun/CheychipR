@@ -1,6 +1,7 @@
 // --- ゲーム設定 ---
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+const API_BASE = "api";
 
 // プレイヤー情報
 let player = {
@@ -23,7 +24,6 @@ let player = {
     cri: 0,
     res: 0,
   },
-
   attackTimer: 0,
   baseAttackInterval: 60,
   range: 150,
@@ -44,14 +44,111 @@ let masterData = null;
 const imageCache = {};
 let saveTimer = 0;
 let isPaused = false;
+let isGameRunning = false;
 
-// ★変更：デフォルト値（マスタ未設定時用）
 const DEFAULT_ENEMIES_PER_WAVE = 5;
+let fade = {
+  active: false,
+  state: "none",
+  alpha: 0,
+  speed: 0.05,
+  callback: null,
+};
 
-// --- 初期化 ---
-async function init() {
+// --- 初期化フロー ---
+window.onload = async function () {
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
+
+  // ログイン確認
+  try {
+    const res = await fetch(API_BASE + "/check_session.php");
+    const data = await res.json();
+    if (data.status === "logged_in") {
+      showGameScreen(data.email);
+    }
+  } catch (e) {
+    console.error("通信エラー", e);
+  }
+};
+
+// ログイン・登録処理
+window.doLogin = async function () {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const errorEl = document.getElementById("login-error");
+  errorEl.innerText = "";
+  if (!email || !password) {
+    errorEl.innerText = "入力してください";
+    return;
+  }
+  try {
+    const res = await fetch(API_BASE + "/login.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+    if (data.status === "success") showGameScreen(email);
+    else errorEl.innerText = data.message;
+  } catch (e) {
+    errorEl.innerText = "通信エラー";
+  }
+};
+
+window.doRegister = async function () {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const errorEl = document.getElementById("login-error");
+  errorEl.innerText = "";
+  if (!email || !password) {
+    errorEl.innerText = "入力してください";
+    return;
+  }
+  try {
+    const res = await fetch(API_BASE + "/register.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+    if (data.status === "success") {
+      alert("登録しました！ログインします。");
+      doLogin();
+    } else {
+      errorEl.innerText = data.message;
+    }
+  } catch (e) {
+    errorEl.innerText = "通信エラー";
+  }
+};
+
+window.doLogout = async function () {
+  if (!confirm("ログアウトしますか？")) return;
+  await fetch(API_BASE + "/logout.php");
+  location.reload();
+};
+
+window.toggleMode = function () {
+  document.getElementById("btn-group-login").classList.toggle("hidden");
+  document.getElementById("btn-group-register").classList.toggle("hidden");
+  const title = document.getElementById("login-title");
+  title.innerText = title.innerText === "ログイン" ? "新規登録" : "ログイン";
+  document.getElementById("login-error").innerText = "";
+};
+
+function showGameScreen(email) {
+  document.getElementById("login-overlay").style.display = "none";
+  document.getElementById("game-container").style.display = "flex";
+  if (document.getElementById("user-email-display")) {
+    document.getElementById("user-email-display").innerText = email;
+  }
+  startGame();
+}
+
+async function startGame() {
+  if (isGameRunning) return;
+  isGameRunning = true;
 
   try {
     const res = await fetch("../data/master_data.json?v=" + Date.now());
@@ -74,16 +171,21 @@ async function init() {
   document.addEventListener("visibilitychange", handleVisibilityChange);
 }
 
-// ヘルパー：現在のダンジョンの設定敵数を取得
+// --- 以下、ゲームロジック ---
+
+function startTransition(onDarkCallback) {
+  if (fade.active) return;
+  fade.active = true;
+  fade.state = "out";
+  fade.alpha = 0;
+  fade.callback = onDarkCallback;
+}
+
 function getReqKills(dData) {
   if (!dData) return DEFAULT_ENEMIES_PER_WAVE;
-  // boss_flagがあり、かつ最終ウェーブなら「1体（ボスのみ）」
   const maxWave = Number(dData.wave_count || 1);
   const hasBoss = Number(dData.boss_flag || 0) === 1;
-  if (hasBoss && player.currentWave === maxWave) {
-    return 1;
-  }
-  // それ以外は設定値（なければデフォルト）
+  if (hasBoss && player.currentWave === maxWave) return 1;
   return Number(dData.enemies_per_wave) || DEFAULT_ENEMIES_PER_WAVE;
 }
 
@@ -99,27 +201,30 @@ function initDungeonList() {
 
   sortedDungeons.forEach((d) => {
     const id = Number(d.id);
-    if (!player.dungeonProgress[id]) {
-      player.dungeonProgress[id] = { clearCount: 0 };
-    }
+    if (!player.dungeonProgress[id])
+      player.dungeonProgress[id] = {
+        clearCount: 0,
+        killCount: 0,
+        cleared: false,
+      };
     const progress = player.dungeonProgress[id];
+    if (typeof progress.clearCount === "undefined") progress.clearCount = 0;
 
     let isUnlocked = id === 1;
     if (id > 1) {
-      const prevProgress = player.dungeonProgress[id - 1] || { clearCount: 0 };
+      const prevProgress = player.dungeonProgress[id - 1];
+      const prevClearCount = prevProgress ? prevProgress.clearCount || 0 : 0;
       const req = d.req_clears ? Number(d.req_clears) : 1;
-      if (prevProgress.clearCount >= req) isUnlocked = true;
+      if (prevClearCount >= req) isUnlocked = true;
     }
-
     if (!isUnlocked) return;
 
-    const currentClears = progress.clearCount;
     let style = "";
     if (player.currentDungeonId == id)
       style = "border: 2px solid #3498db; background:#eaf2f8;";
     const btnText = player.currentDungeonId == id ? "探索中" : "移動";
     const btnDisabled = player.currentDungeonId == id ? "disabled" : "";
-    const statusText = `<span style="color:#e67e22">Clear: ${currentClears}</span>`;
+    const statusText = `<span style="color:#e67e22">Clear: ${progress.clearCount}</span>`;
 
     const div = document.createElement("div");
     div.className = "dungeon-item";
@@ -140,12 +245,15 @@ function initDungeonList() {
 
 window.changeDungeon = function (dungeonId) {
   if (player.currentDungeonId == dungeonId) return;
-  player.currentDungeonId = dungeonId;
-  player.currentWave = 1;
-  player.killsInWave = 0;
-  enemies = [];
-  initDungeonList();
-  saveGame();
+  startTransition(() => {
+    player.currentDungeonId = dungeonId;
+    player.currentWave = 1;
+    player.killsInWave = 0;
+    enemies = [];
+    damageTexts = [];
+    initDungeonList();
+    saveGame();
+  });
 };
 
 window.switchScreen = function (screenName) {
@@ -155,10 +263,10 @@ window.switchScreen = function (screenName) {
   document
     .querySelectorAll(".menu-item")
     .forEach((el) => el.classList.remove("active"));
-  const targetScreen = document.getElementById("screen-" + screenName);
-  if (targetScreen) targetScreen.style.display = "block";
-  const targetMenu = document.getElementById("menu-" + screenName);
-  if (targetMenu) targetMenu.classList.add("active");
+  const ts = document.getElementById("screen-" + screenName);
+  if (ts) ts.style.display = "block";
+  const tm = document.getElementById("menu-" + screenName);
+  if (tm) tm.classList.add("active");
   if (screenName === "dungeon") initDungeonList();
 };
 
@@ -222,6 +330,10 @@ function resizeCanvas() {
     canvas.width = combatArea.clientWidth;
     canvas.height = combatArea.clientHeight;
   }
+  if (canvas.width === 0) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight * 0.2;
+  }
 }
 
 function calcBattleStats() {
@@ -282,12 +394,6 @@ function calculateOfflineProgress() {
         `Offline: ${diffSeconds}s, ${killCount} kills, ${totalGainedExp} exp`
       );
       gainExp(totalGainedExp);
-
-      // オフライン時のクリア回数計算（簡易版）
-      // 本当は「10体倒したら1ウェーブ進む」などの計算が必要だが、複雑になるため
-      // ここでは「キル数だけ加算して、ゲーム再開時に判定する」形にする
-      // または、オフラインではクリア回数は増えない仕様にするのが安全。
-      // ※今回は「増えない」仕様にしておく（トラブル防止）
     }
   }
   player.lastLogin = now;
@@ -295,12 +401,39 @@ function calculateOfflineProgress() {
 
 function gameLoop() {
   requestAnimationFrame(gameLoop);
+  if (fade.active) updateFade();
   if (isPaused) return;
   try {
-    update();
+    if (!fade.active || fade.state === "in") {
+      update();
+    }
     draw();
   } catch (e) {
     console.error(e);
+  }
+}
+
+function updateFade() {
+  if (fade.state === "out") {
+    fade.alpha += fade.speed;
+    if (fade.alpha >= 1) {
+      fade.alpha = 1;
+      if (fade.callback) {
+        fade.callback();
+        fade.callback = null;
+      }
+      fade.state = "wait";
+      setTimeout(() => {
+        fade.state = "in";
+      }, 300);
+    }
+  } else if (fade.state === "in") {
+    fade.alpha -= fade.speed;
+    if (fade.alpha <= 0) {
+      fade.alpha = 0;
+      fade.active = false;
+      fade.state = "none";
+    }
   }
 }
 
@@ -313,18 +446,22 @@ function update() {
   spawnTimer++;
   const rate = getConfig("spawn_rate", 100);
 
-  // 敵スポーン判定
-  // ボス戦（最終ウェーブ＆ボスあり＆敵0）なら即スポーン
   const dData = getDungeonData(player.currentDungeonId);
   if (dData) {
     const maxWave = Number(dData.wave_count || 1);
     const hasBoss = Number(dData.boss_flag || 0) === 1;
-    if (hasBoss && player.currentWave === maxWave && enemies.length === 0) {
-      spawnEnemy();
-      spawnTimer = 0;
-    } else if (enemies.length === 0 && spawnTimer > rate) {
-      spawnEnemy();
-      spawnTimer = 0;
+    const reqKills = getReqKills(dData);
+    const spawnedCount = player.killsInWave + enemies.length;
+    if (hasBoss && player.currentWave === maxWave) {
+      if (spawnedCount < 1 && enemies.length === 0) {
+        spawnEnemy();
+        spawnTimer = 0;
+      }
+    } else {
+      if (spawnedCount < reqKills && spawnTimer > rate) {
+        spawnEnemy();
+        spawnTimer = 0;
+      }
     }
   }
 
@@ -380,7 +517,7 @@ function update() {
         if (index > -1) {
           enemies.splice(index, 1);
           gainExp(target.exp);
-          handleEnemyKill(target); // ★撃破処理呼び出し
+          handleEnemyKill(target);
         }
       }
     }
@@ -398,30 +535,28 @@ function update() {
   }
 }
 
-// ★敵撃破時のロジック（ウェーブ・クリア判定）
 function handleEnemyKill(enemy) {
   if (enemy.isBoss) {
-    dungeonClear();
+    startTransition(() => {
+      dungeonClearLogic();
+    });
     return;
   }
-
   player.killsInWave++;
-
   const dData = getDungeonData(player.currentDungeonId);
   if (!dData) return;
-
-  // ★修正：マスタデータの enemies_per_wave を使う
   const reqKills = getReqKills(dData);
-
   if (player.killsInWave >= reqKills) {
     player.currentWave++;
     player.killsInWave = 0;
-
+    enemies = [];
+    damageTexts = [];
     const maxWave = Number(dData.wave_count || 1);
     const hasBoss = Number(dData.boss_flag || 0) === 1;
-
     if (!hasBoss && player.currentWave > maxWave) {
-      dungeonClear();
+      startTransition(() => {
+        dungeonClearLogic();
+      });
     } else {
       spawnDamageText(
         canvas.width / 2,
@@ -433,7 +568,7 @@ function handleEnemyKill(enemy) {
   }
 }
 
-function dungeonClear() {
+function dungeonClearLogic() {
   spawnDamageText(
     canvas.width / 2,
     canvas.height / 2,
@@ -441,9 +576,15 @@ function dungeonClear() {
     "#f1c40f"
   );
   const dId = player.currentDungeonId;
-  if (!player.dungeonProgress[dId])
-    player.dungeonProgress[dId] = { clearCount: 0 };
+  if (!player.dungeonProgress[dId]) {
+    player.dungeonProgress[dId] = {
+      clearCount: 0,
+      killCount: 0,
+      cleared: false,
+    };
+  }
   player.dungeonProgress[dId].clearCount++;
+  player.dungeonProgress[dId].cleared = true;
   player.currentWave = 1;
   player.killsInWave = 0;
   enemies = [];
@@ -460,10 +601,8 @@ function getDungeonData(id) {
 function spawnEnemy() {
   const dData = getDungeonData(player.currentDungeonId);
   if (!dData) return;
-
   const maxWave = Number(dData.wave_count || 1);
   const hasBoss = Number(dData.boss_flag || 0) === 1;
-
   if (hasBoss && player.currentWave === maxWave) {
     spawnBoss(dData);
   } else {
@@ -487,7 +626,6 @@ function spawnBoss(dData) {
       color: "purple",
       width: 60,
     };
-
   let laneIdx = 1;
   enemies.push({
     x: canvas.width,
@@ -523,7 +661,6 @@ function spawnNormalEnemy(dData) {
       .map((s) => Number(s));
   else if (masterData && masterData.enemies)
     allowedEnemyIds = masterData.enemies.map((e) => Number(e.id));
-
   let targetId =
     allowedEnemyIds[Math.floor(Math.random() * allowedEnemyIds.length)];
   let enemyData = masterData.enemies.find((e) => Number(e.id) === targetId);
@@ -537,7 +674,6 @@ function spawnNormalEnemy(dData) {
       color: "red",
       width: 30,
     };
-
   enemies.push({
     x: canvas.width,
     yRatio: lanes[laneIdx],
@@ -610,10 +746,8 @@ function draw() {
     ctx.lineTo(canvas.width, h);
   });
   ctx.stroke();
-
   ctx.fillStyle = "#3498db";
   ctx.fillRect(player.x, canvas.height * 0.5 - 15, player.width, player.height);
-
   enemies.forEach((e) => {
     let y = canvas.height * e.yRatio;
     let w = e.width || 30;
@@ -636,7 +770,6 @@ function draw() {
       ctx.fillText("BOSS", e.x - 5, y - h / 2 - 5);
     }
   });
-
   damageTexts.forEach((dt) => {
     ctx.globalAlpha = Math.max(0, dt.life / dt.maxLife);
     ctx.fillStyle = dt.color;
@@ -647,15 +780,12 @@ function draw() {
     ctx.fillText(dt.text, dt.x, dt.y);
     ctx.globalAlpha = 1.0;
   });
-
-  // ★追加：ウェーブ情報の表示
   const dData = getDungeonData(player.currentDungeonId);
   if (dData) {
     ctx.fillStyle = "black";
     ctx.font = "16px Arial";
-    const maxWave = dData.wave_count || 1;
+    const maxWave = Number(dData.wave_count || 1);
     const reqKills = getReqKills(dData);
-    // ボス戦中は「BOSS」と表示、それ以外は「残り敵数」
     let progressText = `Next: ${Math.max(0, reqKills - player.killsInWave)}`;
     if (Number(dData.boss_flag) === 1 && player.currentWave === maxWave) {
       progressText = "BOSS";
@@ -665,6 +795,10 @@ function draw() {
       10,
       30
     );
+  }
+  if (fade.active) {
+    ctx.fillStyle = `rgba(0, 0, 0, ${fade.alpha})`;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
 }
 
@@ -695,5 +829,3 @@ function updateUI() {
     else btn.classList.remove("active");
   });
 }
-
-init();

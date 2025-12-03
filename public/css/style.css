@@ -7,31 +7,43 @@ html, body {
 }
 
 #game-container {
-    display: flex; flex-direction: column; width: 100vw; height: 100vh;
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
 }
 
-/* === 上部：戦闘領域 (20%) === */
+/* === 上部：戦闘領域 === */
 #combat-area {
-    width: 100%; height: 20%; background-color: #f8f9fa;
-    position: relative; box-sizing: border-box; border-bottom: 2px solid #ccc;
+    width: 100%;
+    /* ★修正：高さを画面の20%に戻す */
+    height: 20vh; 
+    /* ★追加：最低でも200pxは確保する（潰れ防止） */
+    min-height: 200px;
+    flex: none;
+    
+    background-color: #f8f9fa;
+    position: relative; box-sizing: border-box;
+    border-bottom: 2px solid #ccc;
+    overflow: hidden;
 }
 #gameCanvas { display: block; width: 100%; height: 100%; }
 
-/* === 下部：メインエリア (80%) === */
+/* === 下部：メインエリア === */
 #bottom-area {
-    width: 100%; height: 80%; display: flex; flex-direction: row;
+    width: 100%; flex: 1; min-height: 0;
+    display: flex; flex-direction: row;
+    background-color: #ecf0f1;
 }
 
-/* --- 左側：メニュー (10%) --- */
+/* --- 左側：メニュー --- */
 #menu-area {
-    width: 10%; min-width: 80px; background-color: #2c3e50;
+    width: 100px; height: 100%; background-color: #2c3e50;
     color: white; padding: 10px 5px; box-sizing: border-box;
     display: flex; flex-direction: column; align-items: center;
-    border-right: 1px solid #1a252f;
+    border-right: 1px solid #1a252f; overflow-y: auto;
 }
 .menu-item {
-    width: 90%; margin-bottom: 8px; font-size: 13px;
-    cursor: pointer; padding: 12px 5px; border: 1px solid #34495e;
+    width: 90%; margin-bottom: 8px; font-size: 12px;
+    cursor: pointer; padding: 10px 2px; border: 1px solid #34495e;
     text-align: center; background-color: #34495e; border-radius: 4px;
     transition: background-color 0.2s;
 }
@@ -39,10 +51,10 @@ html, body {
     background-color: #1abc9c; border-color: #16a085; font-weight: bold;
 }
 
-/* --- 右側：詳細エリア (90%) --- */
+/* --- 右側：詳細エリア --- */
 #details-area {
-    width: 90%; background-color: #ecf0f1; padding: 20px 30px;
-    box-sizing: border-box; overflow-y: auto; flex-grow: 1;
+    flex: 1; height: 100%; padding: 20px;
+    box-sizing: border-box; overflow-y: auto;
 }
 
 /* 画面切り替え用 */
@@ -50,160 +62,96 @@ html, body {
 
 h2 {
     margin-top: 0; border-bottom: 2px solid #bdc3c7;
-    padding-bottom: 10px; color: #2c3e50; font-size: 24px;
+    padding-bottom: 10px; color: #2c3e50; font-size: 20px;
 }
 h3 {
-    margin-top: 20px; margin-bottom: 10px; font-size: 18px;
+    margin-top: 20px; margin-bottom: 10px; font-size: 16px;
     color: #7f8c8d; border-left: 4px solid #1abc9c; padding-left: 10px;
 }
 
-/* ステータス共通 */
+/* ステータス画面 */
 .status-row {
-    margin-bottom: 8px; font-size: 16px; color: #2c3e50;
+    margin-bottom: 8px; font-size: 14px; color: #2c3e50;
     display: flex; align-items: center;
 }
-.label { width: 50px; font-weight: bold; }
-.val-big { font-size: 20px; font-weight: bold; }
+.label { width: 40px; font-weight: bold; }
+.val-big { font-size: 18px; font-weight: bold; }
 .bar-container {
-    width: 250px; height: 18px; background-color: #bdc3c7;
-    border-radius: 9px; overflow: hidden; margin-left: 10px;
-    border: 1px solid #95a5a6; position: relative;
+    flex: 1; max-width: 200px; height: 14px;
+    background-color: #bdc3c7; border-radius: 7px;
+    overflow: hidden; margin-left: 10px; border: 1px solid #95a5a6;
 }
 .bar-fill { height: 100%; width: 0%; transition: width 0.3s ease-out; }
 .hp-bar { background-color: #e74c3c; }
 .exp-bar { background-color: #3498db; }
-.progress-bar { background-color: #f1c40f; }
+.highlight { color: #e67e22; font-weight: bold; }
+hr { margin: 15px 0; border: 0; border-top: 1px solid #bdc3c7; }
 
-.highlight { color: #e67e22; font-weight: bold; font-size: 20px; }
-hr { margin: 20px 0; border: 0; border-top: 1px solid #bdc3c7; }
-
-/* グリッドレイアウト（ステータス用） */
-.stats-grid { display: flex; flex-wrap: wrap; margin: -5px; }
-.stat-item {
-    background-color: white; padding: 10px 15px; border-radius: 6px;
+/* グリッドレイアウト */
+.stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;
+}
+.stat-item, .stat-item-read {
+    background-color: white; padding: 8px 10px; border-radius: 4px;
     border: 1px solid #ccc; display: flex; align-items: center;
-    justify-content: space-between; flex: 1 1 180px; margin: 5px;
+    justify-content: space-between; font-size: 14px;
 }
-.stat-name { font-weight: bold; color: #34495e; width: 40px; }
-.stat-val { font-size: 18px; font-weight: bold; width: 30px; text-align: right; }
-.stat-item-read {
-    background-color: #dfe6e9; padding: 8px 12px; border-radius: 4px;
-    font-size: 14px; color: #2d3436; border: 1px solid #b2bec3;
-    flex: 1 1 150px; margin: 5px;
-}
-.stat-item-read span { font-weight: bold; float: right; }
+.stat-item-read { background-color: #dfe6e9; }
 
 .btn-plus {
     background-color: #2ecc71; color: white; border: none;
-    border-radius: 4px; width: 24px; height: 24px; font-size: 16px;
-    cursor: pointer; margin: 0 10px; visibility: hidden;
+    border-radius: 3px; width: 20px; height: 20px; font-size: 14px;
+    cursor: pointer; margin: 0 5px; visibility: hidden;
 }
-.btn-plus:hover { background-color: #27ae60; }
 .btn-plus.active { visibility: visible; }
 
-/* === ダンジョン画面用（カードデザイン修正版） === */
+/* ダンジョン画面 */
 .dungeon-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 10px;
-    margin-top: 15px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-top: 15px;
 }
-
 .dungeon-item {
-    background-color: white;
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 120px;
-    transition: transform 0.1s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: white; border: 1px solid #bdc3c7; border-radius: 6px;
+    padding: 10px; display: flex; flex-direction: column; justify-content: space-between;
+    height: 130px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.1s;
 }
+.dungeon-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.dungeon-item.locked { background-color: #f2f3f4; opacity: 0.6; border-style: dashed; }
+.dungeon-item.cleared { border: 2px solid #f1c40f; background-color: #fffcf0; }
 
-.dungeon-item.locked {
-    background-color: #f2f3f4;
-    opacity: 0.6;
-    border-style: dashed;
-}
-
-.dungeon-item.cleared {
-    border: 2px solid #f1c40f;
-    background-color: #fffcf0;
-}
-
-.dungeon-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* 上段：名前とレベルを横並びに */
 .dungeon-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid #eee; padding-bottom: 4px; margin-bottom: 6px;
 }
-
 .dungeon-header h4 {
-    margin: 0;
-    font-size: 13px; /* 少し小さくして収まりよく */
-    color: #2c3e50;
-    font-weight: bold;
-    text-align: left;
-    line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 70%;
+    margin: 0; font-size: 13px; font-weight: bold; color: #2c3e50;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70%;
 }
+.dungeon-header .lv-label { font-size: 11px; color: #7f8c8d; }
+.dungeon-status { text-align: center; margin-bottom: auto; }
+.status-text { font-size: 12px; font-weight: bold; color: #555; }
 
-.dungeon-header .lv-label {
-    font-size: 11px;
-    color: #7f8c8d;
-    white-space: nowrap;
-    margin-left: 5px;
-}
-
-/* 中段：進捗状況（クリア回数） */
-.dungeon-status {
-    text-align: center;
-    margin-bottom: auto;
-}
-
-.status-text {
-    font-size: 14px; /* 少し大きく */
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-.prog-container {
-    width: 100%;
-    height: 6px;
-    background: #eee;
-    border-radius: 3px;
-    overflow: hidden;
-}
-.prog-fill { height: 100%; background: #2ecc71; width: 0%; }
-
-/* 下段：ボタン */
 .dungeon-item button {
-    margin-top: 10px;
-    padding: 6px 0;
-    font-size: 12px;
-    border-radius: 4px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
+    margin-top: 8px; padding: 5px 0; font-size: 12px;
+    border-radius: 3px; background-color: #3498db; color: white;
+    border: none; cursor: pointer; width: 100%; font-weight: bold;
 }
+.dungeon-item button:disabled { background-color: #bdc3c7; cursor: not-allowed; }
 
-.dungeon-item button:disabled {
-    background-color: #bdc3c7;
-    cursor: not-allowed;
+/* ログイン画面 */
+#login-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; align-items: center; z-index: 2000;
 }
+.login-box {
+    background-color: white; padding: 30px; border-radius: 8px; width: 300px; text-align: center;
+}
+.login-box input {
+    width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;
+}
+.login-box button {
+    width: 100%; padding: 10px; margin-top: 10px; background-color: #3498db;
+    color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;
+}
+.login-box button.secondary { background-color: #95a5a6; margin-top: 5px; }
+.error-msg { color: #e74c3c; font-size: 12px; margin-top: 10px; }
+.hidden { display: none !important; }
