@@ -171,7 +171,7 @@ async function startGame() {
   document.addEventListener("visibilitychange", handleVisibilityChange);
 }
 
-// --- 以下、ゲームロジック ---
+// --- ゲームロジック ---
 
 function startTransition(onDarkCallback) {
   if (fade.active) return;
@@ -270,6 +270,17 @@ window.switchScreen = function (screenName) {
   if (screenName === "dungeon") initDungeonList();
 };
 
+window.resetGame = function () {
+  if (
+    confirm(
+      "本当にデータを削除して最初からやり直しますか？\n（この操作は取り消せません）"
+    )
+  ) {
+    localStorage.removeItem("cc_save_data");
+    location.reload();
+  }
+};
+
 function getImage(fileName) {
   if (!fileName) return null;
   if (imageCache[fileName]) return imageCache[fileName];
@@ -339,16 +350,32 @@ function resizeCanvas() {
 function calcBattleStats() {
   const s = player.stats;
   const b = player.battleStats;
-  const strMult = getConfig("str_to_atk", 2.0);
-  const vitMult = getConfig("vit_to_hp", 10);
-  b.atk = Math.floor((s.str || 5) * strMult + (s.dex || 5) * 0.5);
-  b.def = Math.floor((s.vit || 5) * 1.5);
-  b.agi = s.agi || 5;
-  b.luk = s.luk || 5;
   let oldMax = player.maxHp;
-  player.maxHp = 100 + (s.vit || 5) * vitMult + (player.lv - 1) * 20;
+  player.maxHp = 100 + (player.lv - 1) * 10 + s.vit * 5;
   if (player.hp > player.maxHp) player.hp = player.maxHp;
-  if (player.hp <= 0) player.hp = player.maxHp;
+  if (player.hp <= 0 && player.maxHp > 0) player.hp = player.maxHp;
+
+  b.atk = Math.floor(s.str / 2 + s.luk * 0.1);
+  b.matk = Math.floor(s.int / 2 + s.luk * 0.1);
+  b.def_div = 0;
+  b.def_sub = Math.floor(s.vit * 3);
+  b.mdef_div = 0;
+  b.mdef_sub = Math.floor(s.int * 2 + s.vit * 0.5);
+  b.hit = Math.floor(s.dex * 1 + s.luk * 0.2);
+  b.eva = Math.floor(s.agi * 1 + s.luk * 0.2);
+  b.cri = Math.floor(s.luk * 1);
+  b.res = Math.floor(s.vit * 0.5 + s.luk * 0.2);
+}
+
+function calculateDamage(atk, divDef, subDef) {
+  let reductionPercent = 0;
+  if (divDef > 0) {
+    reductionPercent = Math.sqrt(Math.sqrt(divDef));
+    reductionPercent = Math.floor(reductionPercent * 100) / 100;
+  }
+  let reducedDmg = (atk * (100 - reductionPercent)) / 100;
+  let finalDmg = reducedDmg - subDef;
+  return Math.max(1, Math.floor(finalDmg));
 }
 
 function saveGame() {
@@ -369,6 +396,22 @@ function loadGame() {
   if (!player.dungeonProgress) player.dungeonProgress = {};
   if (!player.currentWave) player.currentWave = 1;
   if (!player.killsInWave) player.killsInWave = 0;
+
+  if (typeof player.battleStats.def_div === "undefined") {
+    player.battleStats = {
+      atk: 0,
+      matk: 0,
+      def_div: 0,
+      def_sub: 0,
+      mdef_div: 0,
+      mdef_sub: 0,
+      hit: 0,
+      eva: 0,
+      cri: 0,
+      res: 0,
+    };
+    calcBattleStats();
+  }
 }
 
 function calculateOfflineProgress() {
@@ -437,102 +480,84 @@ function updateFade() {
   }
 }
 
+// [public/js/game.js] の function update() をこれに置き換えてください
+
 function update() {
-  saveTimer++;
-  if (saveTimer > 600) {
-    saveGame();
-    saveTimer = 0;
-  }
-  spawnTimer++;
-  const rate = getConfig("spawn_rate", 100);
-
-  const dData = getDungeonData(player.currentDungeonId);
-  if (dData) {
-    const maxWave = Number(dData.wave_count || 1);
-    const hasBoss = Number(dData.boss_flag || 0) === 1;
-    const reqKills = getReqKills(dData);
-    const spawnedCount = player.killsInWave + enemies.length;
-    if (hasBoss && player.currentWave === maxWave) {
-      if (spawnedCount < 1 && enemies.length === 0) {
-        spawnEnemy();
-        spawnTimer = 0;
-      }
-    } else {
-      if (spawnedCount < reqKills && spawnTimer > rate) {
-        spawnEnemy();
-        spawnTimer = 0;
-      }
-    }
-  }
-
-  for (let i = enemies.length - 1; i >= 0; i--) {
-    let e = enemies[i];
-    let dist = e.x - (player.x + player.width);
-    if (dist <= e.range && dist > -50) {
-      e.state = "attack";
-      e.attackTimer++;
-      if (e.attackTimer > e.attackInterval) {
-        let dmg = Math.max(1, e.damage);
-        player.hp -= dmg;
-        e.attackTimer = 0;
-        let py = canvas.height * 0.5;
-        spawnDamageText(player.x, py - 20, dmg, "#e74c3c");
-        updateUI();
-      }
-    } else {
-      e.state = "move";
-      e.x -= e.speed;
-    }
-    if (e.x < -50) enemies.splice(i, 1);
-  }
-
-  let agiRed = getConfig("agi_reduction", 0.2);
-  let currentInterval = Math.max(
-    20,
-    player.baseAttackInterval - player.battleStats.agi * agiRed
-  );
-  player.attackTimer++;
-  if (player.attackTimer > currentInterval) {
-    let target = null;
-    let minDist = 9999;
-    for (let e of enemies) {
-      let dist = e.x - player.x;
-      if (dist > -20 && dist < player.range && dist < minDist) {
-        target = e;
-        minDist = dist;
-      }
-    }
-    if (target) {
-      let dmg = player.battleStats.atk || 5;
-      target.hp -= dmg;
-      player.attackTimer = 0;
-      player.x += 10;
-      setTimeout(() => {
-        player.x -= 10;
-      }, 100);
-      let ey = canvas.height * target.yRatio;
-      spawnDamageText(target.x, ey - 20, dmg, "#ffffff");
-      if (target.hp <= 0) {
-        let index = enemies.indexOf(target);
-        if (index > -1) {
-          enemies.splice(index, 1);
-          gainExp(target.exp);
-          handleEnemyKill(target);
+    saveTimer++; if (saveTimer > 600) { saveGame(); saveTimer = 0; }
+    spawnTimer++;
+    const rate = getConfig('spawn_rate', 100);
+    
+    const dData = getDungeonData(player.currentDungeonId);
+    if (dData) {
+        const maxWave = Number(dData.wave_count || 1);
+        const hasBoss = Number(dData.boss_flag || 0) === 1;
+        const reqKills = getReqKills(dData);
+        const spawnedCount = player.killsInWave + enemies.length;
+        if (hasBoss && player.currentWave === maxWave) {
+             if (spawnedCount < 1 && enemies.length === 0) { spawnEnemy(); spawnTimer = 0; }
+        } else {
+             if (spawnedCount < reqKills && spawnTimer > rate) { spawnEnemy(); spawnTimer = 0; }
         }
-      }
     }
-  }
-  for (let i = damageTexts.length - 1; i >= 0; i--) {
-    let dt = damageTexts[i];
-    dt.y += dt.vy;
-    dt.life--;
-    if (dt.life <= 0) damageTexts.splice(i, 1);
-  }
-  if (player.hp <= 0) {
-    player.hp = player.maxHp;
-    enemies = [];
-    updateUI();
-  }
+
+    // --- 敵の行動 ---
+    for (let i = enemies.length - 1; i >= 0; i--) {
+        let e = enemies[i];
+        // 敵から見たプレイヤーとの距離
+        let dist = e.x - (player.x + player.width);
+        
+        // 射程判定（少し緩和）
+        if (dist <= e.range && dist > -50) {
+            e.state = 'attack'; e.attackTimer++;
+            if (e.attackTimer > e.attackInterval) {
+                let dmg = calculateDamage(e.damage, player.battleStats.def_div, player.battleStats.def_sub);
+                player.hp -= dmg; e.attackTimer = 0;
+                let py = canvas.height * 0.5; spawnDamageText(player.x, py - 20, dmg, "#e74c3c");
+                updateUI();
+            }
+        } else { e.state = 'move'; e.x -= e.speed; }
+        if (e.x < -50) enemies.splice(i, 1);
+    }
+
+    // --- プレイヤーの行動 ---
+    let agiRed = getConfig('agi_reduction', 0.2);
+    let currentInterval = Math.max(20, player.baseAttackInterval - (player.battleStats.agi * agiRed));
+    player.attackTimer++;
+    
+    // 攻撃間隔OKならターゲットを探す
+    if (player.attackTimer > currentInterval) {
+        let target = null; let minDist = 9999;
+        
+        for (let e of enemies) {
+            // プレイヤーから敵までの距離
+            let dist = e.x - player.x;
+            
+            // ★修正：射程判定を広げる（+50の猶予を持たせる）
+            // dist > -100 : 敵が自分を通り過ぎても少しの間は攻撃できる
+            // dist < player.range + 50 : 少し遠くても攻撃できる
+            if (dist > -100 && dist < (player.range + 50) && dist < minDist) { 
+                target = e; minDist = dist; 
+            }
+        }
+        
+        if (target) {
+            let dmg = calculateDamage(player.battleStats.atk, 0, 0); 
+            target.hp -= dmg; player.attackTimer = 0;
+            player.x += 10; setTimeout(() => { player.x -= 10; }, 100);
+            let ey = canvas.height * target.yRatio; spawnDamageText(target.x, ey - 20, dmg, "#ffffff");
+            if (target.hp <= 0) {
+                let index = enemies.indexOf(target);
+                if (index > -1) { enemies.splice(index, 1); gainExp(target.exp); handleEnemyKill(target); }
+            }
+        }
+    }
+    
+    for (let i = damageTexts.length - 1; i >= 0; i--) {
+        let dt = damageTexts[i]; dt.y += dt.vy; dt.life--;
+        if (dt.life <= 0) damageTexts.splice(i, 1);
+    }
+    
+    if (player.hp <= 0) { player.hp = player.maxHp; enemies = []; updateUI(); }
 }
 
 function handleEnemyKill(enemy) {
@@ -610,6 +635,7 @@ function spawnEnemy() {
   }
 }
 
+// ★修正：ボスのデータが不正でもデフォルト値で動くようにする
 function spawnBoss(dData) {
   if (enemies.length > 0) return;
   const bossId = Number(dData.boss_id);
@@ -622,7 +648,7 @@ function spawnBoss(dData) {
       hp: 100,
       atk: 20,
       exp: 50,
-      speed: 0.5,
+      speed: 1.0,
       color: "purple",
       width: 60,
     };
@@ -630,11 +656,11 @@ function spawnBoss(dData) {
   enemies.push({
     x: canvas.width,
     yRatio: lanes[laneIdx],
-    hp: Number(enemyData.hp) * 2,
-    maxHp: Number(enemyData.hp) * 2,
-    damage: Number(enemyData.atk),
-    exp: Number(enemyData.exp) * 5,
-    speed: Number(enemyData.speed) * 0.8,
+    hp: Number(enemyData.hp) * 2 || 100,
+    maxHp: Number(enemyData.hp) * 2 || 100,
+    damage: Number(enemyData.atk) || 5,
+    exp: Number(enemyData.exp) * 5 || 50,
+    speed: Number(enemyData.speed) || 1.0, // ★ここが重要
     color: enemyData.color || "purple",
     width: (Number(enemyData.width) || 30) * 1.5,
     image: enemyData.image || null,
@@ -652,6 +678,7 @@ function spawnBoss(dData) {
   );
 }
 
+// ★修正：通常敵もデフォルト値で動くようにする
 function spawnNormalEnemy(dData) {
   let laneIdx = Math.floor(Math.random() * 3);
   let allowedEnemyIds = [];
@@ -677,11 +704,11 @@ function spawnNormalEnemy(dData) {
   enemies.push({
     x: canvas.width,
     yRatio: lanes[laneIdx],
-    hp: Number(enemyData.hp),
-    maxHp: Number(enemyData.hp),
-    damage: Number(enemyData.atk),
-    exp: Number(enemyData.exp),
-    speed: Number(enemyData.speed),
+    hp: Number(enemyData.hp) || 10,
+    maxHp: Number(enemyData.hp) || 10,
+    damage: Number(enemyData.atk) || 1,
+    exp: Number(enemyData.exp) || 1,
+    speed: Number(enemyData.speed) || 1.0, // ★ここが重要
     color: enemyData.color || "red",
     width: Number(enemyData.width) || 30,
     image: enemyData.image || null,
@@ -821,8 +848,22 @@ function updateUI() {
   safeWidth("bar-exp", (player.exp / player.nextExp) * 100);
   safeText("val-sp", player.sp);
   for (let key in player.stats) safeText(`val-${key}`, player.stats[key]);
-  for (let key in player.battleStats)
-    safeText(`val-${key}`, player.battleStats[key]);
+
+  safeText("val-atk", player.battleStats.atk);
+  safeText("val-matk", player.battleStats.matk);
+  safeText(
+    "val-def",
+    `${player.battleStats.def_div} + ${player.battleStats.def_sub}`
+  );
+  safeText(
+    "val-mdef",
+    `${player.battleStats.mdef_div} + ${player.battleStats.mdef_sub}`
+  );
+  safeText("val-hit", player.battleStats.hit);
+  safeText("val-eva", player.battleStats.eva);
+  safeText("val-cri", player.battleStats.cri);
+  safeText("val-res", player.battleStats.res);
+
   const btns = document.querySelectorAll(".btn-plus");
   btns.forEach((btn) => {
     if (player.sp > 0) btn.classList.add("active");
