@@ -14,11 +14,14 @@ let player = {
   nextExp: 50,
   sp: 0,
   stats: { str: 5, vit: 5, agi: 5, int: 5, dex: 5, luk: 5 },
+  // [修正] バトルステータスの初期値を仕様に合わせて変更（除算・減算DEFなど）
   battleStats: {
-    atk: 10,
+    atk: 0,
     matk: 0,
-    def: 0,
-    mdef: 0,
+    def_div: 0,
+    def_sub: 0,
+    mdef_div: 0,
+    mdef_sub: 0,
     hit: 0,
     eva: 0,
     cri: 0,
@@ -346,28 +349,82 @@ function resizeCanvas() {
   }
 }
 
+// [修正] 仕様書通りのステータス計算式へ更新
 function calcBattleStats() {
   const s = player.stats;
   const b = player.battleStats;
-  const strMult = getConfig("str_to_atk", 2.0);
-  const vitMult = getConfig("vit_to_hp", 10);
+  const lv = player.lv;
 
-  b.atk = Math.floor((s.str || 5) * strMult + (s.dex || 5) * 0.5);
-  b.def = Math.floor((s.vit || 5) * 1.5);
-  b.agi = s.agi || 5;
-  b.luk = s.luk || 5;
+  // --- 1. HP計算 ---
+  // 仕様: 基本100 + (Lv-1)*10 + VIT*5
+  const vitVal = s.vit || 0;
+  player.maxHp = 100 + (lv - 1) * 10 + vitVal * 5;
 
-  let oldMax = player.maxHp;
-  player.maxHp = 100 + (s.vit || 5) * vitMult + (player.lv - 1) * 20;
   if (player.hp > player.maxHp) player.hp = player.maxHp;
   if (player.hp <= 0) player.hp = player.maxHp;
+
+  // ステータス値の安全な取得
+  const strVal = s.str || 0;
+  const intVal = s.int || 0;
+  const dexVal = s.dex || 0;
+  const agiVal = s.agi || 0;
+  const lukVal = s.luk || 0;
+
+  // --- ATK (物理攻撃力) ---
+  // 仕様: STR/2 + LUK*0.1
+  b.atk = Math.floor(strVal / 2 + lukVal * 0.1);
+
+  // --- MATK (魔法攻撃力) ---
+  // 仕様: INT/2 + LUK*0.1
+  b.matk = Math.floor(intVal / 2 + lukVal * 0.1);
+
+  // --- DEF (物理防御力) ---
+  // NN(除算): 装備分（未実装のため0）
+  b.def_div = 0;
+  // MM(減算): VIT*3
+  b.def_sub = Math.floor(vitVal * 3);
+
+  // --- MDEF (魔法防御力) ---
+  // NN(除算): 装備分（未実装のため0）
+  b.mdef_div = 0;
+  // MM(減算): INT*2 + VIT*0.5
+  b.mdef_sub = Math.floor(intVal * 2 + vitVal * 0.5);
+
+  // --- HIT (命中力) ---
+  // 仕様: DEX*1 + LUK*0.2
+  b.hit = Math.floor(dexVal * 1 + lukVal * 0.2);
+
+  // --- EVA (回避力) ---
+  // 仕様: AGI*1 + LUK*0.2
+  b.eva = Math.floor(agiVal * 1 + lukVal * 0.2);
+
+  // --- RCI (クリティカル頻度) ---
+  // 仕様: LUK*1
+  b.cri = Math.floor(lukVal * 1);
+
+  // --- RES (状態異常抵抗) ---
+  // 仕様: VIT*0.5 + LUK*0.2
+  b.res = Math.floor(vitVal * 0.5 + lukVal * 0.2);
 }
 
-// ダメージ計算関数（除算DEF未実装のため0）
+// [修正] ダメージ計算関数（除算DEFの計算を含む）
 function calculateDamage(atk, divDef, subDef) {
-  // 現状、敵のDEFは0なのでそのまま計算
-  let reducedDmg = atk;
-  let finalDmg = reducedDmg - subDef;
+  // 1. 除算DEF(NN)による軽減
+  // 仕様: 「除算DEFの平方根の平方根」% 減らす（小数点第3位未満切り捨て）
+  let reductionPercent = 0;
+  if (divDef > 0) {
+    let root1 = Math.sqrt(divDef);
+    let root2 = Math.sqrt(root1);
+    reductionPercent = Math.floor(root2 * 100) / 100;
+  }
+
+  // 軽減後のATK
+  let reducedAtk = (atk * (100 - reductionPercent)) / 100;
+
+  // 2. 減算DEF(MM)による減算
+  let finalDmg = reducedAtk - subDef;
+
+  // 最低ダメージ1保証
   return Math.max(1, Math.floor(finalDmg));
 }
 
@@ -403,6 +460,13 @@ function calculateOfflineProgress() {
       20,
       player.baseAttackInterval - player.battleStats.agi * agiRed
     );
+    // [注意] ここのagi参照はstats.agiかbattleStats.evaか仕様次第ですが
+    // いったん元のロジック維持のため player.stats.agi を使うよう修正推奨
+    // ※今回は仕様書範囲外なので元のままにしますが、battleStats.agiは削除したので注意。
+    // 安全策として stats.agi を見るように変更しておきます。
+    let agiVal = player.stats.agi || 5;
+    atkInterval = Math.max(20, player.baseAttackInterval - agiVal * agiRed);
+
     let attacksPerSec = 60 / atkInterval;
     let avgEnemyHp = 20 + player.lv * 5;
     let avgEnemyExp = 10 + player.lv * 2;
@@ -494,12 +558,16 @@ function update() {
     let e = enemies[i];
     let dist = e.x - (player.x + player.width);
 
-    // ★修正：攻撃判定を -100 まで緩和（重なっていてもOK）
     if (dist <= e.range && dist > -100) {
       e.state = "attack";
       e.attackTimer++;
       if (e.attackTimer > e.attackInterval) {
-        let dmg = Math.max(1, e.damage);
+        // [修正] プレイヤーが受けるダメージ計算に防御力を適用
+        let dmg = calculateDamage(
+          e.damage,
+          player.battleStats.def_div,
+          player.battleStats.def_sub
+        );
         player.hp -= dmg;
         e.attackTimer = 0;
         let py = canvas.height * 0.5;
@@ -513,10 +581,12 @@ function update() {
     if (e.x < -50) enemies.splice(i, 1);
   }
 
+  // プレイヤー攻撃速度の計算 (AGIによる短縮)
   let agiRed = getConfig("agi_reduction", 0.2);
+  let agiVal = player.stats.agi || 5;
   let currentInterval = Math.max(
     20,
-    player.baseAttackInterval - player.battleStats.agi * agiRed
+    player.baseAttackInterval - agiVal * agiRed
   );
   player.attackTimer++;
 
@@ -526,7 +596,6 @@ function update() {
     let minDist = 9999;
     for (let e of enemies) {
       let dist = e.x - player.x;
-      // ★修正：射程判定を -100 〜 range + 50 に拡大
       if (dist > -100 && dist < player.range + 50 && dist < minDist) {
         target = e;
         minDist = dist;
@@ -534,7 +603,7 @@ function update() {
     }
 
     if (target) {
-      // ★修正：ダメージ計算式を適用
+      // 敵へのダメージ（敵の防御は現状0として計算）
       let dmg = calculateDamage(player.battleStats.atk, 0, 0);
 
       target.hp -= dmg;
